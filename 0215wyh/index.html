@@ -1,0 +1,759 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Document</title>
+    <link rel=stylesheet href="plugins/jquery-ui.min.css">
+    <link rel=stylesheet href="css/myCss.css">
+    <script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
+    <script type="text/javascript" src="plugins/jquery-ui.min.js"></script>
+    <script type="text/javascript">
+        $(function(){
+            $("#header_nav li").mouseenter(function(){
+                $(this).stop().animate({backgroundColor:"#0da4d3"},130);
+            })
+            $("#header_nav").find("li").mouseleave(function(){
+                if($(this).hasClass('bg_orange')){
+                    $(this).stop().animate({backgroundColor:"#FF5500"},130);
+                    return;
+                }
+                $(this).stop().animate({backgroundColor:"transparent"},130);
+            });
+            $(".right_title_style a").mouseenter(function(){
+                $(this).stop().animate({color:"black"},130);
+            }).mouseleave(function(){
+                $(this).stop().animate({color:"#777"},130);
+            });
+            $(".account_number a").mouseenter(function(){
+                $(this).stop().animate({color:"black"},130);
+            }).mouseleave(function(){
+                $(this).stop().animate({color:"#ccc"},130);
+            });
+            $(".content_news a:not(.a_button)").mouseenter(function(){
+                $(this).stop().animate({color:"black"},130);
+            }).mouseleave(function(){
+                $(this).stop().animate({color:"#0DA4D3"},130);
+            });
+            $(".a_button").mouseenter(function(){
+                $(this).stop().animate({color:"white",backgroundColor:"#0da4d3"},130);
+            }).mouseleave(function(){
+                $(this).stop().animate({color:"black",backgroundColor:"white"},130);
+            });
+            $(".people_about img").mouseenter(function(){
+                $(this).stop().animate({opacity:"0.8"},230);
+            }).mouseleave(function(){
+                $(this).stop().animate({opacity:"0.4"},230);
+            });
+            $(".footer-bg a").mouseenter(function(){
+                $(this).stop().animate({color:"white"},130);
+            }).mouseleave(function(){
+                $(this).stop().animate({color:"#888888"},130);
+            });
+            $(".footer-bottom a").mouseenter(function(){
+                $(this).stop().animate({color:"white"},130);
+            }).mouseleave(function(){
+                $(this).stop().animate({color:"#585858"},130);
+            });
+            $(".icon").mouseenter(function(){
+                $(this).stop().animate({top:"-25"},200);
+            }).mouseleave(function() {
+                $(this).stop().animate({top:"0"},200);
+            });
+            $(".sdc_icon").mouseenter(function(){
+                $(this).stop().css({backgroundPosition:"0 -191px"});
+            }).mouseleave(function() {
+                $(this).stop().css({backgroundPosition:"0 -109px"});
+            });
+            $(".href_tag li").mouseenter(function(){
+                $(this).stop().animate({color:"black"},130);
+            }).mouseleave(function() {
+                $(this).stop().animate({color:"#0da4d3"},130);
+            });
+            $(".href_article_save a").mouseenter(function(){
+                $(this).stop().animate({color:"black"},130);
+            }).mouseleave(function() {
+                $(this).stop().animate({color:"#8A8A8A"},130);
+            });
+            $(".href_article_about li").mouseenter(function(){
+                $(this).stop().animate({backgroundColor:"#0da5d2",color:"white"},130);
+            }).mouseleave(function() {
+                $(this).stop().animate({backgroundColor:"#F8F8F8",color:"#8A8A8A"},130);
+            });
+            $("#enter_nav li").mouseenter(function(){
+                $(this).stop().animate({color:"white"}, 130);
+                var enter = $(this).find(".enter_nav2");
+                var h = enter.children().length*42;
+                enter.css({display:"block"});
+                enter.stop().animate({opacity:"1",height:h}, 300);
+            }).mouseleave(function() {
+                $(this).stop().animate({color:"#ccc"}, 130);
+                $(this).find(".enter_nav2").stop().css({opacity:"0",height:0,display:"none"});
+            });
+            $(".enter_nav2 li,.head_portrait_toast a").mouseenter(function(){
+                $(this).stop().animate({color:"white"},130);
+            }).mouseleave(function(){
+                $(this).stop().animate({color:"#888"},130);
+            });
+            $(".head_portrait").mouseenter(function(){
+                $(".head_portrait_toast").show();
+            }).mouseleave(function(){
+                $(".head_portrait_toast").hide();
+            });
+            $(".return_black").click(function(){
+                window.scrollTo(0,0);
+            });
+            $(".share").mouseenter(function(){
+                $(".share_hidden").stop().animate({width:230}, 300);
+            }).mouseleave(function(){
+                $(".share_hidden").stop().animate({width:0}, 300);
+            });
+            $(".shareBox h4 a").mouseover(function(){
+                $(this).stop().animate({color:"#0da4d3"},130);
+            }).mouseleave(function(){
+                $(this).stop().animate({color:"black"},130);
+            });
+            $(".shareBox li a").mouseover(function(){
+                $(this).parent().css({backgroundColor:"#F3F3F3"});
+            }).mouseleave(function(){
+                $(this).parent().css({backgroundColor:"white"},130);
+            });
+            var fixedTop = $("#title_fixed").offset().top;
+            var fixedLeft = parseInt($("#title_fixed").css("left"));
+            $(window).scroll(function() {
+                var y = $(document).scrollTop();
+                if(fixedTop<y){
+                    $("#title_fixed").css({position:"fixed",top:"0",left:fixedLeft});
+                }else{
+                    $("#title_fixed").css({position:"static"});
+                }
+                if(y>0){
+                    $(".return_black").fadeIn(500);
+                }else{
+                    $(".return_black").fadeOut(500);
+                }
+            });
+            $("#weibo_send").click(function(){
+                if(canSend){
+                    var text = $(this).parent().find("textarea").val();
+                    $(".weibo_content").append($(".weibo_msg:eq(0)").clone());
+
+                    $(".weibo_right_content p").eq($(".weibo_right_content p").length-1).text(text);
+                    $(".weibo_right_content span").eq($(".weibo_right_content span").length-1).text(getTimer());
+                    $(".weibo_num h4").text($(".weibo_msg").length+"条评论");
+                    $(".weibo textarea").val("").trigger('keyup');
+                    $(this).removeClass("enter_btn");
+                }
+            });
+            var canSend = false;
+            $(".weibo textarea").keyup(function(){
+                var num = 140-$(this).val().length;
+                $(".weibo_head i").text(num);
+                if(num>=0){
+                    $(".weibo_head i").css("color","#D9D9D9");
+                }else{
+                    $(".weibo_head i").css("color","#DA0000");
+                }
+                if(num>=0&&num<140){
+                    $("#weibo_send").addClass("on_btn");
+                    canSend=true;
+                }else{
+                    $("#weibo_send").removeClass("on_btn");
+                    canSend=false;
+                }
+            });
+            $(".weibo_send").on("mouseenter",".on_btn",function(){
+                $(this).addClass('enter_btn');
+            });
+            $(".weibo_send").on("mouseleave",".on_btn",function(){
+                $(this).removeClass('click_btn');
+                $(this).removeClass('enter_btn');
+            });
+            $(".weibo_send").on("mousedown",".on_btn",function(){
+                $(this).addClass('click_btn');
+            });
+            $(".weibo_send").on("mouseup",".on_btn",function(){
+                $(this).removeClass('click_btn');
+            });
+            function getTimer(){
+                var date = new Date();
+                var year = date.getFullYear();
+                var month =date.getMonth()+1;
+                var day = date.getDate();
+                var hour = date.getHours()>9?date.getHours():"0"+date.getHours();
+                var minute = date.getMinutes()>9?date.getMinutes():"0"+date.getMinutes();
+                return year+"-"+month+"-"+day+" "+hour+":"+minute;
+            }
+        });
+    </script>
+</head>
+<body>
+    <div class="return_black">↑</div>
+    <div class="share">
+        <div class="share_hidden">
+        <div class="shareBox">
+            <h3>分享到</h3>
+            <ul>
+                <li class="icon icon1"><a href="#">一键分享</a></li>
+                <li class="icon icon2"><a href="#">QQ空间</a></li>
+                <li class="icon icon3"><a href="#">新浪微博</a></li>
+                <li class="icon icon4"><a href="#">百度云收藏</a></li>
+                <li class="icon icon5"><a href="#">微信</a></li>
+                <li class="icon icon6"><a href="#">人人网</a></li>
+                <li class="icon icon7"><a href="#">腾讯微博</a></li>
+                <li class="icon icon8"><a href="#">百度相册</a></li>
+                <li class="icon icon9"><a href="#">开心网</a></li>
+                <li class="icon icon10"><a href="#">腾讯朋友</a></li>
+                <li class="icon icon11"><a href="#">百度贴吧</a></li>
+                <li class="icon icon12"><a href="#">豆瓣网</a></li>
+                <li class="icon icon13"><a href="#">百度新首页</a></li>
+                <li class="icon icon14"><a href="#">QQ好友</a></li>
+                <li class="icon icon15"><a href="#">和讯微博</a></li>
+                <li class="icon icon16"><a href="#">百度中心</a></li>
+                <li class="clear"></li>
+            </ul>
+            <h4><a href="#">更多...</a></h4>
+            </div>
+        </div>
+        <div class="share_btn"></div>
+    </div>
+    <div class="header">
+        <div class="box">
+            <a class="sdc_icon" href="#" style="background:url(images/sdc_icon.png) no-repeat 0 -109px"></a>
+            <ul class="header_nav" id="header_nav">
+                <a href="#"><li class="bg_orange">首页</li></a>
+                <a href="#"><li>网址导航<i class="hot"></i></li></a>
+                <a href="#"><li>设计讲座</li></a>
+                <a href="#"><li>设计书</li></a>
+                <a href="#"><li>设计服务</li></a>
+                <a href="#"><li>招聘求职</li></a>
+                <a href="#"><li>关于我们</li></a>
+            </ul>
+            <a class="uisdc" href="#" style="background:url(images/sdc_icon.png) no-repeat 0 -52px"></a>
+        </div>
+    </div>
+    <div class="content">
+        <div class="leftmenu">
+            <ul class="enter_nav" id="enter_nav">
+                <a href="#"><li class="enter_li1">热门下载<i>></i>
+                    <ul class="enter_nav2">
+                        <li>PSD下载</li>
+                        <li>笔刷</li>
+                        <li>纹理 &amp; 背景</li>
+                        <li>设计师壁纸</li>
+                        <li>神器下载</li>
+                    </ul>
+                </li></a>
+                <a href="#"><li class="enter_li2">界面 &amp; 图标设计<i>></i>
+                    <ul class="enter_nav2">
+                        <li>WEB UI元素</li>
+                        <li>App UI元素</li>
+                        <li>Icons</li>
+                        <li>Logo 设计</li>
+                        <li>字体设计</li>
+                        <li>精美海报</li>
+                    </ul>
+                </li></a>
+                <a href="#"><li class="enter_li3">PS教程 &amp; 设计文章</li></a>
+                <a href="#"><li class="enter_li4">信息化视图</li></a>
+                <a href="#"><li class="enter_li5">职场 &amp; 规划</li></a>
+                <a href="#"><li class="enter_li6">酷站推荐</li></a>
+                <a href="#"><li class="enter_li7">图书推荐</li></a>
+            </ul>
+            <div class="advert1">
+                <a href="#"><img src="images/yestone-331.gif" width="160" height="110" alt=""></a>
+            </div>
+            <div class="title_tag">
+                <h5 class="title_style"><i></i><span>标签</span></h5>
+                <ul class="href_tag">
+                    <a href="#"><li>App设计</li></a>
+                    <a href="#"><li>ICON</li></a>
+                    <a href="#"><li>logo设计</li></a>
+                    <a href="#"><li>psd下载</li></a>
+                    <a href="#"><li class="font_middle">ps技巧</li></a>
+                    <a href="#"><li class="font_middle">PS教程</li></a>
+                    <a href="#"><li class="font_middle">ui设计</li></a>
+                    <a href="#"><li class="font_middle">交互设计</li></a>
+                    <a href="#"><li>图标设计</li></a>
+                    <a href="#"><li class="font_big">优秀网页设计</li></a>
+                    <a href="#"><li>字体设计</li></a>
+                    <a href="#"><li class="font_middle">设计师职场</li></a>
+                    <a href="#"><li class="font_middle">酷站</li></a>
+                    <a href="#"><li>酷站推荐</li></a>
+                    <a href="#"><li class="font_middle">用户体验</li></a>
+                    <a href="#"><li class="font_big">经验分享</li></a>
+                    <a href="#"><li class="font_big">网页设计</li></a>
+                    <a href="#"><li class="font_middle">职场规划</li></a>
+                </ul>
+            </div>
+            <div class="advert1 advert1_h100">
+                <a href="#"><img src="images/160100-45dxkc.png" width="160" height="100" alt=""></a>
+            </div>
+            <div class="title_recommend">
+                <h5 class="title_style"><i></i><span>优设推荐</span></h5>
+                <ul class="recommend_book">
+                    <li>
+                        <div class="re_book">
+                            <a href="#"><img src="images/yrybook.jpg" alt="" width="50" height="73">
+                            <h5>史上最全的设计师图书目录</h5>
+                            <p><b>推荐：</b>精彩图书,一网打尽！</p></a>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="re_book">
+                            <a href="#"><img src="images/WebFbanner.png" alt="" width="50" height="73">
+                            <h5>WEB开发基础新手实战手册</h5>
+                            <p><b>推荐：</b>学做你的第一个响应式网站</p></a>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="re_book">
+                            <a href="#"><img src="images/timemood-1030.png" alt="" width="50" height="73">
+                            <h5>WEB开发基础新手实战手册</h5>
+                            <p><b>推荐：</b>设计师抱枕与设计师专属T恤</p></a>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="re_book">
+                            <a href="#"><img src="images/17-book-ymsy.png" alt="" width="50" height="73">
+                            <h5>设计师专属周边</h5>
+                            <p><b>推荐：</b>一本不可多得的摄影后期书</p></a>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="re_book" style="border:none">
+                            <a href="#"><img src="images/uisdc-2016-diantai.png" alt="" width="50" height="73">
+                            <h5>从后期到后期</h5>
+                            <p><b>推荐：</b>可以听的设计技巧和职场秘籍</p></a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="advert1 advert1_h100">
+                <a href="#"><img src="images/2016-dkt-12181.png" width="160" height="100" alt=""></a>
+            </div>
+            <div class="advert1 advert1_h100">
+                <a href="#"><img src="images/2017-clouddream-328.png" width="160" height="90" alt=""></a>
+            </div>
+            <div class="title_tag">
+                <h5 class="title_style"><i></i><span>文章存档</span></h5>
+                <ul class="href_article_save">
+                    <li><a href="#">2017年四月</a></li>
+                    <li><a href="#">2017年三月</a></li>
+                    <li><a href="#">2017年二月</a></li>
+                    <li><a href="#">2017年一月</a></li>
+                    <li><a href="#">2016年十二月</a></li>
+                    <li><a href="#">2016年十一月</a></li>
+                    <li><a href="#">2016年十月</a></li>
+                    <li><a href="#">2016年九月</a></li>
+                    <li><a href="#">2016年八月</a></li>
+                    <li><a href="#">2016年七月</a></li>
+                </ul>
+            </div>
+            <div class="title_tag" id="title_fixed">
+                <h5 class="title_style"><i></i><span>相关文章</span></h5>
+                <ul class="href_article_about">
+                    <a href="#"><li>20个超赞的扁平式网页设计</li></a>
+                    <a href="#"><li>10个超赞的鞋类网站设计欣赏</li></a>
+                    <a href="#"><li>30个“大气高端国际化”的网页设计欣赏</li></a>
+                    <a href="#"><li>推荐给设计师的22个美观实用的网站</li></a>
+                    <a href="#"><li>在网页设计中使用纹理传递氛围（附完美案例）</li></a>
+                    <a href="#"><li>瞬间抓住眼球！24个特色人像背景的全屏网站设计</li></a>
+                </ul>
+            </div>
+        </div>
+        <div class="right_content">
+            <div class="advert2">
+                <img src="images/2016-dkt-12182.png" alt="" width="750" height="80">
+            </div>
+            <div class="right_title_style">
+                <h5 class="title_style content_style"><i></i><span><a href="#">Home</a>   /  <a href="#">酷站推荐</a>   /   正文</span></h5>
+            </div>
+            <div class="account_number">
+                <div class="head_portrait">
+                    <img src="images/7fff6bb0gw1em558dbkooj20e60iwaca.jpg" width="50" height="50" alt="">
+                    <div class="head_portrait_toast">
+                        <span></span>
+                        <h6>Hi,我是优设小编</h6>
+                        <p>cyRotel</p>
+                        <a class="bookicon" href="#">浏览全部4036篇文章</a>
+                        <a class="sinaicon" href="#">到我的微博瞧瞧</a>
+                    </div>
+                </div>
+                <div class="head_title">
+                    彻底给跪了！2014年绝对值得体验的最佳炫酷网站
+                </div>
+                <div class="head_content">
+                    <span>推荐:<a href="#">cyRotel</a>&nbsp;&nbsp;</span>
+                    <span> 2014/12/29 &nbsp;&nbsp;</span>
+                    <span> in:<a href="#">酷站推荐</a></span>
+                </div>
+                <div class="clear"></div>
+            </div>
+            <div class="content_news">
+                <div class="content_above">
+                    <div class="news_pic">
+                        <img src="images/2014-the-coolest-websites-1.jpg" width="690" height="140"  alt="">
+                    </div>
+                    <p>编者按：激动得不知道说什么好了，小编拍着胸脯良心推荐，每一个都是亲身感受过的，真的超级赞！就算网站遍阅千百个，也从来没见过这么酷炫到哭的，技术跟设计都是超一流水平！一句话，不好你揍我。</p>
+                    <p>同学们，千万用谷歌或火狐，实测360感受不了。</p>
+                </div>
+                <div class="news_block">
+                    <a class="news_title" href="#">Mikkel Bang</a>
+                    <p>打开第一个网站就吓得一屁股坐到了地上。360° 全方位视觉感受，随你怎么拖拽，甚至有裸眼3D的效果！！简直是钢铁侠科技再现！！不仅是技术高手，作者画风也很有特色，奇奇怪怪的抽象画，可以点进去的吉他，带你遨游另一个世界！</p>
+                    <div class="news_pic">
+                        <img src="images/Mikkel_Bang.jpg" width="750" height="483"  alt="">
+                    </div>
+                </div>
+                <div class="news_block">
+                    <a class="news_title" href="#">Highway One Road Trip</a>
+                    <p>网站的动画是特别出彩的地方，创意也很棒，特别是在最后看到一个横幅写着“恭喜发财”，给笑出声了，左侧还有舞狮表演，作者是华裔设计师么？还是中国迷？</p>
+                    <div class="news_pic">
+                        <img src="images/Highway_One_Road_Trip.jpg" width="750" height="521"  alt="">
+                    </div>
+                </div>
+                <div class="news_block">
+                    <a class="news_title" href="#">Alee Foroughi</a>
+                    <p>这个设计师将三角形玩得出神入化，从首页拉下去，一整屏都被三角形分割，但不会感到尖锐，而是满满的设计感和时尚风，创意大赞！</p>
+                    <p>顺便插播高级设计师的三角形好文：<a class="news_content_a" href="#">《腾讯美女设计师倾囊相授：圆、方、三角（第二集）》</a></p>
+                    <div class="news_pic">
+                        <img src="images/Alee_Foroughi.jpg" width="750" height="494"  alt="">
+                    </div>
+                </div>
+                <div class="news_block">
+                    <a class="news_title" href="#">Creation</a>
+                    <p>美得无法自拔！看完这个网站，深刻意识到那些一张长图的招聘都弱爆了！网站是流行的多边形风格+视差滚动，设计师的色彩控制得太漂亮了，线条划过，色彩一闪，分分钟都想嫁给这个公司了。</p>
+                    <p>附上类似的多边形风格行星：<a class="news_content_a" href="#">《PS+AI教程！手把手教你打造低多边形星系海报》</a></p>
+                    <div class="news_pic">
+                        <img src="images/Creation.jpg" width="750" height="488"  alt="">
+                    </div>
+                </div>
+                <div class="news_block">
+                    <a class="news_title" href="#">Igor Solovey</a>
+                    <p>第一次见到这么炫的设计师个人网站！！动效超级棒，展示作品的创意相当与众不同，看完就想招进来有没有？！</p>
+                    <div class="news_pic">
+                        <img src="images/Igor_Solovey.jpg" width="750" height="497"  alt="">
+                    </div>
+                </div>
+                <div class="news_block">
+                    <a class="news_title" href="#">irregular NOISE</a>
+                    <div class="news_pic">
+                        <img src="images/irregular_NOISE.jpg" width="750" height="480"  alt="">
+                    </div>
+                </div>
+                <div class="news_block">
+                    <a class="news_title" href="#">Peppermint</a>
+                    <div class="news_pic">
+                        <img src="images/Peppermint.jpg" width="750" height="516"  alt="">
+                    </div>
+                </div>
+                <div class="news_block">
+                    <a class="news_title" href="#">Wilson Sideral</a>
+                    <div class="news_pic">
+                        <img src="images/Wilson_Sideral.jpg" width="750" height="536"  alt="">
+                    </div>
+                </div>
+                <div class="news_block">
+                    <a class="news_title" href="#">Letters. Inc</a>
+                    <div class="news_pic">
+                        <img src="images/Letters_Inc.jpg" width="750" height="484"  alt="">
+                    </div>
+                </div>
+                <div class="news_block">
+                    <a class="news_title" href="#">Art Label Project</a>
+                    <div class="news_pic">
+                        <img src="images/Art_Label_Project.jpg" width="750" height="487"  alt="">
+                    </div>
+                </div>
+                <div class="news_block">
+                    <a class="news_title" href="#">Vintage Productions</a>
+                    <div class="news_pic">
+                        <img src="images/Vintage_Productions.jpg" width="750" height="506"  alt="">
+                    </div>
+                </div>
+                <div class="news_block">
+                    <a class="news_title" href="#">Rogue Society</a>
+                    <p>这个特别说明一下，十八岁禁入！！</p>
+                    <p>严重警告，这篇教程十八岁禁入！！<a class="news_content_a" href="#">《关起门来涨姿势！如何从AV封面中学习平面设计？》</a></p>
+                    <div class="news_pic">
+                        <img src="images/Rogue_Society.jpg" width="750" height="418"  alt="">
+                    </div>
+                </div>
+                <div class="news_block">
+                    <a class="news_title" href="#">District13</a>
+                    <div class="news_pic">
+                        <img src="images/District13.jpg" width="750" height="457"  alt="">
+                    </div>
+                </div>
+                <div class="news_block">
+                    <a class="news_title" href="#">ivxvixviii</a>
+                    <div class="news_pic">
+                        <img src="images/ivxvixviii.jpg" width="750" height="438"  alt="">
+                    </div>
+                </div>
+                <div class="news_block">
+                    <a class="news_title" href="#">ohohohohohohohohohohoh-my-god-lab</a>
+                    <div class="news_pic">
+                        <img src="images/ohohohohohohohohohohoh_my_god_lab.jpg" width="750" height="459"  alt="">
+                    </div>
+                </div>
+                <div class="news_block">
+                    <a class="news_title" href="#">Kenji Endo</a>
+                    <div class="news_pic">
+                        <img src="images/Kenji_Endo.jpg" width="750" height="500"  alt="">
+                    </div>
+                </div>
+                <div class="news_block">
+                    <a class="news_title" href="#">Travel in history of Art4web</a>
+                    <div class="news_pic">
+                        <img src="images/Travel_in_history_of_Art4web.jpg" width="750" height="416"  alt="">
+                    </div>
+                </div>
+                <div class="news_block">
+                    <a class="news_title" href="#">Guggenheim Zero</a>
+                    <div class="news_pic">
+                        <img src="images/Guggenheim_Zero.jpg" width="750" height="445"  alt="">
+                    </div>
+                </div>
+                <div class="news_block">
+                    <a class="news_title" href="#">Tomas Bata University in Zlin</a>
+                    <div class="news_pic">
+                        <img src="images/Tomas_Bata_University_in_Zlin.jpg" width="750" height="416"  alt="">
+                    </div>
+                </div>
+                <div class="news_block">
+                    <a class="news_title" href="#">Parallaxis</a>
+                    <div class="news_pic">
+                        <img src="images/Parallaxis.jpg" width="750" height="494"  alt="">
+                    </div>
+                </div>
+                <div class="about2014">
+                    <h6>【以三篇好文纪念远去的2014】</h6>
+                    <div class="about_content">
+                        <p>2014年的干货全都打包在这了！</p>
+                        <a href="#">《年度颁奖盛典！2014年最受欢迎的设计资源大盘点》</a>
+                        <p>趁着年底免费赶紧下起来！</p>
+                        <a href="#">《年底资源包！27个优质的PSD精品资源免费下载》</a>
+                        <p>了解<a href="#">网页设计</a>的历史就这么简单！</p>
+                        <a href="#">《涨姿势！写给网页设计师的网页设计简史》</a>
+                    </div>
+                    <span>本文为优设网编译自<a href="#">Mag.splashnology</a>，转载请注明出处。</span>
+                    <div class="news_pic">
+                        <img src="images/uisdc-tuweia-8s.jpg" width="690" height="140"  alt="">
+                    </div>
+                    <h6 class="orangetxt">【优设网 原创文章 投稿邮箱：2650232288@qq.com】</h6>
+                </div>
+                <div class="about_uisdc">
+                    <h6>================关于优设网================</h6>
+                    <span>"优设网<a href="#">uisdc.com</a> "是国内人气最高的<a href="#">网页设计</a>师学习平台，专注分享<a href="#">网页设计</a>、无线端设计以及PS教程。</span>
+                    <h6>【特色推荐】</h6>
+                    <span><b>设计师需要读的100本书：</b>史上最全的设计师图书导航：<a href="#">http://hao.uisdc.com/book/。</a></span>
+                    <span><b>设计微博：</b>拥有粉丝量88万的人气微博<a href="#">@优秀网页设计</a> ，欢迎关注获取网页设计资源、下载顶尖设计素材。</span>
+                    <span><b>设计导航：</b>全球顶尖设计网站推荐，设计师必备导航：<a href="#">http://hao.uisdc.com</a></span>
+                    <span><b class="orangetxt">官方微信：</b>想在手机上、被窝里获取设计教程和各种意想不到的”福利”吗？添加优设哥微信号：<b class="orangetxt">youshege</b></span>
+                    <div class="news_pic news_pic_middle">
+                        <img src="images/chat-yinliu-pic.png" width="296" height="290"  alt="">
+                    </div>
+                </div>
+                <div class="about_article">
+                    <h5 class="title_style content_style"><i></i><span>相关文章</span></h5>
+                    <ul class="about_article_recycle">
+                        <li><a href="#">20个超赞的扁平式网页设计</a></li>
+                        <li><a href="#">10个超赞的鞋类网站设计欣赏</a></li>
+                        <li><a href="#">30个“大气高端国际化”的网页设计欣赏</a></li>
+                        <li><a href="#">推荐给设计师的22个美观实用的网站</a></li>
+                        <li><a href="#">在网页设计中使用纹理传递氛围（附完美案例）</a></li>
+                        <li><a href="#">酷站界的奥斯卡奖！2015年春季最佳网站人气榜出炉</a></li>
+                    </ul>
+                    <img src="images/dxsj45-725100.jpg" width="728" height="100" alt="">
+                    <div class="post-copyright">
+                        <strong>非特殊说明，本文版权归原作者所有，转载请注明出处</strong>
+                        <p>本文地址：<a href="#">http://www.uisdc.com/2014-the-coolest-websites</a></p>
+                        <a class="a_button" href="#">优秀网页设计</a>
+                        <a class="a_button" href="#">网页设计</a>
+                        <a class="a_button" href="#">酷站</a>
+                    </div>
+                </div>
+                <div class="weibo">
+                    <div class="weibo_head">
+                        <ul>
+                            <li><a href="#">登录</a></li>
+                            <li class="spacer"></li>
+                            <li><a href="#">注册</a></li>
+                        </ul>
+                        <span>还可以输入<i>140</i> 字</span>
+                    </div>
+                    <div class="weibo_send">
+                        <div><a href="#"><img src="images/default_avatar_male_50.gif" alt="" width="50" height="50"></a></div>
+                        <div><textarea placeholder="随便说点什么吧..."></textarea></div>
+                        <button id="weibo_send"></button>
+                    </div>
+                    <div class="clear"></div>
+                    <div class="weibo_content">
+                        <div class="weibo_num">
+                            <h4>1条评论</h4>
+                        </div>
+                        <div class="weibo_msg">
+                            <div class="weibo_head_portrait">
+                                <a href="#"><img src="images/default_avatar_male_50.gif" alt=""></a>
+                                <div class="clear">
+
+                                </div>
+                            </div>
+                            <div class="weibo_right_content">
+                                <div>
+                                    <a href="#" class="title">藤暖清让</a><span>2016-6-21 18:59</span>
+                                </div>
+                                <p>年轻美貌时间不会很久，尤其女性，称着自己最青春的时候做到最美，美瞳美瞳 大家都爱 。@六年正品美瞳信誉老店 V花心信abeyes</p>
+                                <div class="clear"></div>
+                                <ul>
+                                    <li><a href="#">回复</a></li>
+                                    <li class="spacer"></li>
+                                    <li><a href="#">私信TA</a></li>
+                                    <li class="clear"></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="clear"></div>
+
+                </div>
+                <div class="search">
+                    <img src="images/dxsj45-725100.jpg" width="728" height="100" alt="">
+                    <label>
+                        <input type="text" name="" placeholder="站内搜索">
+                        <button></button>
+                    </label>
+                </div>
+            </div>
+        </div>
+        <div class="clear"></div>
+    </div>
+    <div class="footer">
+        <div class="footer-bg">
+            <div class="box">
+                <div class="inner-block first">
+                    <h3>关于我们</h3>
+                    <p>优设网（uisdc.com）是国内人气最高的网页设计师学习平台。坚持开放、分享、成长的宗旨，为广大设计师及设计爱好者提供免费的交流互动平台。目前正通过网站、微博@优秀网页设计、QQ群、微信 ID：youshege，为设计师免费提供高水准的行业设计讲座和领先的设计资讯分享。联盟更致力于为经验丰富的专家和积极努力的设计师提供一个展示自我的优良平台。</p>
+                </div>
+                <div class="inner-block">
+                    <h3>我们的团队</h3>
+                    <a class="people_about" href="#"><img src="images/team1zp.jpg" width="53" height="53" alt=""></a>
+                    <a class="people_about" href="#"><img src="images/team2cz.jpg" width="53" height="53" alt=""></a>
+                    <a class="people_about" href="#"><img src="images/team3sl.jpg" width="53" height="53" alt=""></a>
+                    <a class="people_about" href="#"><img src="images/team4wz.jpg" width="53" height="53" alt=""></a>
+                    <a class="people_about" href="#"><img src="images/team5yy.jpg" width="53" height="53" alt=""></a>
+                    <a class="people_about" href="#"><img src="images/team6xl.jpg" width="53" height="53" alt=""></a>
+                    <a class="people_about" href="#"><img src="images/team7qz.jpg" width="53" height="53" alt=""></a>
+                    <a class="people_about" href="#"><img src="images/team8kk.jpg" width="53" height="53" alt=""></a>
+                    <a class="people_about" href="#"><img src="images/team9xy.jpg" width="53" height="53" alt=""></a>
+                </div>
+                <div class="inner-block third">
+                    <h3>大家在关注</h3><a class="footer_inner_more" href="#">更多酷站 »</a>
+                    <ul class="footer_key_list">
+                        <li><a href="#">经验分享</a></li>
+                        <li><a href="#">网页设计</a></li>
+                        <li><a href="#">PS教程</a></li>
+                        <li><a href="#">酷站</a></li>
+                        <li><a href="#">ps技巧</a></li>
+                        <li><a href="#">优秀网页设计</a></li>
+                        <li><a href="#">设计师职场</a></li>
+                        <li><a href="#">用户体验</a></li>
+                        <li><a href="#">ui设计</a></li>
+                        <li><a href="#">交互设计</a></li>
+                        <li><a href="#">字体设计</a></li>
+                        <li><a href="#">App设计</a></li>
+                        <li><a href="#">ICON</a></li>
+                        <li><a href="#">职场规划</a></li>
+                        <li><a href="#">酷站推荐</a></li>
+                        <li><a href="#">psd下载</a></li>
+                        <li><a href="#">logo设计</a></li>
+                        <li><a href="#">图标设计</a></li>
+                        <li><a href="#">字体下载</a></li>
+                        <li><a href="#">神器推荐</a></li>
+                    </ul>
+                </div>
+                <div class="inner-block last">
+                    <h3>优设微信</h3>
+                    <img src="images/2016-gwweixin-bottom.png" height="153" width="153" alt="">
+                    <a href="#">戳进来，惊喜等着您！</a>
+                </div>
+                <div class="clear"></div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="footer-bg black">
+                <div class="box">
+                    <div class="bottom-topblock1">
+                        <ul class="">
+                            <a href="#"><li>广告合作</li></a>
+                            <a href="#"><li>免责声明</li></a>
+                            <a href="#"><li>友情链接</li></a>
+                            <a href="#"><li>联系我们</li></a>
+                            <a href="#"><li>关于我们</li></a>
+                            <a href="#"><li>@优秀网页设计</li></a>
+                            <li><span>优设官方 QQ 群：</span>
+                                <select>
+                                    <option selected="true">181671383</option>
+                                    <option>181671383</option>
+                                    <option>87096978</option>
+                                    <option>192586823</option>
+                                    <option>385439141</option>
+                                    <option>216862992</option>
+                                    <option>124169968</option>
+                                    <option>96096993</option>
+                                    <option>199178798</option>
+                                    <option>79321884</option>
+                                    <option>244419297</option>
+                                    <option>193642837</option>
+                                    <option>179124119</option>
+                                    <option>172111170</option>
+                                    <option>277704164</option>
+                                </select>
+                            </li>
+                            <li><span>Copyright © 2017</span><a href="#"> 优设-UISDC</a><span>- 优设网官方微信号：youshege</span><a href="#">- 鄂ICP备16005435号-1</a></li>
+                        </ul>
+                    </div>
+                    <div class="bottom-topblock2">
+                        <ul>
+                            <a href="#"><li class="iconbox iconbox52"><div class="icon icon1"></div></li></a>
+                            <a href="#"><li class="iconbox iconbox26"><div class="icon icon2"></div></li></a>
+                            <a href="#"><li class="iconbox iconbox32"><div class="icon icon3"></div></li></a>
+                            <a href="#"><li class="iconbox iconbox26"><div class="icon icon4"></div></li></a>
+                            <a href="#"><li class="iconbox iconbox52"><div class="icon icon5"></div></li></a>
+                            <li class="icon6"><span>感谢</span> <a href="#">lizus</a><span>提供研发技术支持，</span> <a href="#">七牛</a><span>赞助云存储</span></li>
+                        </ul>
+                    </div>
+                    <div class="bottom-topblock3">
+                        <ul>
+                            <li><span>友情链接</span></li>
+                            <a href="#"><li>hao123上网导航</li></a>
+                            <a href="#"><li>设计师网址导航</li></a>
+                            <a href="#"><li>psd素材</li></a>
+                            <a href="#"><li>平面设计</li></a>
+                            <a href="#"><li>360用户体验</li></a>
+                            <a href="#"><li>设计导航</li></a>
+                            <a href="#"><li>设计素材</li></a>
+                            <a href="#"><li>UI设计培训</li></a>
+                            <a href="#"><li>红动中国设计网</li></a>
+                            <a href="#"><li>网页模板</li></a>
+                            <a href="#"><li>360安全网址导航</li></a>
+                            <a href="#"><li>优设云梦网络</li></a>
+                            <a href="#"><li>WordPress主题定制</li></a>
+                            <a href="#"><li>Nav80网址导航</li></a>
+                            <a href="#"><li>网页设计</li></a>
+                            <a href="#"><li>视觉同盟</li></a>
+                            <a href="#"><li>腾讯ISUX</li></a>
+                            <a href="#"><li>技术宅社区</li></a>
+                            <a href="#"><li>设计达人</li></a>
+                            <a href="#"><li>腾讯TGideas</li></a>
+                            <a href="#"><li>PConline创意设计</li></a>
+                            <li class="clear"></li>
+                        </ul>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
