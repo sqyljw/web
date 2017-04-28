@@ -1,0 +1,77 @@
+.con{width:100%;max-width:640px;height:2740px;margin:auto;border:1px solid #d0d0d0;}
+.tap{width:100%;height:30px;background-color:#333;}
+.pop{width:100%;height:80px;background-color:#29abe2;}
+.pop-left{width:12.5%;float:left;height:80px;}
+.pop-left img{width:100%;padding:20%;}
+.pop-right{width:87.5%;height:80px;float:right;}
+.pop-right-left{width:80%;height:80px;float:left;background}
+.pop-right-right{width:20%;height:80px;float:right;}
+.pop-right-left img{width:90%;margin:20px 5px;}
+.pop-right-right img{width:90%;margin:20px -10px;}
+.max{width:100%;height:220px;position:relative;}
+.max-top img{width:100%;position:absolute;}
+.min img{width:25%;float:left;}
+.cpen-left img{width:27%;float:left;border:1px solid #d0d0d0;}
+.cpen-right{width:73%;float:right;}
+.cpen-right img{width:50%;border:1px solid #d0d0d0;float:left;}
+.siao img{width:100%;clear:both;border:1px solid #d0d0d0;}
+.cong img{width:25%;float:left;border:1px solid #d0d0d0;}
+.icon-1{width:25%;float:left;text-align:center;position:relative;z-index:1;}
+.icon-1 img{width:100%;}
+.icon-1 span{line-height:35px;color:#ff0000;position:relative;top:-10px;}
+.sen-left{width:50%;float:left;}
+.sen-left img,.sen-right img{width:100%;padding:5px;}
+.sen-top img{width:50%;float:left;}
+.sen-right{width:50%;float:right;}
+.onte{width:100%;height:160px;}
+.onte-left{width:25%;float:left;}
+.onte-right{width:73%;float:right;padding-top:15px;}
+.onte-left img{width:100%;padding:10px;}
+.onte-right p{font-size:20px;line-height:25px;}
+.onte-one{width:100%;float:left;}
+.onte-tg{width:50%;float:left;margin-top:25px;}
+.onte-tg2{width:40%;float:right;text-align:center;position:relative;top:-40px;left:-15px;}
+#onte-one2{color:#fff;font-size:16px;display:block;width:40%;float:left;background-color:#29abe2;border:1px solid #29abe2;line-height:30px;text-align:center;}
+#onte-one3{color:#29abe2;font-size:16px;display:block;width:55%;float:right;background-color:#fff;border:1px solid #29abe2;line-height:30px;text-align:center;}
+.onte-tg2 p{font-size:18px;color:#acacac;position:relative;top:10px;font-family:方正大标宋简体;}
+.onte-tg2 span{font-size:30px;color:#666;font-family:方正大标宋简体;}
+#t{font-size:40px;color:#f15a24;}
+#one{color:#acacac;font-size:16px;position:relative;top:5px;}
+.shawe{width:100%;height:84px;border:1px solid #d0d0d0;}
+.shawe img{width:20%;float:left;}
+.texe-one{
+	display:inline-block;
+    width:10px;
+	height:10px;
+	background-color:#fff;
+	text-align:center;
+	color:black;
+	border-radius:5px;
+	cursor:pointer;/*鼠标变小手的样式*/
+	position:relative;
+	z-index:1;
+	top:190px;
+	left:88%;
+}
+.texe-one2{background-color:red;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
