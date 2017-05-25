@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="ZH-cn">
+	<head>
+		<meta charset="utf-8"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=0.5, maximum-scale=2.0, user-scalable=yes" />
+		<title>职位期望</title>
+		<meta name="keywords" content="手机app"/>
+		<meta name="description" content="手机app注册信息统计">
+		<link rel="shortcut icon" href="images/job.ico">
+		<script src="js/move1.js"></script>
+	  <style>
+	  	*{margin:0pt,padding:0pt;font-family:微软雅黑;}
+	  	.con{width:100%;
+	  		max-width:320pt;
+	  		height:586pt;
+	  		margin:auto;
+	  		border:1pt solid rgb(225,225,225);
+	  	}
+	  	.top{
+	  		width:100%;
+	  		height:44pt;
+	  		font-size:15pt;
+	  		color:rgb(255,255,255);
+	  		background:rgb(27,26,32);
+	  		line-height:44pt;
+	  	}
+	  	.top1{
+	  		float:left;
+	  		margin-left:8pt;
+	  		cursor: pointer;
+	  	}
+	  	.top2{
+	  		float:right;
+	  		margin-right:8pt;
+	  	}
+	  	.top3{
+	  		width:60pt;
+	  		height:44pt;
+	  		margin:0 auto;
+	  	}
+	  	.info{
+	  		font-size:15pt;
+	  	}
+	  	.info_a{
+	  		width:100%;
+	  		height:44pt;
+	  		line-height:44pt;
+	  		border-bottom:1pt solid #efefef;
+	  	}
+	  	.info_a img{
+	  		float:left;
+	  		margin:13pt 10pt 0 10pt;
+	  	}
+	  	.input_user{
+	  		font-size:14pt;
+	  		float:right;
+	  		margin:13pt 10pt 0 10pt;
+	  		border:1pt solid white;
+	  		text-align:right;
+	  		outline:none;
+	  	}
+	  	.chu{
+	  		border-bottom:8pt solid #efefef;
+	  	}
+	  	.zuixia{
+	  		width:100%;
+	  		height:104pt;
+	  		background:#efefef;
+	  		border:1pt solid #efefef;
+	  	}
+	  	.anniu{
+	  		width:80%;
+	  		height:40pt;
+	  		background:rgb(18,137,230);
+	  		border-radius:4pt;
+	  		margin:auto;
+	  		color:white;
+	  		font-size:15pt;
+	  		text-align:center;
+	  		line-height:40pt;
+	  		margin-top:36pt;
+	  		cursor:pointer;
+	  	}
+	  	textarea{
+	  		width:94%;
+	  		height:130pt;
+	  		resize:none;
+	  		border:0px;
+	  		font-size:13pt;
+	  		padding:10pt 3% 10pt 3%;
+      }
+      .city{
+      	width:100%;
+      	max-width:320pt;
+	  	height:90pt;
+	  	background:#FFF;
+	  	border:1pt solid #efefef;
+	  	text-align: center;
+	  	padding-top:10pt;
+	  	display:none;
+      }
+       .citya{
+      	width:100%;
+      	max-width:320pt;
+	  	height:90pt;
+	  	background:#FFF;
+	  	border:1pt solid #efefef;
+	  	text-align: center;
+	  	padding-top:10pt;
+	  	display:block;
+	  	position: absolute;
+	  	top:150pt;
+      }
+      .sel{
+      	border:1px solid #ccc;
+      	width:27%;
+      	height:30pt;
+      	text-align: center;
+      	border-radius: 2pt;
+      }
+      .input_city{
+      	width:50%;
+      	height:30pt;
+        line-height: 30pt;
+        margin-top:10pt;
+      }
+      	.x_sex{
+      		max-width:320pt;
+	  		width:80%;
+	  		height:169pt;
+	  		text-align:center;
+	  		position:absolute;
+	  		left:10%;
+	  		top:470.5pt;
+	  		display:none;
+	  	}
+	  	.x_sex_{
+	  		max-width:320pt;
+	  		border-radius:4pt;
+	  	}
+	  	.x_sex_x{
+	  		max-width:320pt;
+	  		width:100%;
+	  		height:35pt;
+	  		background:white;
+	  		line-height:35pt;
+	  		color:rgb(153,153,153);
+	  		border-bottom:1pt solid rgb(216,216,216);
+	  	}
+	  	.x_sex_n{
+	  		width:100%;
+	  		height:39pt;
+	  		background:white;
+	  		line-height:40pt;
+	  		font-size:12pt;
+	  		color:rgb(18,137,230);
+	  		font-size:15pt;
+	  		border-bottom:1pt solid rgb(216,216,216);
+	  	}
+	  	.x_sex_u{
+	  		width:100%;
+	  		height:39pt;
+	  		background:white;
+	  		line-height:40pt;
+	  		color:rgb(18,137,230);
+	  		font-size:15pt;
+	  		border-bottom:1pt solid rgb(216,216,216);
+	  	}
+	  	.x_sex_q{
+	  		width:100%;
+	  		height:45pt;
+	  		line-height:45pt;
+	  		margin-top:8pt;
+	  		background:white;
+	  		color:rgb(18,137,230);
+	  		font-size:15pt;
+	  		max-width:320pt;
+	  	}
+	  	  	.disb{
+	  		width:80%;
+	  		height:169pt;
+	  		text-align:center;
+	  		position:absolute;
+	  		
+	  		top:200.5pt;
+	  		display:block;
+	  	}
+	  .job{
+	  	    max-width:320pt;
+	  		width:100%;
+	  		height:169pt;
+	  		text-align:center;
+	  		position:absolute;
+	  		display:none;
+	  		top:230.5pt;
+	  		
+	  }
+	  .x_job_x{
+	  		max-width:320pt;
+	  		width:100%;
+	  		height:35pt;
+	  		background:white;
+	  		line-height:35pt;
+	  		color:rgb(153,153,153);
+	  		border-bottom:1pt solid rgb(216,216,216);
+	  	}
+	  	 .j_{
+	  	    max-width:320pt;
+	  		width:100%;
+	  		height:169pt;
+	  		text-align:center;
+	  		position:absolute;
+	  		display:none;
+	  		top:270.5pt;
+	  		
+	  }
+	  .x_j_x{
+	  		max-width:320pt;
+	  		width:100%;
+	  		height:35pt;
+	  		background:white;
+	  		line-height:35pt;
+	  		color:rgb(153,153,153);
+	  		border-bottom:1pt solid rgb(216,216,216);
+	  	}
+    	  </style>
+	</head>
+	<body>
+		<div class="con">
+			<div class="top chu">
+				<div class="top1" id="top1">返回</div>
+				<div class="top2">...</div>
+				<div class="top3">职位期望</div>
+			</div>
+			<div class="info">
+				<div class="info_a">
+					<img src="images/icEmInfoJobName.png">
+					<span>职位名称</span>
+					<input class="input_user"  placeholder="请输入你期望的职位" size="16pt">
+				</div>
+				<div class="info_a">
+					<img src="images/icEmInfoCity.png">
+					<span>所在城市</span>
+					<input class="input_user"  value="" placeholder="请选择工作城市 〉" size="18pt" id="input_city">
+				</div>
+				<div class="info_a">
+					<img src="images/icEmInfoSalary.png">
+					<span>目标年薪</span>
+					<input class="input_user" placeholder="请选择薪资范围 〉" id="sex" size="14pt">
+				</div>
+				<div class="info_a">
+					<img src="images/icEmInfoCompanyIndustry.png">
+					<span>目标行业</span>
+					<input class="input_user" placeholder="互联网 〉" size="16pt" id="input_job">
+				</div>
+				<div class="info_a chu">
+					<img src="images/icEmInfoCategory.png">
+					<span>工作性质</span>
+					<input class="input_user"  placeholder="全职 〉" size="8pt" id="input_j">
+				</div>
+				<div class="info_a">
+					<img src="images/icContent.png">
+					<span>自我评价</span>
+				</div>
+				<textarea placeholder="输入你的有点、性格品质等...&#10;&#10;例:2年互联网产品设计经验，熟悉web、iOS、安卓各平台的设计规范，具有一定的手绘基础，工作严谨，态度认真负责。"></textarea>
+			</div>
+			<div class="zuixia">
+				<div class="anniu" id="anniu">下一步</div>
+			</div>
+			<div class="city" id="city_2">
+				省&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;市&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;区<br>
+				<select id="pro" onchange="setCity(this.value)" class="sel"></select><select id="city" onchange="setArea()" class="sel"></select><select id="area" class="sel"></select>
+				
+				<div class="anniu input_city" id="city_s">确定</div>
+			</div>
+             <div class="job" id="job_s">
+             	<div class="x_job" >
+             		<div class="x_job_x">互联网</div>
+             		<div class="x_job_x">化工与化工应用</div>
+             		<div class="x_job_x">生物与制药</div>
+             		<div class="x_job_x">web前端开发</div>
+             	</div>
+             </div>
+               <div class="j_" id="j_s">
+             	<div class="x_j" >
+             		<div class="x_j_x">全职</div>
+             		<div class="x_j_x">兼职</div>
+             	</div>
+             </div>
+			<div class="x_sex" id="sex_s">
+			<div class="x_sex_">
+				<div class="x_sex_x">期望薪资</div>
+				<div class="x_sex_n">2000~3000</div>
+				<div class="x_sex_n">3000~4000</div>
+				<div class="x_sex_n">4000~5000</div>
+				<div class="x_sex_n">5000~10000</div>
+				<div class="x_sex_n">10000以上</div>
+			</div>
+			<div class="x_sex_q"  id="x_sex_q">取消</div>
+			
+		</div>
+
+	</body>
+</html>

@@ -1,0 +1,116 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>合肥启讯网络技术有限公司</title>
+<meta name="keywords" content="启讯科技" />
+<meta name="description" content="启讯科技" />
+<link rel="stylesheet" type="text/css" href="./css/css.css" />
+<link rel="stylesheet" type="text/css" href="./css/language_2.css" />
+<script type="text/javascript" src="./js/jquery-1.7.1.js"></script>
+<script type="text/javascript">
+$(function(){
+	$(".level").mouseenter(function(){
+		//展开子菜单
+		$(this).children(".sonMenu").slideDown();
+		//移动logo图片
+			//获得当前主菜单的序号
+		moveImg($(this).index());
+	}).mouseleave(function(){
+		//收起子菜单
+		$(this).children(".sonMenu").slideUp();
+	})
+})
+function moveImg(num){
+	//获得1张图片宽度
+	var imgW=$(".logoImg").eq(0).outerWidth();
+	//原的位置
+	//var ol=parseInt($(".logoImgMove").css("marginLeft"));
+	//新位置
+	var nl=imgW*num*-1;
+	//将图片容器，移动到新的位置
+	//$(".logoImgMove").css("marginLeft",nl+"px")
+	$(".logoImgMove").animate({"marginLeft":nl+"px"},1000)
+}
+</script>
+</head>
+
+<body>
+<div class="body_bg">
+<div class="bg">
+    <div class="page">
+        <div class="logo">
+			<div class="logoImgMoveDiv"><!-- 移动层父容器 (窗口容器)-->
+				<div class="logoImgMove"><!-- 被移动的层(图片的父容器) -->
+					<!-- 几张切换的图片 -->
+					<img class="logoImg" src="./images/logo.png" />
+					<img class="logoImg" src="./images/logo_websites.png" />
+					<img class="logoImg" src="./images/logo_marketing.png" />
+					<img class="logoImg" src="./images/logo_clients.png" />
+					<img class="logoImg" src="./images/logo_contanctus.png" />
+				</div>
+			</div>
+        </div>
+
+
+        <div class="navigation">
+       	  <ul id="navigationUl">
+				<li class="level">
+					<a href="/">首页</a>
+					<ul class="sonMenu"  style="display:none"></ul>
+				</li>
+
+		  						 
+				<li class="level">
+					<a href="list.php?cid=68" target="_self" title="网站建设">网站建设</a>		
+					
+					<ul class="navigation_two sonMenu" style="display:none">
+						<li><a href="list.php?cid=68" target="" title="企业建站">企业建站</a></li>
+						<li><a href="list.php?cid=69" target="" title="电子商务">电子商务</a></li>
+					</ul>		
+				</li>
+				
+								 
+				<li class="level">
+					<a href="list.php?cid=41" target="_self" title="软件开发">软件开发</a>
+					<ul class="navigation_two sonMenu" style="display:none">
+						<li><a href="list.php?cid=41" target="" title="手机软件">手机软件</a></li>
+						<li><a href="list.php?cid=42" target="" title="办公软件">办公软件</a></li>
+						<li><a href="list.php?cid=43" target="" title="行业软件">行业软件</a></li>
+					</ul>		
+				</li>
+				
+								 
+				<li class="level">
+					<a href="list.php?cid=70" target="_self" title="SEO">SEO</a>
+					<ul class="navigation_two sonMenu" style="display:none">
+						<li><a href="list.php?cid=70" target="" title="SEO推广">SEO推广</a></li>
+						<li><a href="list.php?cid=71" target="" title="SEO培训">SEO培训</a></li>
+					</ul>		
+				</li>
+				
+								 
+				<li class="level">
+					<a href="list.php?cid=72" target="_self" title="关于我们">关于我们</a>
+					<ul class="navigation_two sonMenu" style="display:none">
+						<li><a href="list.php?cid=72" target="" title="公司简介">公司简介</a></li>
+						<li><a href="list.php?cid=73" target="" title="企业文化">企业文化</a></li>
+						<li><a href="list.php?cid=74" target="" title="招聘人才">招聘人才</a></li>
+						<li><a href="list.php?cid=75" target="" title="联系我们">联系我们</a></li>
+					</ul>
+				</li>
+					 
+            </ul>
+        </div>
+
+        <div class="clear"></div>
+        <div class="footer">
+			<p>All Rights Reserved. 启讯网络技术有限公司.Copyright &copy; 2003-2011 <a href="/">fengges.com</a></p>
+
+		</div>
+    </div>
+</div>
+</div>
+
+</body>
+</html>

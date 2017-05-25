@@ -1,0 +1,141 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>响应式布局</title>
+<meta content="width=device-width, initial-scale=1.0,user-scalable=no" name="viewport" />
+ <link href="css/bootstrap.min.css" rel="stylesheet"> <!-- 导入css样式   -->
+   <script src="js/jquery.min.js"></script> <!--  导入js文件 -->
+   <script src="js/bootstrap.min.js"></script>   
+<style>
+   *{ padding:0px; margin:0px;}
+   body{ font-size:12px; font-family:"Times New Roman", Times, serif; background:#000;}
+   ul,li{ list-style:none;} 
+   nav,article,span,aside,h2{ display:block;}
+   nav{ width:1000px; height:40px;  background:#366327; margin:0 auto; border-radius:6px;}
+   nav ul{ width:100%;}
+   nav ul li{ width:250px; line-height:40px; color:#FFF; text-align:center; 
+   display:block; float:left; }
+   nav ul li:hover{ background:#00F;}
+   .container{ width:1000px; margin:12px auto;}
+   .container article{width:700px; padding:12px; float:left; border-radius:6px; background:#FFF; line-height:32px;}
+   .container aside{ width:256px; float:right;  }
+   .container aside article{
+	width: 240px;
+	border-radius: 6px;
+	background: #FFF;
+	float: left;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 6px;
+	margin-left: 0px;
+	padding-top: 0px;
+	padding-right: 8px;
+	padding-bottom: 0px;
+	padding-left: 8px;
+}  
+   .container aside article h2{ width:100%; float:left;font-size:14px; border-bottom:#CCC 1px solid;}
+   .container aside article ul{width:100%;}
+   .container aside article ul li{ width:100%; line-height:30px;}
+   .container aside .pic{ width:240px; border-radius:6px; padding:0px 8px;background:#FFF; float:left;}
+    .container aside .pic h2{width:100%; float:left;font-size:14px; border-bottom:#CCC 1px solid; }
+	.container aside .pic .img{ width:100%; float:left;}
+	.container aside .pic .img img{ float:left; width:70px; height:39px; margin-right:6px; margin-bottom:10px;}
+	#myCarousel{width:990px; margin:0 auto}
+   
+   
+   @media screen and (max-width:600px){
+	          nav{ width:100%; background:none;}
+			  nav ul{ width:100%;}
+	          nav ul li{ width:100%; line-height:30px; background:#366327; border-radius:6px; margin:2px 0px;}
+			  .container{ width:100%;}
+			  .container article{ width:100%; padding:0px; margin:8px 0px;}
+			  .container aside{ width:100%; padding:0px;margin:8px 0px;}
+			  .container aside article{ width:100%; padding:0px;}
+			  .container aside .pic{ width:100%; padding:0px;}
+			  #myCarousel{ width:100%;}
+			  
+	        }
+</style>
+
+</head>
+
+<body>
+
+<nav>
+       <ul>
+           <li>公司首页</li><li>公司简介</li><li>公司新闻</li><li>联系我们</li>
+       </ul>
+</nav>
+<div style=" clear:both"></div>
+<div id="myCarousel"  class="carousel slide">
+	<!-- 轮播（Carousel）指标 -->
+	<ol class="carousel-indicators">
+		<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+		<li data-target="#myCarousel" data-slide-to="1"></li>
+		<li data-target="#myCarousel" data-slide-to="2"></li>
+	</ol>   
+	<!-- 轮播（Carousel）项目 -->
+	<div class="carousel-inner">
+		<div class="item active">
+			<img src="img/scenic_1.png" width="100%" alt="First slide">
+		</div>
+		<div class="item">
+			<img src="img/scenic_2.png" width="990" height="450" alt="Second slide">
+		</div>
+		<div class="item">
+			<img src="img/scenic_3.png" width="990" height="450" alt="Third slide">
+		</div>
+	</div>
+	<!-- 轮播（Carousel）导航 -->
+	<a class="carousel-control left" href="#myCarousel" 
+	   data-slide="prev">&lsaquo;</a>
+	<a class="carousel-control right" href="#myCarousel" 
+	   data-slide="next">&rsaquo;</a>
+</div> 
+
+
+
+<div class="container">
+       <article>&nbsp;&nbsp;&nbsp;&nbsp;十一长假已然过去了一大半。今天倒真是晴朗的不行，向窗外望去几乎可以看到阳光穿过凉爽的空气一缕缕洒落下来的样子。自从不再是学生，对每年的几次长假就无比珍惜，想方设法让每一天都尽量过的饱满一些；夜里闭上眼，满脑子就都是Drupal、博客、咖啡、使命召唤、南方公园。..也许需要出门走一走了。<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;OK开始说正经的了。在之前一篇译文中，我们了解了响应式Web设计的概念、组成要素以及基本的实现思路。今天继续相关话题，我们将从前文介绍过的"弹性布局结构"这方面出发，通过一个具体的实例来深入学习。<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;如今的屏幕分辨率，小至320px（iPhone），大到2560px甚至更高（大显示器），变化范围极大。除了使用传统的台式机，用户会越来越多的通过手机、上网本、iPad一类的平板设备来浏览页面。这种情况下，固定宽度的设计方案将会显得越发不合理。页面需要有更好的适应性，其布局结构要做到根据不同的设备及屏幕分辨率进行响应调整。接下来，我们将了解一下怎样通过HTML5和CSS3 Media Queries（媒介查询）相关技术来实现跨设备跨浏览器的响应式Web设计方案。<br />
+&nbsp;&nbsp;&nbsp;&nbsp;我们将范例页面的父级容器宽度设置为固定的980px，对于桌面浏览环境，该宽度适用于任何宽于1024像素的分辨率。我们通过media query来监测那些宽度小于980px的设备分辨率，并将页面的宽度设置由"固定"方式改为"液态"，布局元素的宽度随着浏览器窗口的尺寸变化进行调整。当可视部分的宽度进一步减小到650px以下时，主要内容部分的容器宽度会增大至全屏，而侧边栏将被置于主内容部分的下方，整个页面变为单栏布局。</article>
+
+<aside>
+     <article>
+         <h2>最多访问文章</h2>
+         <ul>
+                <li>《全民编程》我在微软生活中所接触的 </li>
+                <li>Eclipse安装SVN插件方式简明介绍</li>
+                <li>使用Eclipse调试Java程序的10个技巧 </li>
+                <li>三步学会Java Socket编程 </li>
+                <li>程序员妻子自述: 那些程序员教给我的</li>
+                <li>我希望在20岁时就知道的26条时间管理 </li>
+                <li>详解Java解析XML的四种方法 </li>
+                <li>Java数组声明、创建、初始化 </li>
+         </ul>
+     </article>
+
+     <div  class="pic">
+         <h2>最新发布照片</h2>
+         <div class="img">
+             <img src="img/block06_01.jpg" />
+             <img src="img/block06_02.jpg" />
+             <img src="img/block06_03.jpg" />
+             <img src="img/block06_04.jpg" />
+             <img src="img/block06_05.jpg" />
+             <img src="img/block06_01.jpg" />
+             <img src="img/block06_02.jpg" />
+             <img src="img/block06_03.jpg" />
+             <img src="img/block06_04.jpg" />
+         </div>
+
+     </div>
+
+</aside>
+
+</div>
+
+</body>
+</html>

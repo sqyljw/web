@@ -1,0 +1,22 @@
+.footer {
+	border-top:2px solid #555;
+	padding:20px;
+	background: #ccc;
+	height: 200px;
+	background: #666;
+	color:#fff;
+}
+.footer p {
+	width:960px;
+	height:25px;
+	line-height: 25px;
+	font-size: 13px;
+	margin:10px auto;
+}
+.footer p a{
+	color:#eee;
+	margin-right: 10px;
+}
+.footer p a:hover {
+	color: #FF4400;
+}

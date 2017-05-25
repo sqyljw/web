@@ -1,0 +1,209 @@
+<!doctype html>
+<htmL>
+   <head>
+     <title>div覆盖压线法</title>	
+     <meta charset="utf-8">
+      <link rel="stylesheet" type="text/css" href="bootstrap.min.css"/>  
+      <script type="text/javascript" src="jquery-1.7.js"></script>
+      <script type="text/javascript" src="jquery.min.js"></script>
+      <script type="text/javascript" src="bootstrap.min.js"></script>
+      <style>
+      	 .col-md-1{
+      	 	height:100px;
+      	 	background:blue;
+      	 
+      	 	}
+      	 	
+/*#toptop {
+    width: 100%;
+    height: 30px;
+    line-height: 30px;
+    background: #F1F1F1;
+    font: 12px/150% Arial, Verdana, "\5b8b\4f53";
+    color: #666;
+} 
+#toptop .ci-right {
+    top: 12px;
+    right: 8px;
+    height: 7px;
+    overflow: hidden;
+    font: 400 15px/15px consolas;
+    color: #6A6A6A;
+    transition: transform .1s ease-in 0s;
+    line-height: 30px;
+}
+.cw-icon .i, .cw-icon i {
+    display: block;
+    position: absolute;
+    overflow: hidden;
+}
+.fl {
+    float: left;
+}
+ol, ul {
+    list-style: none;
+    box-sizing: border-box;
+}
+#toptop #ttbar-mycity {
+    padding-left: 0;
+}
+#toptop li.dorpdown {
+    z-index: 13;
+}
+#toptop li {
+    float: left;
+    height: 30px;
+    padding: 0 6px;
+}
+.dorpdown {
+    position: relative;
+}
+
+#toptop #ttbar-mycity .dt {
+    padding: 0 25px 0 10px;
+}
+.cw-icon {
+    position: relative;
+    cursor: default;
+}
+*/
+.biaoshi{
+	 width:100px;
+	 height:40px;
+
+	 margin-left:100px
+	}
+	
+ ul li{
+	 width:100px;
+	 height:40px;
+	line-height:40px;
+	list-style:none;
+	 
+	}
+.tushu{
+	 width:10px;
+	 height:10px;
+	
+	text-align:center;
+  float:left;
+	
+	 margin-top:20px;
+	overflow:hidden;
+	line-height:0px;
+	}
+	.tushul{
+	 width:10px;
+	 height:10px;
+	
+ 	
+	 float:left;
+	 text-align:center;
+	 margin-top:10px;
+	overflow:hidden;
+	line-height:20px;
+	}
+	
+	.a{
+		width:100px;height:40px;background:yellow;border:1px solid;border-bottom:none;margin-left:100px;
+		}
+	.b{
+		width:500px;height:400px;background:yellow;border:1px solid;margin-top:-1px;position:absolute;z-index:-1;margin-left:100px;
+		display:none;
+		}
+	</style>
+	
+	<script>
+		
+		window.onload=function(){
+		 document.getElementById("biaoshi").onmouseover=function(){
+		 	   document.getElementById("tushu").className="tushul";
+		 	   document.getElementById("biaoshi").className="a";
+		 	   document.getElementById("b").style.display="block";
+		 }
+		 document.getElementById("biaoshi").onmouseout=function(){
+		 	   document.getElementById("tushu").className="tushu";
+		 	    document.getElementById("biaoshi").className="biaoshi";
+		 	    document.getElementById("b").style.display="none";
+		 }
+		}
+	</script>
+   </head>	
+   <body>
+<div class="container" style="background:red;">
+
+		<div class="row">
+		  <div class="col-md-1">.col-md-1</div>
+		  <div class="col-md-1">.col-md-1</div>
+		  <div class="col-md-1">.col-md-1</div>
+		  <div class="col-md-1">.col-md-1</div>
+		  <div class="col-md-1">.col-md-1</div>
+		  <div class="col-md-1">.col-md-1</div>
+		  <div class="col-md-1">.col-md-1</div>
+		  <div class="col-md-1">.col-md-1</div>
+		  <div class="col-md-1">.col-md-1</div>
+		  <div class="col-md-1">.col-md-1</div>
+		  <div class="col-md-1">.col-md-1</div>
+		  <div class="col-md-1">.col-md-1</div>
+		</div>
+		<div class="row">
+		  <div class="col-md-8">.col-md-8</div>
+		  <div class="col-md-4">.col-md-4</div>
+		</div>
+		<div class="row">
+		  <div class="col-md-4">.col-md-4</div>
+		  <div class="col-md-4">.col-md-4</div>
+		  <div class="col-md-4">.col-md-4</div>
+		</div>
+		<div class="row">
+		  <div class="col-md-6">.col-md-6</div>
+		  <div class="col-md-6">.col-md-6</div>
+		</div>
+</div>
+
+<div class="cintainer">
+    <div class="row">
+	    <div class="col-md-5" style="margin-left:500px">
+						<form role="form">
+						  <div class="form-group">
+						    <label for="exampleInputEmail1">Email address</label>
+						    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
+						  </div>
+						  <div class="form-group">
+						    <label for="exampleInputPassword1">Password</label>
+						    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+						  </div>
+						  <div class="form-group">
+						    <label for="exampleInputFile">File input</label>
+						    <input type="file" id="exampleInputFile">
+						    <p class="help-block">Example block-level help text here.</p>
+						  </div>
+						  <div class="checkbox">
+						    <label>
+						      <input type="checkbox"> Check me out
+						    </label>
+						  </div>
+						  <button type="submit" class="btn btn-default">Submit</button>
+						</form>
+      </div>
+    
+    </div>
+</div>
+
+
+
+   <div class="biaoshi" id="biaoshi">
+	<ul>
+	  <li>深圳<div class="tushu" id="tushu">◇</div></li>	
+	</ul>
+</div>	
+
+<div class="b" id="b">
+   	
+</div>
+
+
+
+
+   	</body>
+</htmL>

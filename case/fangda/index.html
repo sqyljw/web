@@ -1,0 +1,150 @@
+<HTML>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf8" />
+<style>
+ul{margin:0px;padding:0px;list-style:outside none none}
+li{margin:0px;padding:0px;float:left}
+
+/* 1.小图容器 minDiv样式 未设置*/
+	/* 1.1 小图 minImg样式 未设置*/
+	/* 1.2 小图 透明度样式*/
+	.opacity05{opacity:0.5}
+
+/* 2. 中图容器：相对定位*/
+.middDiv{
+	position:relative;
+	width:448px;height:448px;
+	border:1px solid  #c0c0c0;
+}
+	/* 2.1 中图 middImg样式 未设置*/
+
+	/* 2.2 放大镜：绝对定位必须/z轴/透明度*/
+	.tomaxDiv{
+		position:absolute;z-index:-100;opacity:0.5;
+		cursor:move ;  
+		left:0px;top:0px;
+		width:280px;height:280px;
+		background:yellow;
+	}
+
+/* 3. 大图容器：相对定位/z轴/overflow:hidden*/
+.maxDiv{
+	position:relative;z-index:-100;overflow:hidden;
+	border:1px solid  #c0c0c0;
+	width:500px;height:500px;
+	float:right;
+}
+	/* 3.1 大图：绝对定位*/
+	.maxImg{
+		position:absolute;
+		left:0px;top:0px;
+	}
+</style>
+<script src="jquery-1.7.1.js"></script>
+<script>
+//定义第1张大图的路径
+var maxImgSrc="./images/1_max.jpg"
+//原位置和新位置
+var ox,oy;
+var nx,ny;
+$(function (){
+	//小图上
+	$(".minImg").mouseenter(function(){
+		//对小图的外观修改：透明度
+		$(this).removeClass("opacity05");
+		$(".minImg").not($(this)).addClass("opacity05");
+
+		//切换中图的src=当前选中的小图 身上的 自定义属性的值：midd
+		$(".middImg").attr("src",$(this).attr("midd"))
+
+		//切换大图的src=当前选中的小图 身上的 自定义属性的值：max
+		//$(".maxImg").attr("src",$(this).attr("max"))
+		maxImgSrc=$(this).attr("max");
+	})
+
+//(1)用户的选择：
+     //在中图容器上进行鼠标移动：先进入/后移动
+	$(".middDiv").mouseenter(function(event){
+		
+		$(".tomaxDiv").css("left",event.offsetX+"px")
+		$(".tomaxDiv").css("top",event.offsetY+"px")
+
+		ox=event.pageX;oy=event.pageY;
+		//(2) 信息的载体：
+		// (2.1)中图容器内，出现了一个半透明层
+		// (2.2)大图容器内，显示了一张放大的图
+		$(".tomaxDiv").css("zIndex",100)
+		$(".maxDiv").css("zIndex",100)	
+			//将大图路径载入
+			$(".maxImg").attr("src",maxImgSrc)
+	}).mousemove(function (event){
+		//(3) 载体的表达形式
+		//	 (3.1)中图容器内的放大镜层，在一定范围内，会跟随鼠标移动
+		//	 (3.2)大图容器内的大图：会跟随鼠标，做相反移动
+
+		nx=event.pageX;ny=event.pageY;//鼠标新位置
+		
+		var l=nx-ox+parseInt($(".tomaxDiv").css("left"));//得到放大镜层新位置
+		var t=ny-oy+parseInt($(".tomaxDiv").css("top"));
+		l=Math.max(l,0);//约束范围
+		t=Math.max(t,0);
+		l=Math.min(l,$(".middDiv").innerWidth()-$(".tomaxDiv").outerWidth());
+		t=Math.min(t,$(".middDiv").innerHeight()-$(".tomaxDiv").outerHeight());
+		$(".tomaxDiv").css({"left":l+"px","top":t+"px"});//移动放大镜
+
+		//比例：
+		//大图的宽/中图的宽度
+		//大图的高/中图的高
+	var l2=-1*l* ($(".maxImg").outerWidth()/$(".middImg").outerWidth())
+	var t2=-1*t* ($(".maxImg").outerHeight()/$(".middImg").outerHeight())
+		$(".maxImg").css({"left":l2+"px","top":t2+"px"});//移动大图
+
+
+		ox=nx;oy=ny;//新位置付给原位置
+	}).mouseleave(function(){
+		$(".tomaxDiv").css("zIndex",-100)
+		$(".maxDiv").css("zIndex",-100)
+	})
+})
+
+
+
+</script>
+
+<script src="./jquery-1.7.1.js"></script>
+<script>
+</script>
+</head>
+<body>
+模仿该页面效果：http://item.jd.hk/1951152525.html
+<br>
+<br>
+    <div style="background:green;width:1000px;height:500px">
+		<div style="float:left">
+			<div class="middDiv"><!-- 中图容器 -->
+				<img  class="middImg" src="./images/1_midd.png" height="448" width="448"><!-- 中图 -->
+				<div class="tomaxDiv"></div><!-- 放大镜 -->
+			</div>
+
+			<div class="minDiv" style="border:1px dashed  yellow;width:450px;height:75px;"><!-- 小图容器 -->
+				<ul class="lh">
+					<li>
+						<img class="minImg"  src="./images/1_min.jpg" midd="./images/1_midd.png" max="./images/1_max.jpg" height="50" width="50"><!-- 小图 -->
+															<!-- 存在自定义属性： midd/max-->
+					</li>
+					<li>
+						<img class="minImg opacity05"  src="./images/2_min.jpg" midd="./images/2_midd.jpg" max="./images/2_max.jpg" height="50" width="50">
+					</li>
+				</ul>
+			</div>
+		</div>
+
+		<div class="maxDiv"><!-- 大图容器 -->
+			<img class="maxImg"><!-- 大图 -->
+		</div>
+
+	</div>
+</body>
+
+</html>
+

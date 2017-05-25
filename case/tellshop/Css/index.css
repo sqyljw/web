@@ -1,0 +1,120 @@
+* {padding:0;margin:0;}
+/* main */
+.main {
+	width:900px;
+	margin:10px auto;
+	border-top:2px solid #ccc;
+	padding-left:40px;
+	padding-right:20px;
+	padding-bottom: 40px;
+	padding-top: 40px;
+}
+
+/* product */
+.product {
+	width:150px;
+	padding-right:30px;
+	padding-bottom:20px;
+	float:left;
+}
+.product-iwrap {
+	width:150px;
+	height:260px;
+	border:1px solid #ccc;
+	padding:10px 5px;
+	border-radius: 3px;
+}
+.product-iwrap:hover {
+	border:1px solid #FF4400;
+
+}
+.product-iwrap img {
+	width:150px;
+	height:150px;
+}
+
+.product-iwrap p {
+	height:30px;
+	margin-top:2px;
+	
+	text-align: center;
+	font-size: 13px;
+}
+.product-iwrap button {
+	border:0;
+	background: #FF4400;
+	height:30px;
+	color:#fff;
+	padding:0 10px;
+	cursor: pointer;
+	border-radius: 3px;
+}
+.product-iwrap button:hover {
+	background:#f52b00;
+}
+
+.product-iwrap p[name=detail] {
+	font-weight: bold;
+	color:#f52b00;
+	height:40px;
+}
+.product-iwrap p[name=detail] a{
+	text-decoration:none;
+	color:#888;
+	font-size: 13px;
+}
+.product-iwrap p[name=detail] a:hover {
+	color:red;
+	text-decoration: underline;
+}
+
+.product-iwrap p[name=price] {
+	font-weight: bold;
+	color:#f52b00;
+	line-height: 30px;
+}
+
+
+.list p[name=title] {
+	height:30px;
+	line-height: 30px;
+	font-size: 0;
+}
+.list p[name=title] b {
+	width:70px;
+	display: inline-block;
+	font-size: 14px;
+}
+.list p[name=title] b:nth-of-type(1) {
+	width:40px;
+	float:left;
+	background: blue;
+}
+.list .item {
+	height:40px;
+	padding:5px;
+	line-height: 40px;
+	background: blue;
+}
+.list .item a {
+	display: inline-block;
+	width:100px;
+	background: yellow;
+}
+
+.list .item .count {
+	display: inline-block;
+	width:80px;
+	background: red;
+	position: relative;
+}
+.list .item .count input {
+	width:30px;
+	height:30px;
+}
+.list .item .count b {
+	width:0;
+	height:0;
+	margin:1px;
+	border:5px solid blue;
+}

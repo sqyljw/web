@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+   <title>CSS的中单位的介绍</title>
+   <meta charset="utf-8"/>
+   <meta name="keywords" content="学习php、css"/>
+   <style>
+    body a{
+      text-decoration: none;
+      color:skyblue;
+    }
+   </style>
+  </head>
+  <body text="black" background="c5.jpg">
+
+    <h3 align="center">CSS的中单位的介绍</h3>
+
+     <pre>
+       CSS单位PX、EM、REM、PT的区别 
+        1、PX ：像素（Pixel） 
+        PX是相对长度单位，它是相对于显示器屏幕分辨率而言的。 
+        优缺点：比较稳定和精确，但在浏览器中放大或缩放浏览页面时会出现页面混乱的情况。  
+        2、EM：是相对长度单位。 
+        EM是相对于父元素来设计字体大小的。如果当前对行内文本的字体尺寸未被人为设置，则相对于浏览器的默认字体尺寸。 
+        优缺点：EM的值并不是固定的，它会继承父级元素的字体大小。  
+        EM和PX的之间的相互转换： 
+        任意浏览器的默认字体高都是16px。所有未经调整的浏览器都符合: 1em=16px。那么12px=0.75em,10px=0.625em。 
+        为了使用方便，用em时，我们通常在CSS中的body选择器中声明font-size=62.5%（使em值变为 16px*62.5%=10px）, 之后，你只需要将你使用的px值除以10，即可得到em值，如：12px=1.2em, 10px=1em。
+      手机端布局：
+         @media screen and (max-width:640px){}
+                           screen   媒体属性(计算机屏幕) and (条件)
+                             
+       手机屏:
+       &lt;meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+       参数设置∶
+        width – viewport的宽度
+        height – viewport的高度
+        initial-scale – 初始的缩放比例
+        minimum-scale – 允许用户缩放到的最小比例
+        maximum-scale – 允许用户缩放到的最大比例
+        user-scalable – 用户是否可以手动缩放
+        布局手机网站的时候图片&lt;img src="" />宽度用 100%;  height:auto（自动）   100 100
+        <a href="yidong.html" target="_blank">案例</a>
+                                               
+     </pre>
+  </body>
+
+</html>

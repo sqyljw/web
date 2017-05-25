@@ -1,0 +1,73 @@
+/*顶部区块*/
+.top {
+	height:35px;
+	line-height: 35px;
+	background: #FF4400;
+}
+.top div {
+	width:960px;
+	height:100%;
+	margin:0 auto;
+}
+
+.top div a {
+	
+	display: inline-block;
+	font-size: 13px;
+	text-align: center;
+	padding:0 10px;
+	color:#f6f6f6;
+	text-decoration: none;
+}
+.top div a:hover {
+	background: #f52b00;;
+	color:#fff;
+}
+.top div .left {
+	width:200px;
+	float: left;
+	font-size: 0;
+}
+.top div .right {
+	width:420px;
+	float:right;
+}
+.top .right a {
+	float:left;
+	width:80px;
+	text-align: center;
+	font-size: 13px;
+
+}
+
+.top .right form {
+	float:left;
+	position: relative;
+	width: 197px;
+	height:22px;
+	line-height: 22px;
+	top:4px;
+	margin-left: 20px;
+}
+.top .right form input {
+	height:22px;
+}
+.top .right form input[type=text] {
+	width:130px;
+	padding-right: 55px;
+	padding-left: 10px;
+	border:1px solid #ccc;
+	border-radius:11px;
+	font-size: 12px;
+}
+.top .right form input[type=submit] {
+	width:50px;
+	height:24px;
+	position: absolute;
+	top:0;
+	right:0px;
+	border:1px solid #ccc;
+	border-top-right-radius: 11px;
+	border-bottom-right-radius: 11px;
+	font-size: 12px;
+}

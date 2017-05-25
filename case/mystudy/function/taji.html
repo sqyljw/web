@@ -1,0 +1,100 @@
+<!doctype html>
+ <html>
+ 	 <head>
+ 	 	 <meta charset="UTF-8">
+ 	 	 <meta name="description" content="taiji">
+ 	 	 <meta name="keywords" content="taiji">
+ 	 	 <title>canvas绘制八卦图</title>
+ 	 </head>
+ 	 <style>
+ 	    *{
+ 	    	margin:0px;padding:0px;
+ 	    }
+        .all{
+        	width:100%;
+        	height:500px;
+        	margin:auto;
+        	background:url(../images/php.gif) no-repeat center center;
+        	background-size:40%;
+        	overflow: hidden;
+        }
+        #canvas3,#canvas2{
+        	float:left;        }
+        #canvas1,#canvas4{
+
+        	float:right;        }
+        #canvas2,#canvas4{
+        	margin-top:150px;
+       }
+
+ 	 </style>
+ 	 <body>
+ 	 	<div class="all">
+ 	 		<div style="width:100%;height:50%">
+ 	 			<canvas id="canvas1" width="100" height="100" class="canvas"></canvas>
+ 	 			<canvas id="canvas3" width="100" height="100" class="canvas"></canvas>
+ 	 		</div>
+ 	 		<div style="width:100%;height:50%;">
+    	 	    <canvas id="canvas4" width="100" height="100" class="canvas"></canvas>
+    	 	    <canvas id="canvas2" width="100" height="100" class="canvas"></canvas>
+ 	 		</div>
+	 	 	
+ 	 	</div>
+ 	 	
+ 	 	<script>
+
+ 	 	function taji(id){
+              var canvas=document.getElementById(id);
+ 	 		  var context=canvas.getContext('2d');
+ 	 		 //1.先绘制一个完整的空心圆
+ 	 		  context.beginPath();
+ 	 		  context.arc(50,50,40,0,Math.PI*2);
+ 	 		  context.stroke();
+ 	 		  context.fill();
+ 	 		  context.fillStyle="#5AA4E8";
+ 	 		//2.绘制半黑半白 默认为黑色
+ 	 		  context.beginPath();
+ 	 		  context.arc(50,50,40,Math.PI*3/2,Math.PI/2,true);
+ 	 		  context.fill();
+ 	 		  //3.绘制一黑一白两个半圆2
+ 	 		  context.fillStyle="#5AA4E8";
+ 	 		  context.beginPath();
+ 	 		  context.arc(50,30,20,0,Math.PI*2);
+ 	 		  context.fill();
+ 	 		  context.fillStyle="black";
+ 	 		  context.beginPath();
+ 	 		  context.arc(50,70,20,0,Math.PI*2);
+ 	 		  context.fill();
+ 	 		      //4.绘制两个小圆
+ 	 		  context.fillStyle="black";
+ 	 		  context.beginPath();
+ 	 		  context.arc(50,30,6,0,Math.PI*2);
+ 	 		  context.fill();
+ 	 		  context.fillStyle="#5AA4E8";
+ 	 		  context.beginPath();
+ 	 		  context.arc(50,70,6,0,Math.PI*2);
+ 	 		  context.fill();
+ 	 	}
+ 	 		  taji("canvas1"); 
+ 	 		  taji("canvas2"); 
+ 	 		  taji("canvas3"); 
+ 	 		  taji("canvas4"); 
+ 	 		  var x=0;
+ 	 		  function rotate1(){
+ 	 		  
+                x-=0.5;
+                document.getElementById("canvas1").style.transform="rotate("+x+"deg)";
+                document.getElementById("canvas2").style.transform="rotate("+x+"deg)";
+ }
+             setInterval(rotate1,5);
+              var y=0;
+ 	 		  function rotate2(){
+ 	 		  
+                y+=0.5;
+                document.getElementById("canvas3").style.transform="rotate("+y+"deg)";
+                document.getElementById("canvas4").style.transform="rotate("+y+"deg)";
+ }
+             setInterval(rotate2,5);
+ 	 	</script>
+ 	 </body>
+ </html>

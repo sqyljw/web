@@ -1,0 +1,75 @@
+<meta charset="utf-8">
+<style>
+*{margin:0;padding:0;border:0;font-family:微软雅黑}
+.divClass{
+	position:relative;
+	width:400px;height:350px;
+	background:green;
+	text-align:center;
+}
+.win{
+	position:absolute;top:64px;left:145px;
+	width:110px;
+	z-index:999;
+}
+.winInfo{
+	background:yellow;color:red;
+	font-size:24px;font-weight:bold;
+}
+</style>
+<script src="jquery-1.7.js"></script>
+<script>
+var prize=[];//奖品数组
+prize[0]="苹果6s 黑曜石 64g";
+prize[1]="海尔全自动波轮洗衣机，变频";
+prize[2]="100元现金";
+prize[3]="100元现金";
+prize[4]="华为9.7寸平板";
+prize[5]="100元现金";
+prize[6]="谢谢参与";
+prize[7]="100元现金";
+prize[8]="西门子3门 智能wifi冰箱";
+prize[9]="100元现金";
+prize[10]="不要灰心";
+prize[11]="100元现金";
+
+var pDeg=360/prize.length;//每个奖项多少度
+var p_i=0;//点击的次数
+var prizeIndex;//奖项序号
+var nowDeg;//当前旋转到的度数
+$(function (){
+	$(".win").click(function (){
+		//累积点击次数
+		p_i++;
+
+		//奖项序号
+		prizeIndex=Math.floor(Math.random()*prize.length)
+
+
+		//当前需要旋转到的度数=奖项序号*每个奖项多少度
+		nowDeg=(prizeIndex*pDeg+pDeg/2 +360*p_i*10)*-1
+
+		//进行旋转和动画
+		$("#cjImg").css("transform","rotate("+nowDeg+"deg)")
+		$("#cjImg").css("transition","all 4.8s ease")
+
+	})
+
+	//对旋转元素，绑定动画结束事件监听器
+	$("#cjImg").bind(
+		"transitionend",
+		function (){
+			$("#t").html("奖项序号"+prizeIndex+" 奖品"+prize[prizeIndex]+" 旋转度数"+nowDeg)
+		}
+	)
+	
+})
+</script>
+
+<div class="divClass">
+	<img class="win" src="./win.png">
+	<img id="cjImg" src="./cj8.png">
+</div>
+
+<span id="t" class="winInfo">
+</span>

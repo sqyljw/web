@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <title>table/input</title>
+   <meta name="keywords" content="table">
+ </head>
+  <body text="black" background="d6.jpg" leftmargin="30" rightmargin="30" topmargin="30" bottomargin="50" >
+  	
+  	<h2 align="center">表格和input的学习</h2>
+  	在制作表格衔接时在body里面设置 topmargin="0"让表格与表格之间衔接无缝<br>
+    &lt;dl&gt;&lt;dt&gt;正常内容&lt;/dt&gt;&lt;dd&gt;缩进内容&lt;/dd&gt;&lt;/dl&gt;自定义列表，缩进的形式<br>
+   乱码：&lt;head&gt;&lt;/head&gt;在里面第一句设置&lt;meta charset="gb2312 gbk"/&gt;
+    	基于html5比utf-8字符集少，很多产品都是utf-8，utf-8是国际通用的<br>
+    表格：table数据的格式化，在table下面用&lt;caption&gt;用作标题&lt;/caption&gt;&lt;th&gt;自动加粗和居中
+    	&lt;/th&gt;&lt;tbody&gt;给表格分组设置属性&lt;/tbody&gt;<br>
+     &lt;table border="1" width="400" height="300" align="center" cellpadding=内边距 cellspacing=外边距 bordercolor="red"&gt;<br>
+     	单元格可以设置宽度，以保证这个页面的可观性.制作
+    细致的边框线，给table第一步设置border="0"，第二步bgcolor="red",第三步设置cellspacing="1"，
+    第四步将单元格设置背景色就是让单元格颜色和背景色不一样。<br>
+   文本框&lt;input type="text" name="username" value="admin" size="40"&gt;;密码框&lt;input type="password".....&gt;<br>
+  提交按钮&lt;input type="submit" value="tijiao"&gt;<br>
+    单选框&lt;input type="radio" name="sex" value="男" checked&gt;男，这里checked的表示默认<br>
+    多选框&lt;input type="checkbox" name="hobby []" value="lol" &gt;lol，这里[]的表示多项选择<br>
+   普通按钮&lt;input type="button" name="btn" value="普通按钮"&gt;<br>
+   图片按钮&lt;input type="image" src="图片地址" &gt;<br>
+  文件:&lt;input type="file" name="upfile"&gt;<br>
+  隐藏域&lt;input type="hidden" name="typied" value="111"&gt;<br>
+   下拉菜单&lt;select name="language" size="40" multiple&gt;&lt;option selected&gt;/&lt;/option&gt;&lt;/select&gt;selected默认选择这一项<br>
+    	multiple表示可以在下拉菜单中选择多项，size没有的话是横向，一般第一个option/option是提示文本<br>
+    	
+  &lt;textarea name="qwe" rows="垂直行数" cols="水平行数"&gt;文本&lt;/textarea&gt;		
+    
+  
+ </body>
+</html>

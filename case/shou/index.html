@@ -1,0 +1,75 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>css3手风琴</title>
+<style>
+   *{ margin:0px; padding:0px;}
+    ul,li{ list-style:none;}
+   .menu{ width:1180px; overflow:hidden; margin:0 auto;}
+   .menu ul{width:3400px;}
+   .menu ul li{ width:196px; height:360px; position:relative; float:left; border-left:#FFF 1px solid; box-shadow:-3px -3px 5px #333333; transition:all .8s;}
+   .menu ul li img{ width:980px; float:left; height:100%;}
+   .menu ul li p{ position:absolute; width:100%; height:360px; line-height:360px; text-align:center; color:#FFF; transition: all .8s; background:rgba(51,51,51,0.5)}
+   .menu ul li p.top{ top:0px; left:0px; color:red;font-weight:bold;}
+   .menu ul li p.bottom{ bottom:0px; left:0px; }
+   .menu ul:hover li{ width:40px;}
+   .menu ul li:hover{ width:980px;}
+   .menu ul li:hover p{
+	   height:40px;
+	   line-height:40px;
+      }
+</style>
+</head>
+
+<body>
+<div class="menu">
+   <ul>
+       <li>
+       <img src="images/11.jpg" />       
+       <p class="top">君生我未生，我生君已老</p>
+       <p class="bottom">君生我未生，我生君已老</p>
+       </li>
+       
+       <li>
+       <img src="images/22.jpg" />
+       <p class="top">君恨我生迟，我恨君生早</p>
+       <p class="bottom">君恨我生迟，我恨君生早</p>
+       </li>       
+       
+         <li>
+       <img src="images/33.jpg" />
+       <p class="top">恨不生同时，日日与君好</p>
+       <p class="bottom">恨不生同时，日日与君好</p>
+       </li>        
+  
+          <li>
+       <img src="images/4.jpg" />
+       <p class="top">我离君天涯，君隔我海角</p>
+       <p class="bottom">我离君天涯，君隔我海角</p>
+       </li>     
+           <li>
+       <img src="images/5.jpg" />
+       <p class="top">化蝶去寻花，夜夜栖芳草</p>
+       <p class="bottom">化蝶去寻花，夜夜栖芳草</p>
+       </li> 
+          <li>
+       <img src="images/6.jpg" />
+       <p class="top">老婆，我想你</p>
+       <p class="bottom">老婆，我想你</p>
+       </li>          
+       
+              
+       
+   </ul>
+
+</div>
+
+
+
+
+
+</body>
+
+
+</html>

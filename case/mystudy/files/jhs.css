@@ -1,0 +1,184 @@
+#top{
+	background:url(images/top3.png);
+	margin:auto;
+	height:93px;
+	width:1000px;
+	
+	
+	}
+#gn{
+	width:1000px;
+	height:10px;
+	margin:auto;
+	
+	}
+#gn ul li{
+	line-height:5px;
+	}
+#gn a{
+	text-decoration:none;
+	color:black;
+	font-size:15px;
+	font-family:¿¬Ìå;
+	
+	}
+#gn a:hover{
+	font-weight:bold;
+	}
+#left1 li{
+	float:left;
+	width:80px;
+	height:10px;
+	list-style:none;
+
+	
+	}
+#right1 li{
+	float:right;
+	width:80px;
+	height:10px;
+	list-style:none;
+	padding-right:10px;
+	}
+#dh{
+	width:1000px;
+	margin:auto;
+	
+	height:60px;
+	background-color:#FA2960;
+	}
+#dh a{
+	text-decoration:none;
+	color:black;
+	}
+#dh a:hover{
+	color:#FA2960;
+	background:#ffffff;
+	
+	}
+#A li{
+	float:left;
+	list-style:none;
+	height:20px;
+	font-size:12px;
+	width:150px;
+	line-height:50px;
+	}
+
+#C li{
+	float:right;
+	list-style:none;
+	height:20px;
+	font-size:12px;
+	width:90px;
+	line-height:50px;
+	}
+#B li{
+	float:left;
+	list-style:none;
+	height:50px;
+	font-size:12px;
+	width:40px;
+	line-height:50px;
+	padding-right:13px;
+	}
+#btm{
+	width:1000px;
+	height:400px;
+
+	margin:auto;
+	}
+#btm td{
+	font-size:13px;
+	font-weight:bold;
+	text-align:center;
+	width:30px;
+	color:#ffffff
+	}
+#lt{
+	width:170px;
+	height:420px;
+  border:solid 1px red;
+  float:left;
+  background-color:#F94871;
+	}
+#Z{
+	width:586px;
+	height:420px;
+	border:solid 1px red;
+	float:right;
+	}
+#Z4 img{
+	width:586px;
+	height:232px;
+	float:right;
+	
+	}
+#Z1 ul{
+	width:150px;
+	height:187px;
+	float:left;
+	list-style:none;
+	font-size:12px;
+	
+	background-image:url(images/bao.png);
+	background-repeat:no-repeat;
+	background-position:right bottom;
+	margin:0;
+	background-color:#E5E7FF;
+	}
+
+#Z2 ul{
+	width:150px;
+	height:187px;
+	float:left;
+	list-style:none;
+	font-size:12px;
+	
+	background-image:url(images/dayi.png);
+	background-repeat:no-repeat;
+	background-position:right bottom;
+	margin:0;
+	background-color:#1DDAC2;
+	}
+#Z3 ul{
+	width:150px;
+	height:187px;
+	float:right;
+	list-style:none;
+	font-size:12px;
+	
+	background-image:url(images/water.png);
+	background-repeat:no-repeat;
+	background-position:right bottom;
+	margin:0;
+	width:120px;
+	height:180px;
+	float:right;
+	list-style:none;
+	font-size:12px;
+	}
+#Z1 ul li a,#Z2 ul li a,#Z3 ul li a{
+	text-decoration:none;
+	color:#FF2063;
+	font-size:15px;
+	margin-top:10px;
+	}
+#Z5 img{
+	width:240px;
+	height:420px;
+	float:right;
+	
+	}
+#Z5{
+	float:right;
+	}
+#Z a:hover{
+	color:#ffffff;
+	background-color:#FF2063;
+	}
+
+	
+	
+	
+	}

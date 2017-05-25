@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+      <meta charset="UTF-8">
+      <title>注册页面</title>
+      <meta name="description" content="旅游项目的前端页面注册页面"/>
+      <meta name="keywords" content="注册">
+      <link rel="shortcut icon" href="images/first.ico">
+  	<style type="text/css">
+      *{margin:0px;padding:0px;}
+  	body{width:1308px;
+  		margin:0 auto;
+  		height:700px;
+  		background:url(images/2-1.jpg);
+
+  		}
+  	.denglu{width:700px;
+  		height:700px;
+  		background:#000;
+  		opacity:0.7;
+  		margin:60px auto;
+  		color:#FFF;
+  		}
+  	.denglu h1{text-align:center;}
+  	fieldset{padding:10px;
+  			line-height:2em;}
+  	</style>
+  </head>
+
+  <body>
+  	<div class="denglu">
+      	<h1>账户注册</h1>
+          <form>
+          <fieldset>
+          <legend>账户信息</legend>
+         <p><font color="red">*</font>用户名：<input type="text" />
+         <p><font color="red">*</font>密码：&nbsp;&nbsp;<input type="password" maxlenght="16"/>
+         <p>性别：<input type="radio" name="sex" value="男" />男
+         		&nbsp;&nbsp;<input type="radio" name="sex" value="女" />女
+         </fieldset>
+       
+       <fieldset>
+          <legend>
+         
+          会员信息</legend>
+          <p>家庭住址：<input type="text" maxlength="30" />
+          <p>目前所在地址：<select>
+                           <option>--请选择--</option>
+                           <option>湖南省</option>
+                           <option>广东省</option>
+                           <option>浙江省</option>
+                         </select>
+                         
+                         <select>
+                           <option>--请选择--</option>
+                           
+                           <optgroup label="湖南省">
+                           <option >湘西市</option>
+                           <option>湘潭市</option>
+                           <option>湖南市</option>
+                           </optgroup>
+                           
+                           <optgroup label="广东省">
+                           <option>广州市</option>
+                           <option>深圳市</option>
+                           <option>河源市</option>
+                           </optgroup>
+                           
+                           <optgroup label="浙江省">
+                           <option>杭州市</option>
+                           <option>xx市</option>
+                           <option>aa市</option>
+                           </optgroup>
+                         </select>
+                         
+                         <select>
+                           <option>--请选择--</option>
+                           
+                           <optgroup label="湘西市">
+                           <option>呵呵县</option>
+                           <option>琉璃县</option>
+                           <option>湘潭县</option>
+                           </optgroup>
+                           
+                           <optgroup label="河源市">
+                           <option>和平县</option>
+                           <option>bb县</option>
+                           <option>aa县</option>
+                           </optgroup>
+                           
+                           <optgroup label="杭州市">
+                           <option>西施县</option>
+                           <option>oo县</option>
+                           <option>xx县</option>
+                           </optgroup>
+                         </select>
+            <p>喜欢的电影：<input type="checkbox" checked>变形金刚1
+                           <input type="checkbox" />变形金刚2
+                           <input type="checkbox" />变形金刚3
+                         	 <input type="checkbox" />变形金刚4
+            <p>所从事行业：<select multiple="multiple">
+                        <option>IT行业</option>
+                        <option>计算机软件</option>
+                        <option>市场推广</option>
+                        <option>广告</option>
+                        </select>
+             <p>个人影评：<textarea cols="30" rows="15"></textarea>
+             <p>会员本人照片上传：<input type="file" /></p>
+             <p><a href="首页.html" target="_blank">
+             <img src="images/注册.png" height="30px"/></a></p>
+             </fieldset>
+          </form>
+      </div>
+  </body>
+</html>

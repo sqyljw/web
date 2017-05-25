@@ -1,0 +1,1153 @@
+<!DOCTYPE html>
+<html lang="ZH-cn">
+    <head>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="css/admin.css">
+	<link href="./dist/css/bootstrap.min.css" rel="stylesheet">
+	
+	<script src="jquery-1.7.js"></script>
+	<script type="text/javascript" src="js/aecmax.js"></script>
+	
+	<script>window.onscroll=function(){
+
+			var t =document.documentElement.scrollTop||document.body.scrollTop;
+			var x= $(this).height();
+			
+			var abc=document.getElementById("abc");
+			if( t>600) {    
+			     abc.style.position="fixed";     
+			     abc.style.top=x-240+"px";
+			  if(4780<t){
+			     	abc.style.position="fixed";     
+			      abc.style.top="180px";
+			     	}
+			}else{
+			     
+			     abc.style.position="relative";
+			     abc.style.top="0";
+			}
+			
+			var ave=document.getElementById("cavshi");
+			if( t>130) {    
+			     ave.style.display="block";  
+			     ave.style.position="fixed";     
+			     ave.style.top=0;
+			  
+			}else{
+			     ave.style.display="none";  
+			     ave.style.position="relative";
+			     ave.style.top="-45px";
+			}
+			}
+			
+  </script>
+
+	<style>
+	  *{margin:0;padding:0;font-size:14px;font-family:微软雅黑;}
+      body a{text-decoration:none;color:#333;}
+	  body{text-decoration:none;}
+      img{border:none;display：inline}
+      ul li{list-style-type:none;}
+	</style>
+	</head>
+    <body>
+	  <div class="max" id="ads">
+	    <div class="max-a">
+		  <div class="max-left">
+		    <div class="max-1 max-2 max-4">
+			  <a class="max-dl">登录</a>
+			</div>
+			<div class="max-1 max-2">
+			  <a>注册</a>
+			</div>
+			<div class="max-1 max-3">
+			  <a>淘宝登录</a>
+			</div>
+		  </div>
+		  <div class="max-right">
+		    <div class="max-1">
+			  <p>相关信息</p>
+			</div>
+			<div class="max-1">
+			  <p>订单管理</p>
+			</div>
+			<div class="max-1">
+			  <p>客户服务</p>
+			</div>
+		  </div>
+		</div>
+	  </div>
+	  
+	  <div class="pop">
+	    <div class="pop-left">
+		  <p>卓猫网</p>
+		</div>
+		<div class="pop-right">
+		  <div class="pop-right-left">
+		    <div class="pop-a">
+			  <span class="reh reh2">商品</span>
+			  <span class="reh">档口</span>
+			  <input type="text" name="username" class="pop-1" placeholder="卓猫网优质的服装代发平台"><input type="button" value="搜索" class="pop-2">
+			</div>
+		  </div>
+		  <div class="pop-right-right">
+		    <p>APP下载</p>
+		    <div class="pop-right-n">
+			  <img src="./img/app.png">
+			</div>
+		  </div>
+		</div>
+	  </div>
+	  
+	  <div class="cont1">
+	  <div class="cont">
+	    <div class="cont-left">
+		  <span>所有分类</span>
+		</div>
+		<div class="cont-right">
+		  <span style="color:#ff6600;">首页</span>
+		  <span>市场</span>
+		  <span style="width:100px;">今天新品</span>
+		</div>
+	  </div>
+	  
+	  <div class="cavshi" id="cavshi">
+	      <div class="cavshi-1">
+		    <div class="cavshi-a">
+			  <span>卓猫网</span>
+			</div>
+		    <div class="cavshi-left">
+			  <div class="cavshi-left-1">
+			    <span id="u">商品</span>
+			  </div>
+			  <div class="cavshi-left-2">
+			    <span>◆</span>
+			  </div>
+			  <div class="w1">
+				  
+			  </div>
+			  <div class="w2 w5">
+				  
+			  </div>
+			</div>
+			
+			<div class="cavshi-right">
+			  <input type="text" name="username" class="pop-3" placeholder=" 卓猫网优质的服装代发平台"><input type="button" value="搜索" class="pop-4">
+		    </div>
+			<div class="cavshi-left-3">
+			  <div class="w3 w4">
+			    <span style="font-size:18px;font-family:方正大标宋简体;" value="商品">商品</span>
+		      </div>
+			  <div class="w3">
+			    <span style="font-size:18px;font-family:方正大标宋简体;" value="档口">档口</span>
+		      </div>
+			</div>
+		  </div>
+	    </div>
+		
+	  </div>
+	  
+	  <div class="txt">
+	    <div class="txt-a">
+		  <div class="txt-left">
+		    <div class="txt-left-en">
+		    <div class="txt-left-1">
+			  <div class="txt-left-a">
+			    <span class="glyphicon glyphicon-map-marker txt-top"></span>
+			    <span class="txt-top">市场导航</span>
+				<div class="txt-one">
+			      <div class="txt-one-1">
+				    <div class="txt-one-a">
+				      <a href="#"><img src="./img/a001.png"></a>
+					</div>
+				  </div>
+				  <div class="txt-one-1">
+				    <div class="txt-one-a">
+				      <a href="#"><img src="./img/a002.png"></a>
+					</div>
+				  </div>
+				  <div class="txt-one-1">
+				    <div class="txt-one-a">
+				      <a href="#"><img src="./img/a003.png"></a>
+					</div>
+				  </div>
+				  <div class="txt-one-1">
+				    <div class="txt-one-a">
+				      <a href="#"><img src="./img/a004.png"></a>
+					</div>
+				  </div>
+				  <div class="txt-one-1">
+				    <div class="txt-one-a">
+				      <a href="#"><img src="./img/a005.png"></a>
+					</div>
+				  </div>
+				  <div class="txt-one-1">
+				    <div class="txt-one-a">
+				      <a href="#"><img src="./img/a006.png"></a>
+					</div>
+				  </div>
+				  <div class="txt-one-1">
+				    <div class="txt-one-a">
+				      <a href="#"><img src="./img/a007.png"></a>
+					</div>
+				  </div>
+				  <div class="txt-one-1">
+				    <div class="txt-one-a">
+				      <a href="#"><img src="./img/a008.png"></a>
+					</div>
+				  </div>
+			    </div>
+			  </div>
+			  <div class="txt-left-b">
+			    <span class="txt-1">四季星座</span>
+				<span class="txt-1">电商基地</span>
+				<span class="txt-1">钱塘男装</span>
+				<span class="txt-1">置地国际</span>
+				<span class="txt-1">精品男装</span>
+				<span class="txt-1">九天国际</span>
+				<span class="txt-1">之江服饰</span>
+				<span class="txt-1">新杭派</span>
+			  </div>
+			</div>
+		    </div>
+			<div class="txt-left-en">
+			<div class="txt-left-1">
+			  <div class="txt-left-a">
+			    <span class="txt-top">男士上装</span>
+				<div class="txt-one txt-one-top">
+			       <div class="txt-one-2">
+				     <div class="txt-one-b">
+				       <img src="./img/a000.png">
+					   <a href="#" class="one-img"><img src="./img/a009.png"></a>
+					 </div>
+					 <p>T恤</p>
+				   </div>
+				   <div class="txt-one-2">
+				     <div class="txt-one-b">
+				       <img src="./img/a000.png">
+					   <a href="#" class="one-img"><img src="./img/a010.png"></a>
+					 </div>
+					 <p>衬衫</p>
+				   </div>
+				   <div class="txt-one-2">
+				     <div class="txt-one-b">
+				       <img src="./img/a000.png">
+					   <a href="#" class="one-img"><img src="./img/a011.png"></a>
+					 </div>
+					 <p>POLO衫</p>
+				   </div>
+				   <div class="txt-one-2">
+				     <div class="txt-one-b">
+				       <img src="./img/a000.png">
+					   <a href="#" class="one-img"><img src="./img/a012.png"></a>
+					 </div>
+					 <p>卫衣</p>
+				   </div>
+				   <div class="txt-one-2">
+				     <div class="txt-one-b">
+				       <img src="./img/a000.png">
+					   <a href="#" class="one-img"><img src="./img/a013.png"></a>
+					 </div>
+					 <p>背心/马甲</p>
+				   </div>
+				   <div class="txt-one-2">
+				     <div class="txt-one-b">
+				       <img src="./img/a000.png">
+					   <a href="#" class="one-img"><img src="./img/a014.png"></a>
+					 </div>
+					 <p>风衣</p>
+				   </div>
+				   <div class="txt-one-2">
+				     <div class="txt-one-b">
+				       <img src="./img/a000.png">
+					   <a href="#" class="one-img one-img2"><img src="./img/a015.png"></a>
+					 </div>
+					 <p>夹克</p>
+				   </div>
+				   <div class="txt-one-2">
+				     <div class="txt-one-b">
+				       <img src="./img/a000.png">
+					   <a href="#" class="one-img one-img2"><img src="./img/a016.png"></a>
+					 </div>
+					 <p>皮衣</p>
+				   </div>
+				   <div class="txt-one-2">
+				     <div class="txt-one-b">
+				       <img src="./img/a000.png">
+					   <a href="#" class="one-img one-img3"><img src="./img/a017.png"></a>
+					 </div>
+					 <p>针织衫/毛衣</p>
+				   </div>
+				   <div class="txt-one-2">
+				     <div class="txt-one-b">
+					 </div>
+				   </div>
+				   <div class="txt-one-2">
+				     <div class="txt-one-b">
+				       <img src="./img/a000.png">
+					   <a href="#" class="one-img one-img2"><img src="./img/a018.png"></a>
+					 </div>
+					 <p>棉衣</p>
+				   </div>
+				   <div class="txt-one-2">
+				     <div class="txt-one-b">
+				       <img src="./img/a000.png">
+					   <a href="#" class="one-img"><img src="./img/a019.png"></a>
+					 </div>
+					 <p>羽绒服</p>
+				   </div>
+				   <div class="txt-one-2">
+				     <div class="txt-one-b">
+				       <img src="./img/a000.png">
+					   <a href="#" class="one-img"><img src="./img/a020.png"></a>
+					 </div>
+					 <p>呢大衣</p>
+				   </div>
+				   <div class="txt-one-2">
+				     <div class="txt-one-b">
+					 </div>
+				   </div>
+				   <div class="txt-one-2">
+				     <div class="txt-one-b">
+					 </div>
+				   </div>
+				   <div class="txt-one-2">
+				     <div class="txt-one-b">
+				       <img src="./img/a000.png">
+					   <a href="#" class="one-img"><img src="./img/a021.png"></a>
+					 </div>
+					 <p>西服</p>
+				   </div>
+				   <div class="txt-one-2">
+				     <div class="txt-one-b">
+				       <img src="./img/a000.png">
+					   <a href="#" class="one-img one-img4"><img src="./img/a022.png"></a>
+					 </div>
+					 <p>西服套装</p>
+				   </div>
+				   <div class="txt-one-2">
+				     <div class="txt-one-b">
+				       <img src="./img/a000.png">
+					   <a href="#" class="one-img"><img src="./img/a023.png"></a>
+					 </div>
+					 <p>名族服装</p>
+				   </div>
+				   <div class="txt-one-2">
+				     <div class="txt-one-b">
+				       <img src="./img/a000.png">
+					   <a href="#" class="one-img"><img src="./img/a024.png"></a>
+					 </div>
+					 <p>套装</p>
+				   </div>
+			    </div>
+			  </div>
+			  <div class="txt-left-b">
+			    <span class="txt-1 txt-2">T恤</span>
+				<span class="txt-1 txt-3">针织衫/毛衣</span>
+				<span class="txt-1 txt-2">夹克</span>
+				<span class="txt-1 txt-2">卫衣</span>
+				<span class="txt-1 txt-2">西服</span>
+				<span class="txt-1 txt-2">衬衫</span>
+				<span class="txt-1 txt-4">POLO衫</span>
+				<span class="txt-1">西服套装</span>
+				<span class="txt-1">背心/马甲</span>
+				<span class="txt-1 txt-2">风衣</span>
+				<span class="txt-1 txt-2">皮衣</span>
+				<span class="txt-1 txt-2">棉衣</span>
+			  </div>
+		    </div>
+			</div>
+			<div class="txt-left-en txt-left-2">
+			<div class="txt-left-1 txt-left-2">
+			  <div class="txt-left-a">
+			    <span class="txt-top">男士下装</span>
+				<div class="txt-one  txt-one-bottom">
+			       <div class="txt-one-3">
+				     <div class="txt-one-c">
+                       <img src="./img/a000.png">
+					   <a href="#" class="two-img two-img2"><img src="./img/a025.png"></a>
+					 </div>
+					 <p>休闲裤</p>
+				   </div>
+				   <div class="txt-one-3">
+				     <div class="txt-one-c">
+                       <img src="./img/a000.png">
+					   <a href="#" class="two-img"><img src="./img/a026.png"></a>
+					 </div>
+					 <p>牛仔裤</p>
+				   </div>
+				   <div class="txt-one-3">
+				     <div class="txt-one-c">
+                       <img src="./img/a000.png">
+					   <a href="#" class="two-img two-img3"><img src="./img/a027.png"></a>
+					 </div>
+					 <p>皮裤</p>
+				   </div>
+				   <div class="txt-one-3">
+				     <div class="txt-one-c">
+                       <img src="./img/a000.png">
+					   <a href="#" class="two-img"><img src="./img/a028.png"></a>
+					 </div>
+					 <p>西裤</p>
+				   </div>
+				   <div class="txt-one-3">
+				     <div class="txt-one-c">
+                       <img src="./img/a000.png">
+					   <a href="#" class="two-img two-img4"><img src="./img/a029.png"></a>
+					 </div>
+					 <p>棉裤</p>
+				   </div>
+				   <div class="txt-one-3">
+				     <div class="txt-one-c">
+                       <img src="./img/a000.png">
+					   <a href="#" class="two-img two-img5"><img src="./img/a030.png"></a>
+					 </div>
+					 <p>羽绒裤</p>
+				   </div>
+			    </div>
+			  </div>
+			  <div class="txt-left-b txt-left-d">
+			    <span class="txt-1 txt-4">休闲裤</span>
+				<span class="txt-1 txt-4">牛仔裤</span>
+				<span class="txt-1 txt-2">皮裤</span>
+				<span class="txt-1 txt-2">棉裤</span>
+				<span class="txt-1 txt-4">羽绒裤</span>
+				<span class="txt-1 txt-2">西裤</span>
+			  </div>
+		    </div>
+			</div>
+		  </div>
+		  <div class="txt-right">
+		     <div class="txt-right-left">
+			   <div class="texe-1">
+			     <a href="#" class="text-img"><img src="./img/newsumme.png"></a>
+			     <a href="#" class="text-img"><img src="./img/newsumme.png"></a>
+			     <a href="#" class="text-img"><img src="./img/newsumme.png"></a>
+				 <a href="#" class="text-img"><img src="./img/newsumme.png"></a>
+			     <a href="#" class="text-img"><img src="./img/newsumme.png"></a>
+			   </div>
+			   <div class="texe-2">
+				<span class="texe-one texe-one2"></span>
+				<span class="texe-one"></span>
+				<span class="texe-one"></span>
+				<span class="texe-one"></span>
+				<span class="texe-one"></span>
+			  </div>
+			 </div>
+			 <div class="txt-right-right">
+			   <div class="txt-right-1">
+			     <span>网站公告</span>
+				 <div class="txt-right-a"><a href="#">卓猫网上线福利免费大派送免费包邮</a></div>
+				 <div class="txt-right-a"><a href="#">卓猫网上线福利免费大派送免费包邮</a></div>
+				 <div class="txt-right-a"><a href="#">卓猫网上线福利免费大派送免费包邮</a></div>
+			   </div>
+			   <div class="txt-right-2">
+			     <div class="txt-1-left">
+				   <span><a href="#">用户登录</a></span>
+				 </div>
+				 <div class="txt-1-right">
+				     <a href="#" class="txt-x">供贷商入住</a>
+				     <a href="#" class="txt-x">分销商入住</a>
+				 </div>
+			   </div>
+			   <div class="txt-right-3">
+			     <div class="txt-right-c">
+				   <p>1894895</p>
+				   <span>商品数量</span>
+				 </div>
+				 <div class="txt-right-c">
+				   <p>5646</p>
+				   <span>入驻档口</span>
+				 </div>
+			   </div>
+			   <div class="txt-right-4">
+			     <a href="#"><img src="./img/a031.png"></a>
+			   </div>
+			 </div>
+		  </div>
+		</div>
+	  </div>
+	  <div class="min">
+	    <div class="tay">
+		  <div class="tay-a">
+		    <div class="tay-en">
+		      <a href="#"><img src="./img/a032.png"></a>
+			</div>
+			<div class="tay-on">
+			  <p>产品优势</p>
+			</div>
+		  </div>
+		  <div class="tay-a">
+		    <div class="tay-en">
+		      <a href="#"><img src="./img/a033.png"></a>
+			</div>
+			<div class="tay-on">
+			  <p>用户福利</p>
+			</div>
+		  </div>
+		  <div class="tay-a">
+		    <div class="tay-en">
+		      <a href="#"><img src="./img/a034.png"></a>
+			</div>
+			<div class="tay-on">
+			  <p>产品功能</p>
+			</div>
+		  </div>
+		  <div class="tay-a tay-b">
+		    <div class="tay-en">
+		      <a href="#"><img src="./img/a035.png"></a>
+			</div>
+			<div class="tay-on">
+			  <p>用户指南</p>
+			</div>
+		  </div>
+		</div>
+	    <div class="min-1">
+		  <div class="min-top">
+		    <div class="min-top-en">
+			  <span>爆款推荐</a></span>
+			</div>
+			<div class="ter" id="abc">
+	          <div class="ter-1">
+			    <a href="#"><img src="./img/a069.png"></a>
+				<span class="cire">5</span>
+				<div class="ter-2">
+				  <a href="#"><img src="./img/a074.png"></a>
+		        </div>
+			  </div>
+			  <div class="ter-1 ter-3">
+			    <a href="#"><img src="./img/a070.png"></a>
+				<div class="ter-2">
+				  <a href="#"><img src="./img/a075.png"></a>
+		        </div>
+				<div class="ter-a">
+				  <div class="ter-b">
+				    <img src="./img/app.png">
+				  </div>
+				</div>
+			  </div>
+			  <div class="ter-1">
+			    <a href="#"><img src="./img/a071.png"></a>
+				<div class="ter-2">
+				  <a href="#"><img src="./img/a076.png"></a>
+		        </div>
+			  </div>
+			  <div class="ter-1">
+			    <a href="#"><img src="./img/a072.png"></a>
+				<div class="ter-2">
+				  <a href="#"><img src="./img/a077.png"></a>
+		        </div>
+			  </div>
+			  <div class="ter-1">
+			    <a href="#ads"><img src="./img/a073.png"></a>
+				<div class="ter-2">
+				  <a href="#"><img src="./img/a078.png"></a>
+		        </div>
+			  </div>
+	        </div>
+
+			
+		  </div>
+		  <div class="min-center">
+		    <div class="min-center-en">
+			  <a href="#"><img src="./img/a036.png"></a>
+			  <div class="min-center-tn">
+			    <a href="#"><img src="./img/a040.png"></a>
+			  </div>
+			</div>
+			<div class="min-center-en">
+			  <a href="#"><img src="./img/a037.png"></a>
+			  <div class="min-center-tn">
+			    <a href="#"><img src="./img/a040.png"></a>
+			  </div>
+			</div>
+			<div class="min-center-en">
+			  <a href="#"><img src="./img/a038.png"></a>
+			  <div class="min-center-tn">
+			    <a href="#"><img src="./img/a040.png"></a>
+			  </div>
+			</div>
+			<div class="min-center-en min-center-en2">
+			  <a href="#"><img src="./img/a039.png"></a>
+			  <div class="min-center-tn">
+			    <a href="#"><img src="./img/a040.png"></a>
+			  </div>
+			</div>
+		  </div>
+		</div>
+		<div class="min-2">
+		  <div class="min-top">
+		    <div class="min-top-en">
+			  <span>实力区</span>
+			</div>
+		  </div>
+		  <div class="min-center2">
+		    <div class="min-center2-left">
+			  <a href="#"><img src="./img/a041.png"></a>
+			  <div class="min-center2-ch">
+			    <div class="min-center2-ch2">
+			      <span>A160</span>
+			    </div>
+			  </div>
+			</div>
+			<div class="min-center2-right">
+			  <div class="min-center2-on">
+			    <a href="#"><img src="./img/a042.png"></a>
+				<div class="min-center2-ch min-center2-ch3">
+			      <div class="min-center2-ch2">
+			        <span>电商141</span>
+			      </div>
+			    </div>
+			  </div>
+			  <div class="min-center2-on">
+			    <a href="#"><img src="./img/a043.png"></a>
+				<div class="min-center2-ch min-center2-ch3">
+			      <div class="min-center2-ch2">
+			        <span>B222</span>
+			      </div>
+			    </div>
+			  </div>
+			  <div class="min-center2-on">
+			    <a href="#"><img src="./img/a044.png"></a>
+				<div class="min-center2-ch min-center2-ch3">
+			      <div class="min-center2-ch2">
+			        <span>九天A102</span>
+			      </div>
+			    </div>
+			  </div>
+			  <div class="min-center2-on min-center2-on2">
+			    <a href="#"><img src="./img/a045.png"></a>
+				<div class="min-center2-ch min-center2-ch3">
+			      <div class="min-center2-ch2">
+			        <span>四季212</span>
+			      </div>
+			    </div>
+			  </div>
+			  <div class="min-center2-on">
+			    <a href="#"><img src="./img/a046.png"></a>
+				<div class="min-center2-ch min-center2-ch3">
+			      <div class="min-center2-ch2">
+			        <span>A118</span>
+			      </div>
+			    </div>
+			  </div>
+			  <div class="min-center2-on">
+			    <a href="#"><img src="./img/a047.png"></a>
+				<div class="min-center2-ch min-center2-ch3">
+			      <div class="min-center2-ch2">
+			        <span>电商A112</span>
+			      </div>
+			    </div>
+			  </div>
+			  <div class="min-center2-on">
+			    <a href="#"><img src="./img/a048.png"></a>
+				<div class="min-center2-ch min-center2-ch3">
+			      <div class="min-center2-ch2">
+			        <span>置地A139</span>
+			      </div>
+			    </div>
+			  </div>
+			  <div class="min-center2-on min-center2-on2">
+			    <a href="#"><img src="./img/a049.png"></a>
+				<div class="min-center2-ch min-center2-ch3">
+			      <div class="min-center2-ch2">
+			        <span>钱塘2001</span>
+			      </div>
+			    </div>
+			  </div>
+			</div>
+		  </div>
+		</div>
+		<div class="min-3">
+		  <div class="min-top">
+		    <div class="min-top-en">
+			  <span>风格区</span>
+			</div>
+		  </div>
+		  <div class="min-center2">
+		    <div class="min-center2-left">
+			  <a href="#"><img src="./img/a050.png"></a>
+			  <div class="min-center3-on">
+			    <p>中国风</p>
+			  </div>
+			</div>
+			<div class="min-center2-right">
+              <div class="min-center3-en">
+			    <a href="#"><img src="./img/a051.png"></a>
+				<div class="min-center3-on min-center3-on2">
+			      <p>复古风</p>
+			    </div>
+			  </div>
+			  <div class="min-center3-en">
+			    <a href="#"><img src="./img/a052.png"></a>
+				<div class="min-center3-on min-center3-on3 min-center3-on2">
+			      <p>韩版</p>
+			    </div>
+			  </div>
+			  <div class="min-center3-en min-center3-en2">
+			    <a href="#"><img src="./img/a053.png"></a>
+				<div class="min-center3-on min-center3-on2">
+			      <p>欧美风</p>
+			    </div>
+			  </div>
+			  <div class="min-center3-en min-center3-en3">
+			    <a href="#"><img src="./img/a054.png"></a>
+				<div class="min-center3-on min-center3-on3">
+			      <p>日系</p>
+			    </div>
+			  </div>
+			  <div class="min-center3-en min-center3-en3">
+			    <a href="#"><img src="./img/a055.png"></a>
+				<div class="min-center3-on min-center3-on3">
+			      <p>港风</p>
+			    </div>
+			  </div>
+			  <div class="min-center3-en min-center3-en2 min-center3-en3">
+			    <a href="#"><img src="./img/a056.png"></a>
+				<div class="min-center3-on min-center3-on3">
+			      <p>亚麻</p>
+			    </div>
+			  </div>
+			</div>
+		  </div>
+		</div>
+		<div class="min-4">
+		  <div class="min-top">
+		    <div class="min-top-en">
+			  <span>上　装</span>
+			</div>
+		  </div>
+		  <div class="min-center4">
+		  <div class="min-center4-left">
+		    <div class="min-center4-en">
+			  <div class="min-center4-top">
+			    <a href="#"><img src="./img/a063.png"></a>
+			  </div>
+			  <div class="min-center4-center">
+			    <span class="min-center4-1">￥</span><span class="min-center4-1 min-center4-2">45</span><span class="min-center4-3">电商基地141</span>
+				<br>
+				<span class="min-center4-4">2016夏季新款个性百搭时尚男士圆...</span>
+			  </div>
+			</div>
+			<div class="min-center4-en">
+			  <div class="min-center4-top">
+			    <a href="#"><img src="./img/a063.png"></a>
+			  </div>
+			  <div class="min-center4-center">
+			    <span class="min-center4-1">￥</span><span class="min-center4-1 min-center4-2">45</span><span class="min-center4-3">电商基地141</span>
+				<br>
+				<span class="min-center4-4">2016夏季新款个性百搭时尚男士圆...</span>
+			  </div>
+			</div>
+			<div class="min-center4-en min-center4-ad">
+			  <div class="min-center4-top">
+			    <a href="#"><img src="./img/a063.png"></a>
+			  </div>
+			  <div class="min-center4-center">
+			    <span class="min-center4-1">￥</span><span class="min-center4-1 min-center4-2">45</span><span class="min-center4-3">电商基地141</span>
+				<br>
+				<span class="min-center4-4">2016夏季新款个性百搭时尚男士圆...</span>
+			  </div>
+			</div>
+			<div class="min-center4-en">
+			  <div class="min-center4-top">
+			    <a href="#"><img src="./img/a063.png"></a>
+			  </div>
+			  <div class="min-center4-center">
+			    <span class="min-center4-1">￥</span><span class="min-center4-1 min-center4-2">45</span><span class="min-center4-3">电商基地141</span>
+				<br>
+				<span class="min-center4-4">2016夏季新款个性百搭时尚男士圆...</span>
+			  </div>
+			</div>
+			<div class="min-center4-en">
+			  <div class="min-center4-top">
+			    <a href="#"><img src="./img/a063.png"></a>
+			  </div>
+			  <div class="min-center4-center">
+			    <span class="min-center4-1">￥</span><span class="min-center4-1 min-center4-2">45</span><span class="min-center4-3">电商基地141</span>
+				<br>
+				<span class="min-center4-4">2016夏季新款个性百搭时尚男士圆...</span>
+			  </div>
+			</div>
+			<div class="min-center4-en min-center4-ad">
+			  <div class="min-center4-top">
+			    <a href="#"><img src="./img/a063.png"></a>
+			  </div>
+			  <div class="min-center4-center">
+			    <span class="min-center4-1">￥</span><span class="min-center4-1 min-center4-2">45</span><span class="min-center4-3">电商基地141</span>
+				<br>
+				<span class="min-center4-4">2016夏季新款个性百搭时尚男士圆...</span>
+			  </div>
+			</div>
+		  </div>
+		  <div class="min-center4-right">
+		    <a href="#"><img src="./img/a057.png"></a>
+			<a href="#"><img src="./img/a062.png"></a>
+		  </div>
+		  </div>
+		</div>
+		<div class="min-4">
+		  <div class="min-top">
+		    <div class="min-top-en">
+			  <span>下　装</span>
+			</div>
+		  </div>
+		<div class="min-center4">
+		  <div class="min-center4-right" style="float:left">
+		    <a href="#"><img src="./img/a058.png"></a>
+			<a href="#"><img src="./img/a062.png"></a>
+		  </div>
+		  <div class="min-center4-left" style="float:right">
+		    <div class="min-center4-en">
+			  <div class="min-center4-top">
+			    <a href="#"><img src="./img/a063.png"></a>
+			  </div>
+			  <div class="min-center4-center">
+			    <span class="min-center4-1">￥</span><span class="min-center4-1 min-center4-2">45</span><span class="min-center4-3">电商基地141</span>
+				<br>
+				<span class="min-center4-4">2016夏季新款个性百搭时尚男士圆...</span>
+			  </div>
+			</div>
+			<div class="min-center4-en">
+			  <div class="min-center4-top">
+			    <a href="#"><img src="./img/a063.png"></a>
+			  </div>
+			  <div class="min-center4-center">
+			    <span class="min-center4-1">￥</span><span class="min-center4-1 min-center4-2">45</span><span class="min-center4-3">电商基地141</span>
+				<br>
+				<span class="min-center4-4">2016夏季新款个性百搭时尚男士圆...</span>
+			  </div>
+			</div>
+			<div class="min-center4-en min-center4-ad">
+			  <div class="min-center4-top">
+			    <a href="#"><img src="./img/a063.png"></a>
+			  </div>
+			  <div class="min-center4-center">
+			    <span class="min-center4-1">￥</span><span class="min-center4-1 min-center4-2">45</span><span class="min-center4-3">电商基地141</span>
+				<br>
+				<span class="min-center4-4">2016夏季新款个性百搭时尚男士圆...</span>
+			  </div>
+			</div>
+			<div class="min-center4-en">
+			  <div class="min-center4-top">
+			    <a href="#"><img src="./img/a063.png"></a>
+			  </div>
+			  <div class="min-center4-center">
+			    <span class="min-center4-1">￥</span><span class="min-center4-1 min-center4-2">45</span><span class="min-center4-3">电商基地141</span>
+				<br>
+				<span class="min-center4-4">2016夏季新款个性百搭时尚男士圆...</span>
+			  </div>
+			</div>
+			<div class="min-center4-en">
+			  <div class="min-center4-top">
+			    <a href="#"><img src="./img/a063.png"></a>
+			  </div>
+			  <div class="min-center4-center">
+			    <span class="min-center4-1">￥</span><span class="min-center4-1 min-center4-2">45</span><span class="min-center4-3">电商基地141</span>
+				<br>
+				<span class="min-center4-4">2016夏季新款个性百搭时尚男士圆...</span>
+			  </div>
+			</div>
+			<div class="min-center4-en min-center4-ad">
+			  <div class="min-center4-top">
+			    <a href="#"><img src="./img/a063.png"></a>
+			  </div>
+			  <div class="min-center4-center">
+			    <span class="min-center4-1">￥</span><span class="min-center4-1 min-center4-2">45</span><span class="min-center4-3">电商基地141</span>
+				<br>
+				<span class="min-center4-4">2016夏季新款个性百搭时尚男士圆...</span>
+			  </div>
+			</div>
+		  </div>
+		</div>
+		</div>
+		<div class="min-4">
+		  <div class="min-top">
+		    <div class="min-top-en">
+			  <span>衬　衫</span>
+			</div>
+		  </div>
+		  <div class="min-center4">
+		  <div class="min-center4-left">
+		    <div class="min-center4-en">
+			  <div class="min-center4-top">
+			    <a href="#"><img src="./img/a063.png"></a>
+			  </div>
+			  <div class="min-center4-center">
+			    <span class="min-center4-1">￥</span><span class="min-center4-1 min-center4-2">45</span><span class="min-center4-3">电商基地141</span>
+				<br>
+				<span class="min-center4-4">2016夏季新款个性百搭时尚男士圆...</span>
+			  </div>
+			</div>
+			<div class="min-center4-en">
+			  <div class="min-center4-top">
+			    <a href="#"><img src="./img/a063.png"></a>
+			  </div>
+			  <div class="min-center4-center">
+			    <span class="min-center4-1">￥</span><span class="min-center4-1 min-center4-2">45</span><span class="min-center4-3">电商基地141</span>
+				<br>
+				<span class="min-center4-4">2016夏季新款个性百搭时尚男士圆...</span>
+			  </div>
+			</div>
+			<div class="min-center4-en min-center4-ad">
+			  <div class="min-center4-top">
+			    <a href="#"><img src="./img/a063.png"></a>
+			  </div>
+			  <div class="min-center4-center">
+			    <span class="min-center4-1">￥</span><span class="min-center4-1 min-center4-2">45</span><span class="min-center4-3">电商基地141</span>
+				<br>
+				<span class="min-center4-4">2016夏季新款个性百搭时尚男士圆...</span>
+			  </div>
+			</div>
+			<div class="min-center4-en">
+			  <div class="min-center4-top">
+			    <a href="#"><img src="./img/a063.png"></a>
+			  </div>
+			  <div class="min-center4-center">
+			    <span class="min-center4-1">￥</span><span class="min-center4-1 min-center4-2">45</span><span class="min-center4-3">电商基地141</span>
+				<br>
+				<span class="min-center4-4">2016夏季新款个性百搭时尚男士圆...</span>
+			  </div>
+			</div>
+			<div class="min-center4-en">
+			  <div class="min-center4-top">
+			    <a href="#"><img src="./img/a063.png"></a>
+			  </div>
+			  <div class="min-center4-center">
+			    <span class="min-center4-1">￥</span><span class="min-center4-1 min-center4-2">45</span><span class="min-center4-3">电商基地141</span>
+				<br>
+				<span class="min-center4-4">2016夏季新款个性百搭时尚男士圆...</span>
+			  </div>
+			</div>
+			<div class="min-center4-en min-center4-ad">
+			  <div class="min-center4-top">
+			    <a href="#"><img src="./img/a063.png"></a>
+			  </div>
+			  <div class="min-center4-center">
+			    <span class="min-center4-1">￥</span><span class="min-center4-1 min-center4-2">45</span><span class="min-center4-3">电商基地141</span>
+				<br>
+				<span class="min-center4-4">2016夏季新款个性百搭时尚男士圆...</span>
+			  </div>
+			</div>
+		  </div>
+		  <div class="min-center4-right">
+		    <a href="#"><img src="./img/a059.png"></a>
+			<a href="#"><img src="./img/a062.png"></a>
+		  </div>
+		  </div>
+		</div>
+		<div class="min-4">
+		  <div class="min-top">
+		    <div class="min-top-en">
+			  <span>牛仔裤</span>
+			</div>
+		  </div>
+		<div class="min-center4">
+		  <div class="min-center4-right" style="float:left">
+		    <a href="#"><img src="./img/a060.png"></a>
+			<a href="#"><img src="./img/a062.png"></a>
+		  </div>
+		  <div class="min-center4-left" style="float:right">
+		    <div class="min-center4-en">
+			  <div class="min-center4-top">
+			    <a href="#"><img src="./img/a063.png"></a>
+			  </div>
+			  <div class="min-center4-center">
+			    <span class="min-center4-1">￥</span><span class="min-center4-1 min-center4-2">45</span><span class="min-center4-3">电商基地141</span>
+				<br>
+				<span class="min-center4-4">2016夏季新款个性百搭时尚男士圆...</span>
+			  </div>
+			</div>
+			<div class="min-center4-en">
+			  <div class="min-center4-top">
+			    <a href="#"><img src="./img/a063.png"></a>
+			  </div>
+			  <div class="min-center4-center">
+			    <span class="min-center4-1">￥</span><span class="min-center4-1 min-center4-2">45</span><span class="min-center4-3">电商基地141</span>
+				<br>
+				<span class="min-center4-4">2016夏季新款个性百搭时尚男士圆...</span>
+			  </div>
+			</div>
+			<div class="min-center4-en min-center4-ad">
+			  <div class="min-center4-top">
+			    <a href="#"><img src="./img/a063.png"></a>
+			  </div>
+			  <div class="min-center4-center">
+			    <span class="min-center4-1">￥</span><span class="min-center4-1 min-center4-2">45</span><span class="min-center4-3">电商基地141</span>
+				<br>
+				<span class="min-center4-4">2016夏季新款个性百搭时尚男士圆...</span>
+			  </div>
+			</div>
+			<div class="min-center4-en">
+			  <div class="min-center4-top">
+			    <a href="#"><img src="./img/a063.png"></a>
+			  </div>
+			  <div class="min-center4-center">
+			    <span class="min-center4-1">￥</span><span class="min-center4-1 min-center4-2">45</span><span class="min-center4-3">电商基地141</span>
+				<br>
+				<span class="min-center4-4">2016夏季新款个性百搭时尚男士圆...</span>
+			  </div>
+			</div>
+			<div class="min-center4-en">
+			  <div class="min-center4-top">
+			    <a href="#"><img src="./img/a063.png"></a>
+			  </div>
+			  <div class="min-center4-center">
+			    <span class="min-center4-1">￥</span><span class="min-center4-1 min-center4-2">45</span><span class="min-center4-3">电商基地141</span>
+				<br>
+				<span class="min-center4-4">2016夏季新款个性百搭时尚男士圆...</span>
+			  </div>
+			</div>
+			<div class="min-center4-en min-center4-ad">
+			  <div class="min-center4-top">
+			    <a href="#"><img src="./img/a063.png"></a>
+			  </div>
+			  <div class="min-center4-center">
+			    <span class="min-center4-1">￥</span><span class="min-center4-1 min-center4-2">45</span><span class="min-center4-3">电商基地141</span>
+				<br>
+				<span class="min-center4-4">2016夏季新款个性百搭时尚男士圆...</span>
+			  </div>
+			</div>
+		  </div>
+		</div>
+		</div>
+		<div class="min-4">
+		  <div class="min-top">
+		    <div class="min-top-en">
+			  <span>休闲裤</span>
+			</div>
+		  </div>
+		<div class="min-center4">
+		  <div class="min-center4-right" style="float:left">
+		    <a href="#"><img src="./img/a061.png"></a>
+			<a href="#"><img src="./img/a062.png"></a>
+		  </div>
+		  <div class="min-center4-left" style="float:right">
+		    <div class="min-center4-en">
+			  <div class="min-center4-top">
+			    <a href="#"><img src="./img/a063.png"></a>
+			  </div>
+			  <div class="min-center4-center">
+			    <span class="min-center4-1">￥</span><span class="min-center4-1 min-center4-2">45</span><span class="min-center4-3">电商基地141</span>
+				<br>
+				<span class="min-center4-4">2016夏季新款个性百搭时尚男士圆...</span>
+			  </div>
+			</div>
+			<div class="min-center4-en">
+			  <div class="min-center4-top">
+			    <a href="#"><img src="./img/a063.png"></a>
+			  </div>
+			  <div class="min-center4-center">
+			    <span class="min-center4-1">￥</span><span class="min-center4-1 min-center4-2">45</span><span class="min-center4-3">电商基地141</span>
+				<br>
+				<span class="min-center4-4">2016夏季新款个性百搭时尚男士圆...</span>
+			  </div>
+			</div>
+			<div class="min-center4-en min-center4-ad">
+			  <div class="min-center4-top">
+			    <a href="#"><img src="./img/a063.png"></a>
+			  </div>
+			  <div class="min-center4-center">
+			    <span class="min-center4-1">￥</span><span class="min-center4-1 min-center4-2">45</span><span class="min-center4-3">电商基地141</span>
+				<br>
+				<span class="min-center4-4">2016夏季新款个性百搭时尚男士圆...</span>
+			  </div>
+			</div>
+			<div class="min-center4-en">
+			  <div class="min-center4-top">
+			    <a href="#"><img src="./img/a063.png"></a>
+			  </div>
+			  <div class="min-center4-center">
+			    <span class="min-center4-1">￥</span><span class="min-center4-1 min-center4-2">45</span><span class="min-center4-3">电商基地141</span>
+				<br>
+				<span class="min-center4-4">2016夏季新款个性百搭时尚男士圆...</span>
+			  </div>
+			</div>
+			<div class="min-center4-en">
+			  <div class="min-center4-top">
+			    <a href="#"><img src="./img/a063.png"></a>
+			  </div>
+			  <div class="min-center4-center">
+			    <span class="min-center4-1">￥</span><span class="min-center4-1 min-center4-2">45</span><span class="min-center4-3">电商基地141</span>
+				<br>
+				<span class="min-center4-4">2016夏季新款个性百搭时尚男士圆...</span>
+			  </div>
+			</div>
+			<div class="min-center4-en min-center4-ad">
+			  <div class="min-center4-top">
+			    <a href="#"><img src="./img/a063.png"></a>
+			  </div>
+			  <div class="min-center4-center">
+			    <span class="min-center4-1">￥</span><span class="min-center4-1 min-center4-2">45</span><span class="min-center4-3">电商基地141</span>
+				<br>
+				<span class="min-center4-4">2016夏季新款个性百搭时尚男士圆...</span>
+			  </div>
+			</div>
+		  </div>
+		</div>
+		</div>
+	  </div>
+	  <div class="capn">
+	    <div class="capn-a">
+	      <div class="capn-left">
+		    <div class="capn-top">
+			  <img src="./img/a064.png">
+			  <span><img src="./img/a068.png"></span>
+			</div>
+			<div class="capn-bottom">
+			  <img src="./img/a065.png">
+			  <div class="capn-bottom-a">
+			    <span class="capn-1"><img src="./img/a066.png"></span>
+			    <span class="capn-2"><img src="./img/a067.png"></span>
+			  </div>
+			</div>
+			<div class="capn-en">
+			  <p>沪ICP备15053131号-1</p>
+			  <p>官方邮箱:00000000@qq.com</p>
+			  <p>官方电话:400-000-000</p>
+			  <p style="font-size:11px;">Copyright 2016 www.zhuomaowang.com</p>
+			</div>
+		  </div>
+		  <div class="capn-right">
+		    <table class="capn-sh">
+			  <tr>
+			    <th>新手指南</th>
+				<th>账号管理</th>
+				<th>卓猫特色</th>
+				<th>服务</th>
+				<th>公司</th>
+			  </tr>
+			  <tr>
+			    <td><a href="#">-新用户登录</a></td>
+				<td><a href="#">-淘宝绑定</a></td>
+				<td><a href="#">-福利</a></td>
+				<td><a href="#">-官方客服</a></td>
+				<td><a href="#">-关于我们</a></td>
+			  </tr>
+			  <tr>
+			    <td><a href="#">-下单支付</a></td>
+				<td><a href="#">-账号信息</a></td>
+				<td><a href="#">-优势</a></td>
+				<td><a href="#">-意见反馈</a></td>
+				<td><a href="#">-招聘信息</a></td>
+			  </tr>
+			  <tr>
+			    <td><a href="#">-供货商入驻</a></td>
+				<td><a href="#">-密码管理</a></td>
+				<td><a href="#">-功能</a></td>
+				<td><a href="#">-APP下载</a></td>
+				<td><a href="#">-联系我们</a></td>
+			  </tr>
+			  <tr>
+			    <td><a href="#">-分销商注册</a></td>
+				<td><a href="#">-操作</a></td>
+				<td><a href="#"></a></td>
+				<td><a href="#"></a></td>
+				<td><a href="#"></a></td>
+			  </tr>
+			</table>
+		  </div>
+		</div>
+	  </div>
+	</body>
+</html>
