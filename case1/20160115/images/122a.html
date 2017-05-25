@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+   <title>标题</title>
+   <meta charset="utf-8"/>
+   <meta name="keywords" content="学习php"/>
+   <meta name=description" content="学习php"/>
+   
+  </head>
+  <body text="black" background="b4.jpg" leftmargin="100" rightmargin="100" botoomargin="100">
+  	<h2 align="center">框架的学习</h2>
+  	<pre>
+  		<font size="4">
+  	&lt;html&gt;框架，仅仅是html的标签，指的是分帧页面。起作用就是把浏览器分为几个页面。
+  	&lt;frameset rows="150,300,*"&gt;这是上中下，cols="左，中，*"也可以rows="数字，*，数字"
+  	  &lt;frame name="a" src="文件地址"&gt;
+  	  &lt;frame&gt;
+  	  &lt;frame&gt;
+  	&lt;/frameset&gt;
+  	framespacing框架的宽度
+  	bordercolor框架及边框的颜色
+  	src页面源文件
+  	name名称属性
+  	frameborder="0"边框显示
+  	scrolling="yes/no/auto"框架滚动条显示
+  	noresize尺寸调整
+  	左边距marginwidth
+  	上边距marginheight
+  	为要改变内容的窗口命名
+  	在链接中target="name"
+  	<ifame src="网址" height=""></ifame>在body里嵌入内容,不利于搜索引擎的搜索，在一个网页中载入另一个网页
+  	
+    有框架页就替代body了
+  	</font>
+    </pre>
+    <xmp>
+ <form name="login" method="post" action="regAction.php">
+   <table>
+   	<tr><td>姓名</td><td><input type="text" name="f" required/></td></tr>
+   	<tr><td>email</td>   		<td><input type="email" name="e" placeholder="1165793932@qq.com"/></td>   	</tr>
+   	<tr>   		<td>url</td>   		<td><input autofocus type="url"/></td>   	</tr>
+   	<tr>   		<td>日期</td>   		<td><input type="date"/></td>   	</tr>
+   	<tr>   		<td>外号</td>   		<td>   			<input type="text" list="aaa"/>
+   			  <datalist id="aaa">
+   			 
+   			  	<option value="张三"></option>
+   			  	<option value="张四"></option>
+   			  	<option value="张一"></option>
+   			  	<option value="张二"></option>
+   			 
+   			  </datalist>
+   		</td>
+   	</tr>
+   	<tr align="center">   		   		<td colspan="2"><input type="submit" name="s" value="提交"/></td>   	</tr>
+   </table>
+ </form>
+</xmp>
+<h2>以上这些代码可以得到下面的表单，在一般的浏览器不能反应他的特殊效果</h2>
+<form name="login" method="post" action="regAction.php">
+   <table>
+   	<tr>
+   		<td>姓名</td>
+   		<td><input type="text" name="f" required/></td>
+   	</tr>
+   	<tr>
+   		<td>email</td>
+   		<td><input type="email" name="e" placeholder="1165793932@qq.com"/></td>
+   	</tr>
+   	<tr>
+   		<td>url</td>
+   		<td><input autofocus type="url"/></td>
+   	</tr>
+   	<tr>
+   		<td>日期</td>
+   		<td><input type="date"/></td>
+   	</tr>
+   	<tr>
+   		<td>外号</td>
+   		<td>
+   			<input type="text" list="aaa"/>
+   			  <datalist id="aaa">
+   			 
+   			  	<option value="张三"></option>
+   			  	<option value="张四"></option>
+   			  	<option value="张一"></option>
+   			  	<option value="张二"></option>
+   			 
+   			  </datalist>
+   		</td>
+   	</tr>
+   	<tr align="center">
+   		
+   		<td colspan="2"><input type="submit" name="s" value="提交"/></td>
+   	</tr>
+   </table>
+ </form>
+  
+  </body>
+</html>

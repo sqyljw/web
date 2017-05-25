@@ -1,0 +1,61 @@
+<!DOCTYPE htm>
+<html>
+ <head>
+  <title>table/form</title>
+   <meta name="keywords" content="table">
+ </head>
+  <body text="black"  align="center" background="d6.jpg" leftmargin="30" rightmargin="30" topmargin="30" bottomargin="50" >
+  	
+  	<h2 align="center">表格和表单的学习</h2>
+  	<p>在制作表格衔接时在body里面设置 topmargin="0"让表格与表格之间衔接无缝</p>
+  	<p>&nbsp;表示空格&lt;/h2&gt;
+    <p>;&lt;dl&gt;&lt;dt&gt;正常内容&lt;/dt&gt;&lt;dd&gt;缩进内容&lt;/dd&gt;&lt;/dl&gt;自定义列表，缩进的形式&lt;/h2&gt;
+    <p>;乱码：&lt;head&gt;&lt;/head&gt;在里面第一句设置&lt;meta charset="gb2312 gbk"/&gt;
+    	<p>基于html5比utf-8字符集少，很多产品都是utf-8，utf-8是国际通用的&lt;/h2&gt;
+    <p>表格：table数据的格式化，在table下面用&lt;caption&gt;用作标题&lt;/caption&gt;&lt;/h2&gt;&lt;th&gt;自动加粗和居中
+    	<p>&lt;/th&gt;&lt;tbody&gt;给表格分组设置属性&lt;/tbody&gt;
+     <p>&lt;table border="1" width="400" height="300" align="center" cellpadding=内边距 cellspacing=外边距&gt;
+     	<p>单元格可以设置宽度，以保证这个页面的可观性.制作
+    	<p>细致的边框线，给table第一步设置border="0"，第二步bgcolor="red",第三步设置cellspacing="1"，
+    	<p>第四步将单元格设置背景色就是让单元格颜色和背景色不一样。
+  	
+    <p>汉 &lt;h2&gt;&nbsp;表示空格&lt;/h2&gt;
+    <p>&lt;dl&gt;&lt;dt&gt;&lt;dd&gt;&lt;/dd&gt;&lt;/dt&gt;&lt;/dl&gt;自定义列表，缩进的形式&lt;/h2&gt;
+    <p>乱码：&lt;head&gt;&lt;/head&gt;在里面第一句设置&lt;meta charset="gb2312 gbk"/&gt;基于html5比utf-8字符集少，很多产品都是utf-8，utf-8是国际通用的&lt;/h2&gt;
+    <p>表格：table数据的格式化，&lt;/h2&gt;
+    &lt;table border="1" width="400" height="300" align="center" cellpadding=内边距 cellspacing=外边距&gt;
+    	&lt;tr&gt;
+   		&lt;th&gt;&lt;/th&gt;
+   		&lt;th&gt;&lt;/th&gt;
+   	&lt;/tr&gt;
+   	&lt;tr&gt;
+   		&lt;td&gt;&lt;/td&gt;
+   		&lt;td&gt;&lt;/td&gt;
+   	&lt;/tr&gt;
+   	&lt;tr&gt;
+   		&lt;td&gt;&lt;/td&gt;
+   		&lt;td&gt;&lt;/td&gt;
+   	&lt;/tr&gt;
+    &lt;/table&gt;
+    <p>通栏。无论你屏幕有多大，都可以到边&lt;/h2&gt;
+    <p>一般在ｔａｂｌｅ里可以代替空格的是&lt;tr&gt;&lt;td width="1222"&gt;&lt;/td&gt;&lt;td&gt;文本&lt;/td&gt;&lt;/tr&gt;&lt;/h2&gt;
+    <p>表单:form是客户端与服务器交互的常见形式。服务器枫在向客户端收集信息的时候就需要表单了&lt;/h2&gt;
+    <p>&lt;form name="名称" method="post(更安全，支持大容量数据提交)/get(数据在地址URL上，2k左右)" action="处理程序"&gt;&lt;/form&gt;&lt;/h2
+    <p>client客户端/server服务器&lt;/h2&gt;
+    <p>b/s&lt;/h2&gt;
+    <p>文本框&lt;input type="text" name="username" value="admin" size="40"&gt;;密码框&lt;input type="password".....&gt;
+    <p>提交按钮&lt;input type="submit" value="tijiao"&gt;
+    <p>单选框&lt;input type="radio" name="sex" value="男" checked&gt;男，这里checked的表示默认
+    <p>多选框&lt;input type="checkbox" name="hobby []" value="lol" &gt;lol，这里[]的表示多项选择
+    <p>普通按钮&lt;input type="button" name="btn" value="普通按钮"&gt;
+    <p>图片按钮&lt;input type="image" src="图片地址" &gt;
+    <p>文件:&lt;input type="file" name="upfile"&gt;</p>
+    <p>隐藏域&lt;input type="hidden" name="typied" value="111"&gt;
+    <p>下拉菜单&lt;select name="language" size="40" multiple&gt;&lt;option selected&gt;/&lt;/option&gt;&lt;/select&gt;selected默认选择这一项
+    	multiple表示可以在下拉菜单中选择多项，size美有的话是横向，一般第一个option/option是提示文本
+    	
+    <p>&lt;textarea name="qwe" rows="垂直行数" cols="水平行数"&gt;文本&lt;/textarea&gt;		
+    
+  
+ </body>
+</html>

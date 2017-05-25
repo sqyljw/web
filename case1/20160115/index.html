@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>宝贝,永远在一起oh!yeah</title>
+<link href="favicon.ico" rel="icon" type="image/x-icon" />
+<meta charset="utf-8">	
+<style type="text/css">
+	*{
+		margin:0;
+		padding:0;
+		}
+	.dac{
+		width:1300px;
+		height:813px;
+		background:url(images/lssl1.jpg);
+		margin:auto;
+	
+		}
+	
+	.dac1{
+		width:1300px;
+		height:813px;
+		background:url(images/l2.jpg);
+		margin:auto;
+	
+		}
+	.dac2{
+		width:1300px;
+		height:813px;
+		background:url(images/l8.jpg);
+		margin:auto;
+	
+		}
+		.dac3{
+		width:1300px;
+		height:813px;
+		background:url(images/l6.jpg);
+		margin:auto;
+	
+		}
+	#start{
+		width:1300px;
+		height:30px;
+		margin:auto;
+		background:#050707;
+		}
+	#start ul li a{
+		
+		text-decoration:none;
+		color:#fff;
+		font-size:13px;
+		}
+	#start ul li{
+		float:right;
+		width:80px;
+		line-height:26px;
+		}
+	#djs{
+		width:500px;;
+		height:200px;
+		
+		margin-top:100px;
+		}
+  #title{
+  	width:100%;
+  	height:400px;
+ 
+  	}
+  .A{
+  	font-size:70px;
+  	color:red;
+  	padding-left:100px;
+  	font-style:italic;
+  	font-weight:bold;
+  	}
+  .B{
+  	font-size:50px;
+  	font-weight:bold;
+  	color:blue;
+  	
+  	font-style:italic;
+  	}
+  .jc{
+		width:50px;
+		height:30px;
+		border:0;
+		background:#EE2024;
+		color:#fff;
+		font-size:25px;
+		text-align:center;
+
+		}
+
+  .C{
+  	font-size:50px;
+  	color:red;
+  	font-weight:bold;
+  	font-style:italic;
+  	}
+  .D{
+  	font-size:50px;
+  	color:Yellow;
+  	font-weight:bold;
+  	font-style:italic;
+  	}
+  .E{
+  	font-size:50px;
+  	color:red;
+  	font-weight:bold;
+  	font-style:italic;
+  	}
+  .F{
+  	font-size:50px;
+  	padding-left:800px;
+  	color:red;
+  	font-weight:bold;
+  	}
+  .G{
+  	font-size:30px;
+  	font-weight:bold;
+  	color:#fff;
+  	}
+  .H{
+  	padding-left:250px;
+  	font-size:60px;
+  	font-weight:bold;
+  	color:blue;
+  	}
+  .A1{
+  	padding-left:1000px;
+  	font-weight:bold;
+  	color:red;
+  	}
+  .A2{
+  	
+  	color:red;
+  	}
+   .but{
+  	width:600px;
+  	height:300px;
+  	}
+  .shimiao{
+  	width:320px;
+  	height:130px;
+    margin-left:500px;
+    
+    background:url(images/ls11.jpg);
+    font-size:130px;
+    text-align:center;
+    border:0;
+    
+    font-weight:bold;
+  
+  	}
+  .val{
+  	margin-top:50px;
+  	}
+  #talk{
+  	width:900px;
+  	color:#2482B9;
+  	}
+</style>
+<script>
+	var int_1;
+  window.onload=function(){
+	  setInterval(time1,1000);
+	  document.getElementById('s').onclick=function(){
+			int_1=setInterval(setTime,1000)
+		}
+	
+	 document.getElementById('o').onclick=function(){
+		document.getElementById('dac').className='dac1'
+		}
+	 document.getElementById('h').onclick=function(){
+		document.getElementById('dac').className='dac2'
+		}
+		document.getElementById('l').onclick=function(){
+		document.getElementById('dac').className='dac3'
+		}
+	}
+  function time1(){
+	var d1=new Date("2016/01/15 00:00:00");
+	var d2=new Date();
+	var t1=d1.getTime();
+	var t2=d2.getTime();
+	var t3=t1-t2;
+	
+	document.getElementById("sss4").value=Math.floor(t3/(1000*60*60*24));
+	document.getElementById("sss3").value=Math.floor((t3%(1000*60*60*24))/1000/60/60);
+	document.getElementById("sss2").value=Math.floor((t3/1000%(60*60))/60);
+	document.getElementById("sss1").value=Math.floor((t3/1000)%60);
+	}
+	var x=10;
+	
+	var color=[];
+	     color[0]="#ffffff";
+	     color[1]="green";
+	     color[2]="blue";
+	     color[3]="black";
+	     color[4]="green";
+	     color[5]="blue";
+	     color[6]="black";
+	     color[7]="green";
+	     color[8]="blue";
+	     color[9]="green";
+	     color[10]="black";
+	     
+	    
+	    
+
+	function setTime(){
+	
+   document.getElementById('t').value=x;
+   
+   document.getElementById('t').style.color=color[x]
+	 x--;
+		if(x<0){document.getElementById('t').value="我们的纪念日么么~";
+			      document.getElementById('t').style.fontSize="35px";
+			      document.getElementById('t').style.fontWeight="bold";
+			      document.getElementById('t').style.color="#ffffff";
+			      
+			}
+		}
+</script>
+</head>
+<body>
+	<div id="start">
+		<ul>
+			<li><a href="#" id="o">换装</a></li>
+		 <li><a href="#" id="s">倒计时</a></li>
+		 <li><a href="#">留言</a></li>
+		</ul>
+		
+	  
+	</div>
+	<div id="dac" class="dac">
+		<div id="talk">你是个活泼可爱的美丽女子，和我相爱走过了五年光阴。你最美好的时光给了平凡的我，你无怨无悔的伴随着我走过之前的路。这里我真诚的向你说声谢谢你亲爱的！今天是我们五周年纪念日，虽然躺在病床上的你让我看着是那么的心痛，你的害怕和憔悴记在我的心里。我想说我会一直呵护你的好好的陪伴你的！我今生今世一直爱着你。生活在这个喧闹和繁华的城市里面，我们都有烦恼和忧愁，但是请记住无论什么情况，你都有我！我们的纪念日，我们的爱到永远！</div>
+	<div id="title">
+			
+     
+	  	<span class="A">I</span><span class="B">L</span><span class="C">Y</span><span class="D">O</span><span class="E">U</span>
+	  	<span class="E">2</span><span class="B">0</span><span class="C">1</span><span class="D">6</span><br>
+	  	<span class="F">相爱</span><span class="G">五周年倒计时!</span><br>
+	  	<span class="A1"> <input id="sss4" class="jc">天</span>
+	    <span class="A2"> <input id="sss3" class="jc">时</span>
+	    <span class="A2"><input id="sss2" class="jc">分 </span>
+      <span class="A2"> <input id="sss1" class="jc">秒</span>
+	  	
+	  	
+	  </div>
+		<div class="but">
+		<input id="t" class="shimiao"><br>
+		
+		</div>
+		
+	  <div id="zhou">
+	  	<marquee ><img src="images/7c.jpg" height="80"/>
+	  		<img src="images/9c.jpg" height="80"/>
+	  		<img src="images/4d.jpg" height="80"/>
+	  		<img src="images/5d.jpg" height="80"/>
+	  		<img src="images/5c.jpg" height="80"/>
+	  		<img src="images/8c.jpg" height="80"/>
+	  		<img src="images/17.jpg" height="80"/>
+	  		<img src="images/18.jpg" height="80"/>
+	  		<img src="images/13.jpg" height="80"/>
+	  		<img src="images/1.jpg" height="80">
+		   	<img src="images/2.jpg" height="80">
+		   	<img src="images/3.jpg" height="80">
+		   	<img src="images/4.jpg" height="80">
+		   	<img src="images/5.jpg" height="80">
+		   	<img src="images/6.jpg" height="80">
+		   	<img src="images/7.jpg" height="80">
+		   	<img src="images/8.jpg" height="80">
+		   	<img src="images/9.jpg" height="80">
+		  </marquee>
+		  <embed src="images/1234.mp3" hidden="true"  ></embed>
+	  </div>
+	</div>
+</body>
+</html>
