@@ -1,0 +1,612 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>天猫tmall.com--上天猫，就够了!</title>
+    <link rel="shortcut icon" href="img/favicon.ico">
+    <link rel="stylesheet" type="text/css" href="css/css.css">
+    <style type="text/css" media="screen">
+        *{padding: 0;margin: 0;}
+
+    </style>
+    <script src="js/jquery-1.11.1.min.js"></script>
+    <script src="myjs/js.js"></script>
+    <!-- <script src="myjs/js.js1"></script> -->
+    <!-- <script src="js/jquery.lazyload.min.js"></script> -->
+</head>
+<body>
+    <div class="big">
+        <div class="yincang" id="yincang">
+            <div class="yincang_1">
+                <ul></ul>
+                <ul><input type="text" class="iiiiii" placeholder="不会买错的化妆品">
+                 <button type="submit">搜索</button></ul>
+            </div>
+        </div>
+        <div class="Carousel_big">
+            <div class="right">
+                <ul>
+                    <li><a href="#"><i class="tianmao"><span>我的资产<i class="a1_2"></i></span></a></i></li>
+                    <li class="right_gouwuche">购物车</li>
+                    <li class="hengxian"></li>
+                    <li><a href="#"><i class="right2"><span>我的资产<i class="a2_2"></i></span></a></i></li>
+                    <li><a href="#"><i class="right3"><span>我关注的品牌<i class="a3_2"></i></span></a></i></li>
+                    <li><a href="#"><i class="right4"><span>我的收藏<i class="a4_2"></i></span></a></i></li>
+                    <li><a href="#"><i class="right5"><span>我看过的<i class="a5_2"></i></span></a></i></li>
+                    <li><i class="right6"><span>我要充值<i class="a6_2"></i></span></i></li>
+                    <li><i class="right7"><a href="#"><span>用户反馈<i class="a7_2"></i></span></a></i></li>
+                    <li><a href="#"><i class="right8"><span><i class="a8_2"></i></span></a></i></li>
+                    <li><a href="javascript:;"><i class="right9" id="right9"></a></i></li>
+                </ul>
+            </div>
+            <div class="top">
+                <ul class="top_left">
+                    <li class="top_left1">喵,欢迎来天猫</li>
+                    <li><a href="#">请登录</a></li>
+                    <li><a href="#">免费注册</a></li>
+                </ul>
+                <ul class="top_right">
+                    <li class="my"><a href="#">我的淘宝</a>
+                        <ul>
+                            <a href="#">已买到的宝贝</a>
+                            <a href="#">已卖出的宝贝</a>
+                        </ul>
+                    </li>
+                    <li class="aixin"><a href="#">我关注的品牌</a></li>
+                    <li class="gouwu"><a href="#">购物车0件</a></li>
+                    <li class="shoucang"><a href="#">收藏夹</a>
+                         <ul>
+                            <a href="#">收藏的宝贝</a>
+                            <a href="#">收藏的店铺</a>
+                        </ul>
+                    </li>
+                    <em></em>
+                    <li class="phone"><a href="#">手机版</a><span><i></i></span></li>
+                    <li class="taobao"><a href="#">淘宝网</a></li>
+                    <li class="taobao"><a href="#">企业购</a></li>
+                    <li class="shangjia"><a href="#">商家支持</a>
+                        <ul>
+                            <h3>商家:</h3>
+                            <li><a href="#">商家中心</a>
+                            <li><a href="#">商家入驻</a></li>
+                            <li><a href="#">运营服务</a></li>
+                            <li><a href="#">商家品控</a></li>
+                            <li><a href="#">商家工具</a></li>
+                            <li><a href="#">商家规则</a></li>
+                            <li><a href="#">天猫智库</a></li>
+                            <li><a href="#">喵言喵语</a></li>
+                            <span></span>
+                            <h3>帮助:</h3>
+                                <div><a href="#">帮助中心</a></div>
+                        </ul>
+                    </li>
+                    <li class="wangzhan"><span></span>网站导航
+                        <div>
+                            <ul class="Hot_big">
+                                <li class="Hot">热点推荐 Hot</li>
+                                <li><a href="#">天猫超市</a></li>
+                                <li><a href="#">喵鲜生</a></li>
+                                <li class="keji"><a href="#">科技新品</a><span></span></li>
+                                <li class="nvzhuang"><a href="#">女装新品</a><span></span></li>
+                                <li><a href="#">酷玩街</a></li>
+                                <li class="neiyi"><a href="#">内衣新品</a><span></span></li>
+                                <li><a href="#">试美状</a></li>
+                                <li><a href="#">运动新品</a></li>
+                                <li class="shizhuang"><a href="#">时尚先生</a><span></span></li>
+                                <li><a href="#">精明妈咪</a></li>
+                                <li class="chile"><a href="#">吃乐会</a><span></span></li>
+                                <li><a href="#">企业采购</a></li>
+                                <li><a href="#">会员积分</a></li>
+                                <li><a href="#">天猫国际</a></li>
+
+                             </ul>
+                            <ul class="Hot_big1">
+                            <li class="Hot1">行业市场 Market</li>
+                                <li><a href="#">美妆</a></li>
+                                <li><a href="#">电器</a></li>
+                                <li class="Hot_big1_nvzhuang"><a href="#">女装</a><span></span></li>
+                                <li class="Hot_big1_nanzhuang"><a href="#">男装</a><span></span></li>
+                                <li><a href="#">女鞋</a></li>
+                                <li><a href="#">男鞋</a></li>
+                                <li class="Hot_big1_neiyi"><a href="#">内衣</a><span></span></li>
+                                <li><a href="#">箱包</a></li>
+                                <li><a href="#">运动</a></li>
+                                <li><a href="#">母婴</a></li>
+                                <li><a href="#">假装</a></li>
+                                <li><a href="#">医药</a></li>
+                                <li><a href="#">食品</a></li>
+                                <li class="Hot_big1_peijian"><a href="#">配饰</a><span></span></li>
+                                <li><a href="#">汽车</a></li>
+                                </ul>
+                            <ul class="Hot_big2"><li class="Hot3">品牌风尚 Brand</li>
+                                <li><a href="#">尚天猫</a></li>
+                                <li><a href="#">大牌街</a></li>
+                                <li><a href="#">潮牌街</a></li>
+                                <li><a href="#">天猫原创</a></li>
+                                <li><a href="#">什么牌子好</a></li>
+                                </ul>
+                            <ul class="Hot_big3"><li class="Hot4">服务指南 Help</li>
+                                <li><a href="#">帮助中心</a></li>
+                                <li><a href="#">品质保障</a></li>
+                                <li><a href="#">特色服务</a></li>
+                                <li><a href="#">7天退货</a></li>
+                                <li><a href="#">什么牌子好</a></li></ul>
+                        </div>
+                    </li>
+                </ul></div></div>
+            <div class="Search_bar1" id=Search_bar1"">
+             <div class="Search_bar">
+            <ul class="tmall"></ul>
+            <ul class="ipn">
+                <form>
+                <input type="text" placeholder="上天猫，就购了！">
+                <button type="submit">搜索</button>
+                </form>
+                <div class="submit_xia">
+                    <ul>
+                        <li><a href="#" class="shirt">衬衫男</a></li>
+                        <li><a href="#">连衣裙</a></li>
+                        <li><a href="#">四件套</a></li>
+                        <li><a href="#" class="bijibendiannao">笔记本电脑</a></li>
+                        <li><a href="#">吊顶灯</a></li>
+                        <li><a href="#">奶粉</a></li>
+                        <li><a href="#" class="yundongxie">运动鞋</a></li>
+                        <li><a href="#">双肩包</a></li>
+                        <li><a href="#" class="kouhong">口红</a></li>
+                    </ul>
+                </div>
+            </ul></div>
+            </div>
+            <!-- 中间导航 -->
+            <div class="nav">
+                <div class="nav_zhong">
+                    <div class="nav_zhong_fenlei"></div>
+                    <ul>
+                        <li class="nav_tianmaochaoshi"><a href="#">天猫超市</a></li>
+                        <li class="nav_tianmaoguoji"><a href="#">天猫国际</a></li>
+                        <li><a href="#">天猫会员</a></li>
+                        <li><a href="#">品牌街</a></li>
+                        <li><a href="#">电器城</a></li>
+                        <li><a href="#">喵鲜生</a></li>
+                        <li><a href="#">医药馆</a></li>
+                        <li><a href="#">营业厅</a></li>
+                        <li><a href="#">魅力惠</a></li>
+                        <li><a href="#">飞猪旅行</a></li>
+                        <li><a href="#">苏宁易购</a></li>
+                    </ul>
+            </div>
+            <!-- 分类下面 -->
+            <div class="nav_fenlei">
+                    <div class="nav_fenlei_1">
+                        <ul>
+                            <li class="nav_fenlei1">女装/内衣</li>
+                            <li class="nav_fenlei2">男装/运动户外</li>
+                            <li class="nav_fenlei3">女鞋/男鞋/箱包</li>
+                            <li class="nav_fenlei4">化妆品/个人护理</li>
+                            <li class="nav_fenlei5">腕表/珠宝饰品/眼镜</li>
+                            <li class="nav_fenlei6">手机/数码/电脑办公</li>
+                            <li class="nav_fenlei7">母婴玩具</li>
+                            <li class="nav_fenlei8">零食/进口食品/茶酒</li>
+                            <li class="nav_fenlei9">生鲜水果</li>
+                            <li class="nav_fenlei10">大家电/生活电器</li>
+                            <li class="nav_fenlei11">家具建材</li>
+                            <li class="nav_fenlei12">汽车/配件/用品</li>
+                            <li class="nav_fenlei13">家纺/家饰/鲜花</li>
+                            <li class="nav_fenlei14">医药保健</li>
+                            <li class="nav_fenlei15">厨具/收纳/宠物</li>
+                            <li class="nav_fenlei16">图书音像</li>
+                        </ul></div>
+            </div>
+            <!-- 分类下面 -->
+            <!-- 轮播 -->
+            <div class="lunbo" id="lunbo">
+                    <div class="lunbo2">
+                        <ul id="pic">
+                            <img src="img/lunbo.jpg" alt="" />
+                            <img src="img/lunbo1.jpg" alt="" />
+                            <img src="img/lunbo4.jpg" alt="" />
+                            <img src="img/轮播2.jpg" alt="" />
+                            <img src="img/轮播5.png" alt="" />
+                        </ul>
+                        <ul id="name">
+                            <li class="active">1</li>
+                            <li>2</li>
+                            <li>3</li>
+                            <li>4</li>
+                            <li>5</li>
+                    </div>
+            </div>
+            <!-- 轮播 -->
+            <!-- 专属活动 -->
+            <div class="zhuanshu">
+                <div class="zhuanshu1">
+
+                </div>
+            </div>
+            <div class="zhuanshu2">
+                <ul>
+                    <a href="#" title=""><img src="img/20170415152642.png"></img></a>
+                    <a href="#" title=""><img src="img/20170415152544.png"></img></a>
+                    <a href="#" title=""><img src="img/20170415152611.png"></img></a>
+                    <a href="#" title=""><img src="img/20170415152642.png"></img></a>
+                    <a href="#" title=""><img src="img/20170415152731.png"></img></a>
+                </ul>
+            </div>
+            <!-- 专属活动 -->
+            <!-- 品牌 -->
+            <div class="pinpai">
+                <ul class="pinpai_right">
+                    <div class="pinpai_right1">
+                            <a href="#"><img src="img/zhibo1.png" alt=""></a>
+                            <a href="#" class="pinpai_right1_pic"><img src="img/zhibo2.png" alt=""></a>
+                            <a href="#"><img src="img/zhibo3.png" alt=""></a>
+                    </div>
+                    <li class="pinpai_right22"><a href="#"><img src="./img/zhibo1.png" width="155px" height="80px"></a></li>
+                    <li class="pinpai_right2"><a href="#"><img src="./img/zhibo2.png" width="155px" height="80px"></a></li>
+                    <li class="pinpai_right222"><a href="#"><img src="./img/zhibo3.png" width="155px" height="80px"></a></li>
+                    <div class="pinpai_right3">
+                        <span>直播<i>LIVE</i></span>
+                        <span class="pinpai_right5"></span>
+                        <ul>
+                            <li><a href="#" title="">品牌直播边看边买！</a></li>
+                            <li><a href="#" title="">看直播互动赢红包！</a></li>
+                        </ul>
+                    </div>
+                </ul>
+                <ul class="pinpai_left">
+                        <div class="adds"><a href="#"><img src="img/pic2.jpg" width="100%"></a>
+                                <a href="#"><div class="adds_1">
+                                <p class="adds_2"></p>
+                                <p class="adds_3">关注人数 22.2万</p>
+                                <p class="adds_4">点击进入</p>
+                                </div>
+                                </a>
+                        </div>
+                        <div class="adds"><a href="#"><img src="img/pic2.jpg" width="100%"></a>
+                                <a href="#"><div class="adds_1">
+                                <p class="adds_2"></p>
+                                <p class="adds_3">关注人数 22.2万</p>
+                                <p class="adds_4">点击进入</p>
+                                </div>
+                                </a>
+                        </div>
+                        <div class="adds"><a href="#"><img src="img/pic2.jpg" width="100%"></a>
+                                <a href="#"><div class="adds_1">
+                                <p class="adds_2"></p>
+                                <p class="adds_3">关注人数 22.2万</p>
+                                <p class="adds_4">点击进入</p>
+                                </div>
+                                </a>
+                        </div>
+                        <div class="adds"><a href="#"><img src="img/pic2.jpg" width="100%"></a>
+                                <a href="#"><div class="adds_1">
+                                <p class="adds_2"></p>
+                                <p class="adds_3">关注人数 22.2万</p>
+                                <p class="adds_4">点击进入</p>
+                                </div>
+                                </a>
+                        </div>
+                        <div class="adds"><a href="#"><img src="img/pic2.jpg" width="100%"></a>
+                                <a href="#"><div class="adds_1">
+                                <p class="adds_2"></p>
+                                <p class="adds_3">关注人数 22.2万</p>
+                                <p class="adds_4">点击进入</p>
+                                </div>
+                                </a>
+                        </div>
+                        <div class="adds"><a href="#"><img src="img/pic2.jpg" width="100%"></a>
+                                <a href="#"><div class="adds_1">
+                                <p class="adds_2"></p>
+                                <p class="adds_3">关注人数 22.2万</p>
+                                <p class="adds_4">点击进入</p>
+                                </div>
+                                </a>
+                        </div>
+                        <div class="adds"><a href="#"><img src="img/pic2.jpg" width="100%"></a>
+                                <a href="#"><div class="adds_1">
+                                <p class="adds_2"></p>
+                                <p class="adds_3">关注人数 22.2万</p>
+                                <p class="adds_4">点击进入</p>
+                                </div>
+                                </a>
+                        </div>
+                        <div class="adds"><a href="#"><img src="img/pic2.jpg" width="100%"></a>
+                                <a href="#"><div class="adds_1">
+                                <p class="adds_2"></p>
+                                <p class="adds_3">关注人数 22.2万</p>
+                                <p class="adds_4">点击进入</p>
+                                </div>
+                                </a>
+                        </div>
+
+                        <div class="adds"><a href="#"><img src="img/pic2.jpg" width="100%"></a>
+                                <a href="#"><div class="adds_1">
+                                <p class="adds_2"></p>
+                                <p class="adds_3">关注人数 22.2万</p>
+                                <p class="adds_4">点击进入</p>
+                                </div>
+                                </a>
+                        </div>
+                        <div class="adds"><a href="#"><img src="img/pic2.jpg" width="100%"></a>
+                                <a href="#"><div class="adds_1">
+                                <p class="adds_2"></p>
+                                <p class="adds_3">关注人数 22.2万</p>
+                                <p class="adds_4">点击进入</p>
+                                </div>
+                                </a>
+                        </div>
+                        <div class="adds"><a href="#"><img src="img/pic2.jpg" width="100%"></a>
+                                <a href="#"><div class="adds_1">
+                                <p class="adds_2"></p>
+                                <p class="adds_3">关注人数 22.2万</p>
+                                <p class="adds_4">点击进入</p>
+                                </div>
+                                </a>
+                        </div>
+                        <div class="adds"><a href="#"><img src="img/pic2.jpg" width="100%"></a>
+                                <a href="#"><div class="adds_1">
+                                <p class="adds_2"></p>
+                                <p class="adds_3">关注人数 22.2万</p>
+                                <p class="adds_4">点击进入</p>
+                                </div>
+                                </a>
+                        </div>
+                        <div class="adds"><a href="#"><img src="img/pic2.jpg" width="100%"></a>
+                                <a href="#"><div class="adds_1">
+                                <p class="adds_2"></p>
+                                <p class="adds_3">关注人数 22.2万</p>
+                                <p class="adds_4">点击进入</p>
+                                </div>
+                                </a>
+                        </div>
+                        <div class="adds"><a href="#"><img src="img/pic2.jpg" width="100%"></a>
+                                <a href="#"><div class="adds_1">
+                                <p class="adds_2"></p>
+                                <p class="adds_3">关注人数 22.2万</p>
+                                <p class="adds_4">点击进入</p>
+                                </div>
+                                </a>
+                        </div>
+                        <div class="adds"><a href="#"><img src="img/pic2.jpg" width="100%"></a>
+                                <a href="#"><div class="adds_1">
+                                <p class="adds_2"></p>
+                                <p class="adds_3">关注人数 22.2万</p>
+                                <p class="adds_4">点击进入</p>
+                                </div>
+                                </a>
+                        </div>
+                        <div class="adds"><a href="#"><img src="img/pic2.jpg" width="100%"></a>
+                                <a href="#"><div class="adds_1">
+                                <p class="adds_2"></p>
+                                <p class="adds_3">关注人数 22.2万</p>
+                                <p class="adds_4">点击进入</p>
+                                </div>
+                                </a>
+                        </div>
+                        <div class="adds"><a href="#"><img src="img/pic2.jpg" width="100%"></a>
+                                <a href="#"><div class="adds_1">
+                                <p class="adds_2"></p>
+                                <p class="adds_3">关注人数 22.2万</p>
+                                <p class="adds_4">点击进入</p>
+                                </div>
+                                </a>
+                        </div>
+                        <div class="adds"><a href="#"><img src="img/pic2.jpg" width="100%"></a>
+                                <a href="#"><div class="adds_1">
+                                <p class="adds_2"></p>
+                                <p class="adds_3">关注人数 22.2万</p>
+                                <p class="adds_4">点击进入</p>
+                                </div>
+                                </a>
+                        </div>
+                        <div class="adds"><a href="#"><img src="img/pic2.jpg" width="100%"></a>
+                                <a href="#"><div class="adds_1">
+                                <p class="adds_2"></p>
+                                <p class="adds_3">关注人数 22.2万</p>
+                                <p class="adds_4">点击进入</p>
+                                </div>
+                                </a>
+                        </div>
+                        <div class="adds"><a href="#"><img src="img/pic2.jpg" width="100%"></a>
+                                <a href="#"><div class="adds_1">
+                                <p class="adds_2"></p>
+                                <p class="adds_3">关注人数 22.2万</p>
+                                <p class="adds_4">点击进入</p>
+                                </div>
+                                </a>
+                        </div>
+                        <div class="adds"><a href="#"><img src="img/pic2.jpg" width="100%"></a>
+                                <a href="#"><div class="adds_1">
+                                <p class="adds_2"></p>
+                                <p class="adds_3">关注人数 22.2万</p>
+                                <p class="adds_4">点击进入</p>
+                                </div>
+                                </a>
+                        </div>
+                        <div class="adds"><a href="#"><img src="img/pic2.jpg" width="100%"></a>
+                                <a href="#"><div class="adds_1">
+                                <p class="adds_2"></p>
+                                <p class="adds_3">关注人数 22.2万</p>
+                                <p class="adds_4">点击进入</p>
+                                </div>
+                                </a>
+                        </div>
+                        <div class="adds"><a href="#"><img src="img/pic2.jpg" width="100%"></a>
+                                <a href="#"><div class="adds_1">
+                                <p class="adds_2"></p>
+                                <p class="adds_3">关注人数 22.2万</p>
+                                <p class="adds_4">点击进入</p>
+                                </div>
+                                </a>
+                        </div>
+                        <div class="adds"><a href="#"><img src="img/pic2.jpg" width="100%"></a>
+                                <a href="#"><div class="adds_1">
+                                <p class="adds_2"></p>
+                                <p class="adds_3">关注人数 22.2万</p>
+                                <p class="adds_4">点击进入</p>
+                                </div>
+                                </a>
+                        </div>
+                        <div class="adds"><a href="#"><img src="img/pic2.jpg" width="100%"></a>
+                                <a href="#"><div class="adds_1">
+                                <p class="adds_2"></p>
+                                <p class="adds_3">关注人数 22.2万</p>
+                                <p class="adds_4">点击进入</p>
+                                </div>
+                                </a>
+                        </div>
+                        <div class="adds"><a href="#"><img src="img/pic2.jpg" width="100%"></a>
+                                <a href="#"><div class="adds_1">
+                                <p class="adds_2"></p>
+                                <p class="adds_3">关注人数 22.2万</p>
+                                <p class="adds_4">点击进入</p>
+                                </div>
+                                </a>
+                        </div>
+                        <div class="adds"><a href="#"><img src="img/pic2.jpg" width="100%"></a>
+                                <a href="#"><div class="adds_1">
+                                <p class="adds_2"></p>
+                                <p class="adds_3">关注人数 22.2万</p>
+                                <p class="adds_4">点击进入</p>
+                                </div>
+                                </a>
+                        </div>
+                        <div class="adds"><a href="#"><img src="img/pic2.jpg" width="100%"></a>
+                                <a href="#"><div class="adds_1">
+                                <p class="adds_2"></p>
+                                <p class="adds_3">关注人数 22.2万</p>
+                                <p class="adds_4">点击进入</p>
+                                </div>
+                                </a>
+                        </div>
+
+                </ul>
+
+            </div>
+            <!-- 品牌 -->
+            <!-- 广告 -->
+            <div class="ggao">
+                <a href="#" title=""><div class="ggao_1">
+
+                </div></a>
+            </div>
+            <!-- 广告 -->
+            <!-- 美丽人生 -->
+            <div class="meili">
+                <ul class="meilimeili"><li> &nbsp;美丽人生 &nbsp;FASHION & BEAUTY</li></ul>
+                <ul class="meili_2">
+                    <li><a href="#" title="">连衣裙</a></li>
+                    <li><a href="#" title="">T桖男</a></li>
+                    <li><a href="#" title="">美容护肤</a></li>
+                    <li><a href="#" title="">休闲男鞋</a></li>
+                    <li><a href="#" title="">黄金项链</a></li>
+                    <li><a href="#" title="">单鞋</a></li>
+                    <li><a href="#" title="">女包</a></li>
+                    <li><a href="#" title="">文胸</a></li>
+                    <li><a href="#" title="">大牌腕表</a></li>
+                </ul>
+                <div class="meili_right"></div>
+                <div class="meili_center">
+                    <ul>
+                        <li><img src="img/6121130.png" alt=""></li>
+                        <li><img src="img/20170416121230.png" alt="" width="245px" height="221px"></li>
+                        <li><img src="img/20170416121328.png" alt="" width="245px" height="221px"></li>
+                        <li><img src="img/20170416121359.png" alt="" width="245px" height="221px"></li>
+                        <li><img src="img/20170416121422.png" alt="" width="245px" height="221px"></li>
+                        <li><img src="img/20170416121443.png" alt="" width="245px" height="221px"></li>
+                    </ul>
+                    <ul class="meili_left">
+                        <li><img src="img/20170416121847.png" alt=""></li>
+                    </ul>
+                </div>
+            </div>
+            <!-- 美丽人生 -->
+            <!-- 猜你喜欢 -->
+                <div class="cainixhxx">
+                    <div class="cainixh">
+                    </div>
+                </div>
+                <div class="cainixh_11">
+                    <div class="cainixh_1">
+                        <ul>
+                            <li><img src="img/20170416123517.png" alt="" wight="235px" height="318px"></li>
+                            <li><img src="img/20170416123737.png" alt="" wight="235px" height="318px"></li>
+                            <li><img src="img/20170416123820.png" alt="" wight="235px" height="318px"></li>
+                            <li><img src="img/20170416123844.png" alt="" wight="235px" height="318px"></li>
+                            <li><img src="img/20170416123910.png" alt="" wight="235px" height="318px"></li>
+                            <li><img src="img/20170416123938.png" alt="" wight="235px" height="318px"></li>
+                            <li><img src="img/20170416124003.png" alt="" wight="235px" height="318px"></li>
+                            <li><img src="img/20170416124028.png" alt="" wight="235px" height="318px"></li>
+                            <li><img src="img/20170416124100.png" alt="" wight="235px" height="318px"></li>
+                            <li><img src="img/20170416124123.png" alt="" wight="235px" height="318px"></li>
+                            <li><img src="img/20170416124148.png" alt="" wight="235px" height="318px"></li>
+                            <li><img src="img/20170416124208.png" alt="" wight="235px" height="318px"></li>
+                            <li><img src="img/20170416124231.png" alt="" wight="235px" height="318px"></li>
+                            <li><img src="img/20170416124253.png" alt="" wight="235px" height="318px"></li>
+                            <li><img src="img/20170416124323.png" alt="" wight="235px" height="318px"></li>
+                        </ul>
+                    </div>
+                    <div class="cainixh_12"></div>
+                </div>
+            <!-- 猜你喜欢 -->
+            <!-- 品质 -->
+            <div class="pinzhi">
+                <div class="pinzhi_1"><a href="#" title=""><img src="img/20170416131141.png" alt=""></a></div>
+                <ul><b>购物指南</b>
+                    <li>
+
+                        <p><a href="#">免费注册</a></p>
+                        <p><a href="#">开通支付宝</a></p>
+                        <p><a href="#">支付宝充值</a></p>
+                    </li>
+                </ul>
+                <ul><b>天猫保障</b>
+                    <li>
+
+                        <p><a href="#">发票保障</a></p>
+                        <p><a href="#">售后规则</a></p>
+                        <p><a href="#">缺货赔付</a></p>
+                    </li>
+                </ul>
+                 <ul><b>支付方式</b>
+                    <li>
+
+                        <p><a href="#">快捷支付</a></p>
+                        <p><a href="#">信用卡</a></p>
+                        <p><a href="#">余额宝</a></p>
+                        <p><a href="#">蚂蚁花呗</a></p>
+                        <p><a href="#">货到付款</a></p>
+                    </li>
+                </ul>
+                <ul><b>商家服务</b>
+                    <li>
+
+                        <p><a href="#">商家入驻</a></p>
+                        <p><a href="#">商家中心</a></p>
+                        <p><a href="#">天猫智库</a></p>
+                        <p><a href="#">天猫规则</a></p>
+                        <p><a href="#">物流服务</a></p>
+                        <p><a href="#">喵言喵语</a></p>
+                        <p><a href="#">运营服务</a></p>
+                    </li>
+                </ul>
+                <ul><b>手机天猫</b>
+                <li><a href="#" title=""><img src="img/二维码.png" alt="" width="105px" height="105px"></a></li>
+                </ul>
+                <ul class="pinzhi_2">1</ul>
+            </div>
+            <!-- 品质 -->
+            <!-- 最下面 -->
+            <div class="buttom_1">
+                <div class="buttom_2">
+
+                </div>
+            </div>
+            <!-- 最下面 -->
+        </div>
+    </div>
+<script type="text/javascript">
+
+</script>
+</body>
+</html>

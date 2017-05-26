@@ -1,0 +1,458 @@
+.big{width: 100%;height: 100%;}
+.Carousel_big{width: 100%;height: 100%;}
+/*头部*/
+.top{
+    width: 100%;
+    height:35px;
+    background: #F2F2F2;
+    border-bottom:1px solid #E5E5E5;
+}
+ .top a{
+            text-decoration:none;
+            color:#CCCCCC;
+        }
+        .top a:hover{
+            color:#C30100;
+        }
+        li{
+            list-style-type:none;
+        }
+        .top{
+            font-size:13px;
+            line-height:35px;
+            position:relative;
+        }
+        .top .top_left{
+            position:absolute;
+            top: 0;
+            left: 130px;
+        }
+         .top .top_left .top_left1  {
+            color:#999;
+         }
+        .top .top_left li{
+            margin-left:20px;
+            float: left;
+            /* border:1px solid #000; */
+        }
+        .top .top_right{
+            position:absolute;
+            left: 690px;
+        }
+        .top .top_right li{
+            float: left;
+            /* border:1px solid #000; */
+            /* padding:0 15px; */
+            margin:0 3px;
+        }
+        .top .shoucang {
+            position:relative;
+            top: 0;
+            left: 0;
+        }
+        .top em{
+            position:absolute;
+            top: 8px;
+            left: 346px;
+            height: 20px;
+            border-left:1px solid #D6D6D6;
+        }
+        .top .my {
+            text-align:center;
+            width: 80px;
+            height:35px;
+            position:relative;
+        }
+        .top .my ul{
+            padding-top:8px;
+            line-height:20px;
+            font-size:11px;
+            width: 80px;
+            height:47px;
+            position:absolute;
+            top: 35px;
+            left:-1px;
+            border-bottom: 1px solid #E5E5E5;
+            border-left: 1px solid #E5E5E5;
+            border-right: 1px solid #E5E5E5;
+            background:#fff;
+            display:none;
+        }
+        .top .my:hover{
+            background:#fff;
+        }
+        .top .my:hover ul{
+            display:block;
+        }
+        .top .aixin{
+            padding-left:3px;
+            text-align:center;
+            width: 100px;
+            line-height:35px;
+            background:url(../img/heart.png) no-repeat left;
+        }
+        .top .gouwu{
+            width: 80px;
+            height:35px;
+            text-align:center;
+            padding-left:3px;
+            background:url(../img/car.png) no-repeat 0px 9px;
+        }
+        .top .shoucang{
+            width: 60px;
+            height:35px;
+            text-align:center;
+            position:relative;
+        }
+         .top .shoucang:hover{
+            background:#fff;
+         }
+          .top .shoucang:hover ul{
+            display:block;
+          }
+        .top .shoucang ul{
+            position:absolute;
+            top:35px;
+            left:-1px;
+            width: 75px;
+            height:47px;
+            font-size:11px;
+            line-height:20px;
+            padding-top:8px;
+            border-bottom: 1px solid #E5E5E5;
+            border-left: 1px solid #E5E5E5;
+            border-right: 1px solid #E5E5E5;
+            background:#fff;
+            display:none;
+        }
+        .top .shangjia{
+            width: 60px;
+            height:35px;
+            text-align:center;
+            position:relative;
+            color:#CCCCCC;
+        }
+        .top .shangjia ul{
+            width: 150px;
+            height:170px;
+            border-bottom: 1px solid #E5E5E5;
+            border-left: 1px solid #E5E5E5;
+            border-right: 1px solid #E5E5E5;
+            position:absolute;
+            top: 35px;
+            left:-50px;
+            background:#fff;
+            display:none;
+        }
+        .top .shangjia ul h3{
+            text-align:left;
+            color:#000;
+        }
+        .top .shangjia ul a{
+            color:#362E2E;
+        }
+        .top .shangjia a:hover{
+            color:#C30100;
+        }
+         .top .shangjia:hover{
+            background:#fff;
+         }
+          .top .shangjia:hover ul{
+            display:block;
+          }
+        .top .shangjia ul li{
+            margin-left:2px;
+            line-height:18px;
+            width: 70px;
+            height:18px;
+            /* border:1px solid red; */
+        }
+        .top .shangjia ul span{
+            position:absolute;
+            top:110px;
+            left:5px;
+            /* display:block; */
+            width: 140px;
+            height:10px;
+            border-top:1px dashed #362E2E;
+        }
+        .top .shangjia ul div{
+            text-align:left;
+            line-height:20px;
+            width: 140px;
+            height:20px;
+        }
+        .top .phone{
+            width: 60px;
+            height:35px;
+            text-align:center;
+            padding-left:10px;
+            background:url(../img/phone.png)no-repeat 5px;
+            position:relative;
+        }
+        .top .phone span{
+            background:url(../img/code.png) no-repeat;
+            display:inline-block;
+            width: 175px;
+            height:215px;
+            border-bottom: 1px solid #E5E5E5;
+            border-left: 1px solid #E5E5E5;
+            border-right: 1px solid #E5E5E5;
+            position:absolute;
+            top: 35px;
+            left:-48px;
+            display:none;
+        }
+        .top .phone span i{
+            border-left:8px solid transparent;
+            border-right:8px solid transparent;
+            border-top:8px solid transparent;
+            border-bottom:8px solid #fff;
+            position:absolute;
+            top: -12px;
+            left: 75px;
+        }
+        .top .phone:hover span{
+            display:block;
+        }
+
+        .top .wangzhan{
+            color:#ccc;
+            padding-left:12px;
+            padding-right: 8px;
+            width: 70px;
+            height:35px;
+            text-align:center;
+            position:relative;
+        }
+        .top .wangzhan span{
+            position:absolute;
+            top: 10px;
+            left:5px;
+            width: 16px;
+            height: 16px;
+            background:url(../img/support.png)no-repeat;
+        }
+        .top .wangzhan:hover{
+            background:#fff;
+        }
+        .taobao{
+            width: 50px;
+            height:35px;
+            text-align:center;
+        }
+        .top .wangzhan:hover div{
+            display:block;
+        }
+      /*网站导航隐藏的内容*/
+         .top .wangzhan div{
+            width: 1200px;
+            height: 250px;
+            border-bottom:1px solid #E5E5E5;
+            border-left:1px solid #E5E5E5;
+            border-right:1px solid #E5E5E5;
+            position:absolute;
+            top: 35px;
+            left:-1111px;
+            background:#fff;
+            display:none;
+        }
+        .top .wangzhan div ul{
+            width: 280px;
+            height:230px;
+            border-right:1px solid #E5E5E5;
+            float: left;
+            padding-left:15px;
+            margin-top:10px;
+        }
+        /*热度*/
+        .top .wangzhan div .Hot_big .keji span{
+            background:url(../img/n.gif)no-repeat;
+            position:absolute;
+            top: 58px;
+            left:239px;
+        }
+        .top .wangzhan div .Hot_big .nvzhuang span{
+            background:url(../img/h.gif)no-repeat;
+            position:absolute;
+            top: 94px;
+            left:68px;
+        }
+        .top .wangzhan div .Hot_big .neiyi span{
+            background:url(../img/h.gif)no-repeat;
+            position:absolute;
+            top: 94px;
+            left:239px;
+        }
+        .top .wangzhan div .Hot_big .shizhuang span{
+            background:url(../img/h.gif)no-repeat;
+            position:absolute;
+            top: 130px;
+            left:239px;
+        }
+        .top .wangzhan div .Hot_big .chile span{
+            background:url(../img/n.gif)no-repeat;
+            position:absolute;
+            top: 165px;
+            left:142px;
+        }
+        .top .wangzhan div .Hot_big1 .Hot_big1_nvzhuang span{
+            background:url(../img/h.gif)no-repeat;
+            position:absolute;
+            top: 48px;
+            left:240px;
+        }
+        .top .wangzhan div .Hot_big1 .Hot_big1_nanzhuang span{
+            background:url(../img/h.gif)no-repeat;
+            position:absolute;
+            top: 48px;
+            left:326px;
+        }
+        .top .wangzhan div .Hot_big1 .Hot_big1_neiyi span{
+            background:url(../img/h.gif)no-repeat;
+            position:absolute;
+            top: 85px;
+            left:240px;
+        }
+        .top .wangzhan div .Hot_big1 .Hot_big1_peijian span{
+            background:url(../img/n.gif)no-repeat;
+            position:absolute;
+            top: 154px;
+            left:154px;
+        }
+        /*热度*/
+
+        .top .wangzhan div .Hot_big .Hot{
+            display:inline-block;
+            width: 200px;
+            height:40px;
+            text-align:left;
+            font-size:16px;
+            color:#F78732;
+            padding-left:px;
+            position:relative;
+        }
+        .top .wangzhan div .Hot_big li{
+            width:80px;
+            height:30px;
+            line-height：30px;
+            margin-top: 5px;
+            text-align:left;
+        }
+        .top .wangzhan div .Hot_big a{
+            color:#787878;
+        }
+        .top .wangzhan div .Hot_big a:hover{
+            color:#F78732;
+            text-decoration:underline;
+        }
+
+         .top .wangzhan div .Hot_big1{
+            width: 380px;
+            position:relative;
+         }
+        .top .wangzhan div .Hot_big1 .Hot1{
+            display:inline-block;
+            width: 300px;
+            height:40px;
+            text-align:left;
+            font-size:16px;
+            color:#2263D4;
+            padding-left:25px;
+            position:relative;
+        }
+        .top .wangzhan div .Hot_big1 li{
+            width:80px;
+            height:30px;
+            line-height：30px;
+            margin-top: 5px;
+        }
+        .top .wangzhan div .Hot_big1 a{
+            color:#787878;
+        }
+        .top .wangzhan div .Hot_big1 a:hover{
+            color:#2263D4;
+            text-decoration:underline;
+        }
+
+
+         .top .wangzhan div .Hot_big2{
+            width: 260px;
+            padding-left:40px;
+         }
+        .top .wangzhan div .Hot_big2 .Hot3{
+            display:inline-block;
+            width:200px;
+            height:40px;
+            text-align:left;
+            font-size:16px;
+            color:#2D2D2D;
+            padding-left:0px;
+            position:relative;
+        }
+        .top .wangzhan div .Hot_big2 li{
+            width:70px;
+            height:30px;
+            line-height：30px;
+            margin-top: 5px;
+            text-align:left;
+            margin-left:20px;
+            margin-left:5px;
+        }
+        .top .wangzhan div .Hot_big2 a{
+            color:#787878;
+        }
+        .top .wangzhan div .Hot_big2 a:hover{
+            color:#2D2D2D;
+            text-decoration:underline;
+        }
+
+
+         .top .wangzhan div .Hot_big3{
+            width: 100px;
+            margin-left:30px;
+         }
+        .top .wangzhan div .Hot_big3 .Hot4{
+            display:inline-block;
+            width:200px;
+            height:40px;
+            text-align:left;
+            font-size:16px;
+            color:#787878;
+            padding-top:6px;
+            position:relative;
+        }
+        .top .wangzhan div .Hot_big3 li{
+            width:100px;
+            height:25px;
+            line-height：25px;
+            text-align:left;
+        }
+        .top .wangzhan div .Hot_big3 a{
+            color:#787878;
+        }
+        .top .wangzhan div .Hot_big3 a:hover{
+            color:#2D2D2D;
+            text-decoration:underline;
+        }
+         .top .wangzhan div ul:last-child{
+            border:none;
+         }
+/*头部*/
+
+/*搜索*/
+.big .Search_bar{
+    width: 1200px;
+    height:130px;
+    border:1px solid #000;
+    margin:0 auto;
+}
+.big .Search_bar .tmall{
+    width: 200px;
+    height:130px;
+    background:url(../img/tmll.gif)no-repeat -50px;
+    border:1px solid #000;
+}
+
+
+/*搜索*/
