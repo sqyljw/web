@@ -1,0 +1,81 @@
+@charset "UTF-8";
+
+.list_m{
+    padding:4.6rem 0 4rem;
+}
+.shop_head{
+    background: rgba(255,255,255,.8);
+    height: 4.6rem;
+    border-bottom: 1px solid #ddd;
+    line-height: 4.6rem;
+}
+.shop_head button{
+    background: transparent;
+    border: none;
+    padding: 0;
+    width: 100%;
+    color: #ec7756;
+    font-size: 1.8rem;
+    outline: none;
+}
+.shop_head [class^='col-xs']{
+    padding-left: 0;
+    padding-right: 0;
+}
+.cover{
+    position: fixed;
+    top: 4.6rem;
+    left: 0;
+    width: 100%;
+    background: rgba(0,0,0,.6);
+    height: 100%;
+    cursor: pointer;
+    z-index: 800;
+    display: none;
+}
+.cover p{
+    color: #fff;
+    width: 4%;
+    position: absolute;
+    right: 1.5rem;
+    top: 15rem;
+    margin-bottom: 0;
+    line-height: 2.6rem;
+    font-size: 1.6rem;
+}
+.category{
+    position: fixed;
+    left: -100%;
+    top: 4.6rem;
+    background: #eee;
+    width: 86%;
+    overflow-y: scroll;
+    z-index: 801;
+    display: none;
+}
+.category li{
+    border-bottom: 1px solid #ddd;
+}
+.category li a{
+    display: block;
+    padding: .6rem 1rem;
+    font-size: 1.6rem;
+}
+.search_div{
+    background: #ccc;
+    position: fixed;
+    padding: .8rem;
+    left: 0;
+    top: 4.6rem;
+    z-index: 799;
+    display: none;
+}
+.search_div .form-group{
+    margin-bottom: 0;
+}
+.search_div .form-control{
+    font-size: 1.6rem;
+}
+.search_div .glyphicon-search{
+    font-size: 2.2rem;
+}

@@ -1,0 +1,18 @@
+@charset "utf-8";
+/* CSS Document */
+body{ background:none;}
+.details{ width:1200px; margin:0 auto; margin-top:40px;}
+.details .cp-left{ width:400px; float:left; position:relative;}
+.details .cp-left img{ width:400px; height:400px;}
+.details .cp-left .fdj{ width:200px; height:200px; top:0px; left:0px; position:absolute; background:url(../pic/fdj.png) repeat; display:none;}
+.details .cp-left .fd-pic{ width:400px; height:400px; top:0px; left:410px; position:absolute; background:url(../pic/fdindex.png) repeat; display:none;}
+
+.details .cp-left:hover .fdj{ display:block; cursor:move;}
+.details .cp-left:hover .fd-pic{ display:block; }
+
+.details .cp-mid{ width:530px; float:left; margin-left:30px;}
+.details .cp-mid h1{ font-size:16px;}
+.details .cp-mid p{ color:#F00; font-size:14px; line-height:26px;}
+.details .cp-mid .cp-bg{ width:500px; padding:20px 10px; height:110px; background:url(../pic/cpbg.png); margin-top:20px;}
+.details .cp-mid .cp-bg .title{ height:16px;}
+.details .cp-mid .cp-bg .title img{ width:58px; height:16px; display:inline-block; vertical-align:middle; margin-right:4px;}

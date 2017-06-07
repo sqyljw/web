@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
+    <title>购物系统产品详情页</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="css/base.css"/>
+    <link rel="stylesheet" href="css/view.css?v=1.02"/>
+</head>
+<body>
+    <div class="shop_wrap">
+        <header>
+            <nav class="nav nav_shop">
+                <div class="back">
+                    <a href="javascript:history.go(-1)"><span class="glyphicon glyphicon-share-alt"></span></a>
+                </div>
+                <h2 class="text-center">商品详情</h2>
+                <div class="v_cart text-right">
+                    <a href="cart.html">
+                        <span class="glyphicon glyphicon-shopping-cart">
+                            <em>10</em>
+                        </span>
+                    </a>
+                </div>
+            </nav>
+        </header>
+        <main class="view_m">
+            <div id="lb" class="carousel slide">
+                <ol class="carousel-indicators">
+                    <li data-target="#lb" data-slide-to="0" class="active"></li>
+                    <li data-target="#lb" data-slide-to="1"></li>
+                    <li data-target="#lb" data-slide-to="2"></li>
+                </ol>
+                <div class="carousel-inner">
+                    <div class="item active">
+                        <img src="img/1.jpg" alt=""/>
+                    </div>
+                    <div class="item">
+                        <img src="img/2.jpg" alt=""/>
+                    </div>
+                    <div class="item">
+                        <img src="img/1.jpg" alt=""/>
+                    </div>
+                </div>
+                <a href="#lb" class="left carousel-control" data-slide="prev">
+                    <span class="glyphicon glyphicon-chevron-left"></span>
+                </a>
+                <a href="#lb" class="right carousel-control" data-slide="next">
+                    <span class="glyphicon glyphicon-chevron-right"></span>
+                </a>
+            </div>
+            <section class="bg">
+                <h3>商品规格</h3>
+                <h4>默认规格</h4>
+                <div class="pro_size clearfix">
+                    <div class="qty pull-left">
+                        <label class="pull-left">数量：</label>
+                        <span class="pull-left desc"><i class="glyphicon glyphicon-minus"></i></span>
+                        <input type="text" value="1" min="1" max="999" class="pull-left num"/>
+                        <span class="pull-left add"><i class="glyphicon glyphicon-plus"></i></span>
+                    </div>
+                    <div class="stock pull-left">
+                        <b>999</b>件库存
+                    </div>
+                </div>
+            </section>
+            <section class="bg offstore">
+                <a href="#" class="clearfix">
+                    <h3 class="pull-left">线下门店</h3>
+                    <span class="pull-right"><i class="glyphicon glyphicon-menu-right"></i></span>
+                </a>
+            </section>
+            <section class="bg pro_desc">
+                <h3>商品信息</h3>
+                <p>2015新品蜂产品 天堂寨蜂蜜900g 纯天然新品 润肠通便 欢迎选购,2015新品蜂产品 天堂寨蜂蜜900g 纯天然新品 润肠通便 欢迎选购.</p>
+                <img src="img/descimg01.jpg" alt=""/>
+                <img src="img/descimg02.jpg" alt=""/>
+                <img src="img/descimg03.jpg" alt=""/>
+                <img src="img/descimg04.jpg" alt=""/>
+                <img src="img/descimg05.jpg" alt=""/>
+                <img src="img/descimg06.jpg" alt=""/>
+                <img src="img/descimg07.jpg" alt=""/>
+                <img src="img/descimg08.jpg" alt=""/>
+                <img src="img/descimg09.jpg" alt=""/>
+                <img src="img/descimg10.jpg" alt=""/>
+                <img src="img/descimg11.jpg" alt=""/>
+                <img src="img/descimg12.jpg" alt=""/>
+                <img src="img/descimg13.jpg" alt=""/>
+                <span>公司介绍：</span>
+                <span>安徽王中王蜂产品有限公司是蜂蜜等产品专业生产加工的公司，拥有完整、科学的质量管理体系。安徽王中王蜂产品有限公司的诚信、实力和产品质量获得业界的认可。欢迎各界朋友莅临参观、指导和业务洽谈。</span>
+                <span>王中王公司始终坚持“诚信合作，双赢共生”的经营理念，坚持以市场为导向研发新产品，开创商企共赢新时代之 营销先河，在生产过程中严格执行国家食品卫生标准，并获得了国家颁发的《全国工业产品生产许可证》(QS认证)体系，确保产品质量零缺陷。</span>
+                <span>王中王公司在社会各界的支持下，全体员工共同努力下，在取得了良好经济效益的同时也取得巨大的社会效益。公司在二次创业之际，引进技术设备和管理经验，以“建国内一流企业，创世界知名品牌”为目标，开现代经营理念之先河；创健康发展之伟业，把产品做精做细，市场做深做透、企业做大做强，为振兴民族企业做出贡献。</span>
+            </section>
+            <div class="copyright">
+                <p class="text-center">由诺博源科技提供技术支持</p>
+            </div>
+        </main>
+        <footer>
+            <nav class="navbar navbar-fixed-bottom view_footer">
+                  <div class="container-fluid">
+                      <div class="row">
+                          <div class="col-xs-6 view_price">
+                              <i>¥</i>800.00
+                          </div>
+                          <div class="col-xs-6 view_btn">
+                              <a href="cart.html">
+                                  <span>添加到购物车</span>
+                              </a>
+                          </div>
+                      </div>
+                  </div>
+            </nav>
+        </footer>
+    </div>
+    <div class="return_top">
+        <a href="javascript:scrollTo(0,0)">
+            <span class="glyphicon glyphicon-arrow-up"></span>
+        </a>
+    </div>
+<script src="js/sea.js"></script>
+<script src="js/jquery-1.12.3.min.js"></script>
+    <script>
+        seajs.config({
+            base:'./js',
+            alias:{
+                jquery:'jquery-1.12.3.min.js',
+                bs:'bootstrap.min.js'
+            }
+        });
+
+        seajs.use(['list','view'],function(list,view){
+            view.index();
+            list.returnTop();
+            $('.add').click(function(){
+               view.add($(this));
+            });
+            $('.desc').click(function(){
+                view.desc($(this));
+            })
+        });
+    </script>
+</body>
+</html>

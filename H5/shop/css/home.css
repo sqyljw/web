@@ -1,0 +1,24 @@
+@charset "UTF-8";
+
+.pro_title{
+    height: 4rem;
+    line-height: 4rem;
+    background: #fff;
+}
+.pro_title h4{
+    color: #e76540;
+    font-size: 1.6rem;
+    font-weight: bold;
+    margin-top: 0;
+    margin-bottom: 0;
+    line-height: 4rem;
+}
+.pro_title .more a{
+    color: #999;
+}
+.pro_title .more a:hover{
+    color: #e76540;
+}
+.home_m{
+    padding-bottom: 4rem;
+}

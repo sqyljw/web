@@ -1,0 +1,272 @@
+@charset "UTF-8";
+
+/*全局css*/
+*{
+    margin:0;
+    padding: 0;
+}
+ul,ol,li{
+    list-style: none;
+}
+.clear{
+    clear: both;
+}
+.f_left{
+   float: left;
+}
+.f_right{
+    float: right;
+}
+body{
+    font-size: 12px;
+    font-family:宋体;
+}
+/*header*/
+.header{
+    width: 1200px;
+    margin: 0 auto;
+}
+.welcome{
+    font-size: 12px;
+    color: #a39478;
+    padding-top: 16px;
+    width: 300px;
+}
+.logo{
+    width: 365px;
+    height: 70px;
+    margin-top: 35px;
+}
+.language{
+    background: url(../img/gq.gif) no-repeat;
+    margin-left: 35px;
+    margin-top: 60px;
+    padding-left: 40px;
+    height: 27px;
+}
+.language span{
+    line-height: 27px;
+    color: #8e8e8e;
+    font-family: 微软雅黑;
+}
+.language span i{
+    font-style: normal;
+    padding: 0 5px;
+}
+/*nav*/
+.nav{
+    padding: 15px 0;
+}
+.nav li a{
+    text-decoration: none;
+    font-family: 微软雅黑;
+    padding: 0 65px;
+    display: block;
+}
+.nav li a span{
+    color:#3f2900;
+    font-size: 16px;
+    display: block;
+}
+.nav li a em{
+    font-style: normal;
+    text-align: center;
+    display: block;
+    color: #634100;
+    text-transform: capitalize;
+    font-size: 13px;
+}
+
+/*banner*/
+.banner{
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 46px;
+}
+.banner img{
+    width: 90%;
+    height: auto;
+    margin: 0 auto;
+    display: block;
+}
+.banner .topline{
+    background: url(../img/ban_border.gif);
+    height: 3px;
+}
+/*block01*/
+.block01{
+    border-top:1px solid #ddd;
+}
+.news_con{
+    width: 1200px;
+    margin: 0 auto;
+    padding-top: 50px;
+}
+.list_l ul li{
+    margin-bottom: 30px;
+}
+.list_l h4,
+.block02 h4{
+    color: #583300;
+    font-size: 18px;
+    letter-spacing: 5px;
+    text-align: center;
+    font-family: 微软雅黑;
+    padding-bottom: 30px;
+}
+.list_l h4 em,
+.block02 h4 em{
+    font-style: normal;
+    color: #b2b2b2;
+    text-transform: uppercase;
+    letter-spacing: normal;
+    font-weight: normal;
+    font-size: 15px;
+}
+.li_img{
+    background: url("../img/liimg_bg.png") no-repeat;
+    width: 66px;
+    height: 66px;
+    position: relative;
+}
+.li_img em{
+    position: absolute;
+    left: 19px;
+    top: 11px;
+    color: #fff;
+    font-style: normal;
+}
+.li_img i{
+    position: absolute;
+    bottom: 13px;
+    left: 18px;
+    color: #5f2a0b;
+    font-style: normal;
+}
+.li_con{
+    margin-left: 25px;
+    width: 370px;
+    margin-right: 16px;
+}
+.li_con h5{
+    color: #c4a06c;
+    line-height: 28px;
+}
+.li_con p{
+    color:#666;
+}
+.list_r{
+    width: 600px;
+}
+.list_r p img{
+    width: 600px;
+}
+.list_r ul{
+    margin-top:10px;
+}
+.list_r ul li{
+    margin-right: 13px;
+}
+.list_r ul li:last-child{
+    margin-right:0;
+}
+.newslist{
+    width: 1078px;
+    border-bottom: 1px dashed #d1d1d1;
+    padding-bottom: 47px;
+}
+.news_kf{
+    width: 112px;
+    position: relative;
+}
+.news_kf span{
+    position: absolute;
+    font-family: 微软雅黑;
+    color:#fff;
+    font-weight: bold;
+}
+.news_kf .kfq{
+    top: 13px;
+    right: 50px;
+}
+.news_kf .kf1{
+    top: 66px;
+    right: 48px;
+}
+.news_kf .kf2{
+    top: 120px;
+    right: 48px;
+}
+.news_kf .kf3{
+    top: 175px;
+    right: 48px;
+}
+.list_l .more{
+    text-align: center;
+}
+.list_l .more span{
+    background: url(../img/morenews.png) no-repeat;
+    width: 100px;
+    height: 23px;
+    display: inline-block;
+    line-height: 23px;
+}
+/*block02*/
+.block02{
+    width: 1072px;
+    margin: 0 auto;
+    height: 400px;
+    position: relative;
+    margin-bottom: 40px;
+}
+.block02 p{
+    text-align: center;
+    color: #666;
+    line-height: 30px;
+    width: 812px;
+    margin: 15px auto 0;
+    font-size: 14px;
+}
+.block02_img_l{
+    position:absolute;
+    left: 0;
+    bottom: 0;
+}
+.block02_img_r{
+    position: absolute;
+    right: 30px;
+    bottom: 25px;
+}
+/*block3*/
+.block03{
+    background: url(../img/pro_bg.jpg) no-repeat;
+    height: 529px;
+}
+.block03 h4{
+    padding: 47px 0 42px;
+}
+.block03 h4 img{
+    width: 113px;
+    margin: 0 auto;
+    display: block;
+}
+.block03 ul{
+    background: url(../img/proshow_op.png) repeat;
+    width: 1142px;
+    height: 323px;
+    margin: 0 auto;
+    padding: 42px 29px 0;
+}
+.block03 ul li{
+    margin-right: 6px;
+}
+.block03 ul li:last-child{
+    margin-right: 0;
+}
+.block03 ul li span{
+    display: block;
+    color: #422600;
+    text-align: center;
+    font-size: 14px;
+    padding-top: 10px;
+    font-family: 微软雅黑;
+}

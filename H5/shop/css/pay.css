@@ -1,0 +1,77 @@
+@charset "UTF-8";
+
+.pay_bg{
+    background: #fff;
+    padding: 1rem;
+    margin-top: 1rem;
+}
+.pay_bg h4{
+    font-size: 1.6rem;
+    font-weight: bold;
+    border-bottom: .1rem solid #ddd;
+    padding-bottom: .8rem;
+}
+.addr_title{
+    border-bottom: .1rem solid #ddd;
+    height: 3.6rem;
+    line-height: 3.6rem;
+}
+.addr_title h3{
+    font-size: 1.6rem;
+    font-weight: bold;
+    margin: 0;
+    line-height: 3.6rem;
+}
+.addr_title span{
+    width: 10rem;
+    display: block;
+    cursor: pointer;
+}
+.addr_div{
+    padding-top: 0!important;
+}
+.addr_title span i{
+    font-size: 2.2rem;
+    color: #777;
+    top: .5rem;
+}
+.addr_con{
+    padding-top: 1rem;
+}
+.addr_con address{
+    margin-bottom: 0;
+}
+.pay_price b{
+    color: #ec7756;
+}
+.pay_btn span{
+    display: block;
+    background: #ec7756;
+    color:#fff;
+    height: 4rem;
+    line-height: 4rem;
+    font-size: 2rem;
+}
+.pay_m{
+    padding-bottom: 5rem;
+}
+.btn_confirm{
+    background: #ec7756;
+    color: #fff!important;
+}
+#addr_modal .modal-header h4{
+    color: #ec7756;
+    margin: 0;
+}
+#addr_modal .control-label{
+    margin-bottom: 0;
+    height: 34px;
+    padding: 6px 0;
+}
+#addr_modal [class^='col']{
+    padding-left: .2rem;
+    padding-right: .2rem;
+}
+#addr_modal .form-control[readonly]{
+    background: #fff;
+}
